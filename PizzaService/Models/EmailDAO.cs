@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pizza.DAL.Models
+namespace PizzaService.Models
 {
-   class SauceDAO
+   public class EmailDAO
    {
-      public string Name { get; set; }
-      public decimal Value { get; set; }
+      public string EmailString { get; set; }
    }
 }

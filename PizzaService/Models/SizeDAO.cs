@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pizza.DAL.Models
+namespace PizzaService.Models
 {
-   class CheeseDAO
+    public class SizeDAO
    {
       public string Name { get; set; }
       public decimal Value { get; set; }

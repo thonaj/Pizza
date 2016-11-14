@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pizza.DAL.Models
+namespace PizzaService.Models
 {
-   class AddressDAO
+   public class AddressDAO
    {
       public string Street { get; set; }
       public string City { get; set; }

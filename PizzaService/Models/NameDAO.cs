@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pizza.DAL.Models
+namespace PizzaService.Models
 {
-   class NameDAO
+   public class NameDAO
    {
       public string First { get; set; }
       public string Last { get; set; }

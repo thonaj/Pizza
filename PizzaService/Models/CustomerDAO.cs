@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PizzaService.Models;
+using Pizza.DAL;
 
-namespace Pizza.DAL.Models
+namespace PizzaService.Models
 {
-   class CustomerDAO
+   public class CustomerDAO
    {
       
       public virtual Address Address { get; set; }

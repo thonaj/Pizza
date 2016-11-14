@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Pizza.DAL.Models;
+using Pizza.DAL;
 using System.Data.Entity;
 
 namespace Pizza.DAL

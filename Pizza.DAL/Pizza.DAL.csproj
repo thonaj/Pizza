@@ -69,23 +69,6 @@
     <Compile Include="Email.cs">
       <DependentUpon>PizzaDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\AddressDAO.cs" />
-    <Compile Include="Models\CheeseDAO.cs" />
-    <Compile Include="Models\CrustDAO.cs" />
-    <Compile Include="Models\CustomerDAO.cs" />
-    <Compile Include="Models\CustomerOrderDAO.cs" />
-    <Compile Include="Models\EmailDAO.cs" />
-    <Compile Include="Models\NameDAO.cs" />
-    <Compile Include="Models\OrderDAO.cs" />
-    <Compile Include="Models\PhoneDAO.cs" />
-    <Compile Include="Models\PizzaCheeseDAO.cs" />
-    <Compile Include="Models\PizzaDAO.cs" />
-    <Compile Include="Models\PizzaOrderDAO.cs" />
-    <Compile Include="Models\PizzaToppingDAO.cs" />
-    <Compile Include="Models\SauceDAO.cs" />
-    <Compile Include="Models\SizeDAO.cs" />
-    <Compile Include="Models\StoreDAO.cs" />
-    <Compile Include="Models\ToppingDAO.cs" />
     <Compile Include="Name.cs">
       <DependentUpon>PizzaDB.tt</DependentUpon>
     </Compile>

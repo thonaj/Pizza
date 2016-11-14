@@ -1,14 +1,15 @@
-﻿using System;
+﻿using Pizza.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pizza.DAL.Models
+namespace PizzaService.Models
 {
-   class PizzaToppingDAO
+   public class PizzaToppingDAO
    {
-      public virtual Pizza Pizza { get; set; }
+      public virtual Pizza.DAL.Pizza Pizza { get; set; }
       public virtual Topping Topping { get; set; }
    }
 }
