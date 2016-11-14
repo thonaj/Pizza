@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pizza.DAL
+namespace Pizza.DAL.Models
 {
-    public class Class1
-    {
-    }
+   class EmailDAO
+   {
+      public string EmailString { get; set; }
+   }
 }

@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>b6ca0c4f-10a5-45ec-8a22-2e6ed4541941</ProjectGuid>
+    <ProjectGuid>{B6CA0C4F-10A5-45EC-8A22-2E6ED4541941}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Pizza.DAL</RootNamespace>
@@ -30,24 +30,138 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Address.cs">
+      <DependentUpon>PizzaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cheese.cs">
+      <DependentUpon>PizzaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Crust.cs">
+      <DependentUpon>PizzaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <DependentUpon>PizzaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerOrder.cs">
+      <DependentUpon>PizzaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Email.cs">
+      <DependentUpon>PizzaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AddressDAO.cs" />
+    <Compile Include="Models\CheeseDAO.cs" />
+    <Compile Include="Models\CrustDAO.cs" />
+    <Compile Include="Models\CustomerDAO.cs" />
+    <Compile Include="Models\CustomerOrderDAO.cs" />
+    <Compile Include="Models\EmailDAO.cs" />
+    <Compile Include="Models\NameDAO.cs" />
+    <Compile Include="Models\OrderDAO.cs" />
+    <Compile Include="Models\PhoneDAO.cs" />
+    <Compile Include="Models\PizzaCheeseDAO.cs" />
+    <Compile Include="Models\PizzaDAO.cs" />
+    <Compile Include="Models\PizzaOrderDAO.cs" />
+    <Compile Include="Models\PizzaToppingDAO.cs" />
+    <Compile Include="Models\SauceDAO.cs" />
+    <Compile Include="Models\SizeDAO.cs" />
+    <Compile Include="Models\StoreDAO.cs" />
+    <Compile Include="Models\ToppingDAO.cs" />
+    <Compile Include="Name.cs">
+      <DependentUpon>PizzaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>PizzaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Phone.cs">
+      <DependentUpon>PizzaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pizza.cs">
+      <DependentUpon>PizzaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PizzaCheese.cs">
+      <DependentUpon>PizzaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PizzaDataAccess.cs" />
+    <Compile Include="PizzaDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PizzaDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PizzaDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PizzaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PizzaDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PizzaDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="PizzaOrder.cs">
+      <DependentUpon>PizzaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PizzaTopping.cs">
+      <DependentUpon>PizzaDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sauce.cs">
+      <DependentUpon>PizzaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Size.cs">
+      <DependentUpon>PizzaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Store.cs">
+      <DependentUpon>PizzaDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Topping.cs">
+      <DependentUpon>PizzaDB.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <EntityDeploy Include="PizzaDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PizzaDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="PizzaDB.edmx.diagram">
+      <DependentUpon>PizzaDB.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PizzaDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PizzaDB.edmx</DependentUpon>
+      <LastGenOutput>PizzaDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="PizzaDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PizzaDB.edmx</DependentUpon>
+      <LastGenOutput>PizzaDB.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -57,5 +171,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-
- </Project>
+</Project>
