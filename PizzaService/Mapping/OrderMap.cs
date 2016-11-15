@@ -7,20 +7,23 @@ using System.Web;
 
 namespace PizzaService.Mapping
 {
-   public static class CrustMap
+   public static class OrderMap
    {
-      public static Crust MapToCrust(CrustDAO b)
+      public static Order MapToOrder(OrderDAO b)
       {
-         var a = new Crust();
+         var a = new Order();
          a.Name = b.Name;
          a.Value = b.Value;
+         a.Store = b.Store;
          return a;
       }
-      public static CrustDAO MapToCrustDAO(Crust b)
+
+      public static OrderDAO MapToOrderDAO(Order b)
       {
-         var a = new CrustDAO();
+         var a = new OrderDAO();
          a.Name = b.Name;
          a.Value = b.Value;
+         a.Store = b.Store;
          return a;
       }
    }

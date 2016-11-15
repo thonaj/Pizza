@@ -16,7 +16,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -68,6 +68,20 @@
     <Compile Include="Mapping\AddressMap.cs" />
     <Compile Include="Mapping\CheeseMap.cs" />
     <Compile Include="Mapping\CrustMap.cs" />
+    <Compile Include="Mapping\CustomerMap.cs" />
+    <Compile Include="Mapping\CustomerOrderMap.cs" />
+    <Compile Include="Mapping\EmailMap.cs" />
+    <Compile Include="Mapping\NameMap.cs" />
+    <Compile Include="Mapping\OrderMap.cs" />
+    <Compile Include="Mapping\PhoneMap.cs" />
+    <Compile Include="Mapping\PizzaCheeseMap.cs" />
+    <Compile Include="Mapping\PizzaMap.cs" />
+    <Compile Include="Mapping\PizzaOrderMap.cs" />
+    <Compile Include="Mapping\PizzaToppingMap.cs" />
+    <Compile Include="Mapping\SauceMap.cs" />
+    <Compile Include="Mapping\SizeMap.cs" />
+    <Compile Include="Mapping\StoreMap.cs" />
+    <Compile Include="Mapping\ToppingMap.cs" />
     <Compile Include="Models\AddressDAO.cs" />
     <Compile Include="Models\CheeseDAO.cs" />
     <Compile Include="Models\CrustDAO.cs" />
@@ -123,7 +137,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>57409</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:57409/</IISUrl>
+          <IISUrl>http://localhost/PizzaService/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -17,7 +17,7 @@ namespace PizzaService.Mapping
          a.Street = b.Street;
          a.Zip = b.Zip;
 
-         return b;
+         return a;
       }
       public static AddressDAO MapToAddressDAO(Address b)
       {

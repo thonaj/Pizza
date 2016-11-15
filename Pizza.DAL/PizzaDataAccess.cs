@@ -8,7 +8,7 @@ using System.Data.Entity;
 
 namespace Pizza.DAL
 {
-   class PizzaDataAccess
+   public class PizzaDataAccess
    {
       PizzaDBEntities db = new PizzaDBEntities();
 
