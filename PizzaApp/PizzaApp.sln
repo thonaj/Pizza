@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Piz.DataAccess", "Piz.DataAccess\Piz.DataAccess.csproj", "{55D1BFA0-BCE2-450B-8E47-A9004E72DA3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizService", "PizService\PizService.csproj", "{7C614EDF-BFBB-4AF0-A865-7E33F2D19CD0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55D1BFA0-BCE2-450B-8E47-A9004E72DA3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55D1BFA0-BCE2-450B-8E47-A9004E72DA3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55D1BFA0-BCE2-450B-8E47-A9004E72DA3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55D1BFA0-BCE2-450B-8E47-A9004E72DA3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C614EDF-BFBB-4AF0-A865-7E33F2D19CD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C614EDF-BFBB-4AF0-A865-7E33F2D19CD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C614EDF-BFBB-4AF0-A865-7E33F2D19CD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C614EDF-BFBB-4AF0-A865-7E33F2D19CD0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
