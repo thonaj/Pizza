@@ -108,7 +108,7 @@ namespace PizzaService
 
       public List<AddressDAO> GetAddresses()
       {
-         List<AddressDAO> list = new List<AddressDAO>() ;
+         List<AddressDAO> list = new List<AddressDAO>();
          foreach (var item in da.getAddresses())
          {
             list.Add(Mapping.AddressMap.MapToAddressDAO(item));
