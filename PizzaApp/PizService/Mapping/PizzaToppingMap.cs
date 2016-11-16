@@ -12,14 +12,16 @@ namespace PizService.Mapping
       public static PizzaTopping MapToPizzaTopping(PizzaToppingDAO b)
       {
          var a = new PizzaTopping();
-         a.Pizza = b.Pizza;
-         b.Topping = b.Topping;
+         a.PizzaId = b.PizzaId;
+         a.ToppingId = b.ToppingId;
+         a.Topping = ToppingMap.MapToTopping(b.Topping);
          return a;
       }
       public static PizzaToppingDAO MapToPizzaToppingDAO(PizzaTopping b)
       {
          var a = new PizzaToppingDAO();
-         a.Pizza = b.Pizza;
+         a.PizzaId = b.PizzaId;
+         a.ToppingId = b.ToppingId;
          b.Topping = b.Topping;
          return a;
       }

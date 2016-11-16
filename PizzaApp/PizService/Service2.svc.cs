@@ -38,10 +38,7 @@ namespace PizService
          return da.deleteCustomer(Mapping.CustomerMap.MapToCustomer(itm));
       }
 
-      public bool DeleteCustomerOrder(CustomerOrderDAO itm)
-      {
-         return da.deleteCustomerOrder(Mapping.CustomerOrderMap.MapToCustomerOrder(itm));
-      }
+     
 
       public bool DeleteEmail(EmailDAO itm)
       {
@@ -73,10 +70,7 @@ namespace PizService
          return da.deletePizzaCheese(Mapping.PizzaCheeseMap.MapToPizzaCheese(itm));
       }
 
-      public bool DeletePizzaOrder(PizzaOrderDAO itm)
-      {
-         return da.deletePizzaOrder(Mapping.PizzaOrderMap.MapToPizzaOrder(itm));
-      }
+     
 
       public bool DeletePizzaTopping(PizzaToppingDAO itm)
       {
@@ -136,15 +130,7 @@ namespace PizService
          return list;
       }
 
-      public List<CustomerOrderDAO> GetCustomerOrder()
-      {
-         List<CustomerOrderDAO> list = new List<CustomerOrderDAO>();
-         foreach (var item in da.getCustomerOrders())
-         {
-            list.Add(Mapping.CustomerOrderMap.MapToCustomerOrderDAO(item));
-         }
-         return list;
-      }
+      
 
       public List<CustomerDAO> GetCustomers()
       {
@@ -206,15 +192,7 @@ namespace PizService
          return list;
       }
 
-      public List<PizzaOrderDAO> GetPizzaOrders()
-      {
-         List<PizzaOrderDAO> list = new List<PizzaOrderDAO>();
-         foreach (var item in da.getPizzaOrders())
-         {
-            list.Add(Mapping.PizzaOrderMap.MapToPizzaOrderDAO(item));
-         }
-         return list;
-      }
+      
 
       public List<PizzaDAO> GetPizzas()
       {
@@ -309,12 +287,7 @@ namespace PizService
          return da.InsertCustomer(a);
       }
 
-      public bool InsertCustomerOrder(CustomerOrderDAO itm)
-      {
-         var a = Mapping.CustomerOrderMap.MapToCustomerOrder(itm);
-         a.Active = true;
-         return da.InsertCustomerOrder(a);
-      }
+      
 
       public bool InsertEmail(EmailDAO itm)
       {
@@ -358,12 +331,7 @@ namespace PizService
          return da.InsertPizzaCheese(a);
       }
 
-      public bool InsertPizzaOrder(PizzaOrderDAO itm)
-      {
-         var a = Mapping.PizzaOrderMap.MapToPizzaOrder(itm);
-         a.Active = true;
-         return da.InsertPizzaOrder(a);
-      }
+      
 
       public bool InsertPizzaTopping(PizzaToppingDAO itm)
       {
@@ -424,10 +392,7 @@ namespace PizService
          return da.updateCustomer(Mapping.CustomerMap.MapToCustomer(itm));
       }
 
-      public bool UpdateCustomerOrder(CustomerOrderDAO itm)
-      {
-         return da.updateCustomerOrder(Mapping.CustomerOrderMap.MapToCustomerOrder(itm));
-      }
+      
 
       public bool UpdateEmail(EmailDAO itm)
       {
@@ -459,10 +424,7 @@ namespace PizService
          return da.updatePizzaCheese(Mapping.PizzaCheeseMap.MapToPizzaCheese(itm));
       }
 
-      public bool UpdatePizzaOrder(PizzaOrderDAO itm)
-      {
-         return da.UpdatePizzaOrder(Mapping.PizzaOrderMap.MapToPizzaOrder(itm));
-      }
+      
 
       public bool UpdatePizzaTopping(PizzaToppingDAO itm)
       {

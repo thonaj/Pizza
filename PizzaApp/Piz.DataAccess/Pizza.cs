@@ -18,7 +18,6 @@ namespace Piz.DataAccess
         public Pizza()
         {
             this.PizzaCheese = new HashSet<PizzaCheese>();
-            this.PizzaOrders = new HashSet<PizzaOrder>();
             this.PizzaToppings = new HashSet<PizzaTopping>();
         }
     
@@ -28,16 +27,14 @@ namespace Piz.DataAccess
         public int CrustId { get; set; }
         public int SauceId { get; set; }
         public int SizeId { get; set; }
-        public int PizzaCheeseId { get; set; }
-        public int PizzaToppingId { get; set; }
+        public Nullable<int> OrderId { get; set; }
     
         public virtual Crust Crust { get; set; }
+        public virtual Order Order { get; set; }
         public virtual Sauce Sauce { get; set; }
         public virtual Size Size { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PizzaCheese> PizzaCheese { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PizzaOrder> PizzaOrders { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PizzaTopping> PizzaToppings { get; set; }
     }

@@ -17,22 +17,21 @@ namespace Piz.DataAccess
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Customer()
         {
-            this.CustomerOrders = new HashSet<CustomerOrder>();
+            this.Orders = new HashSet<Order>();
         }
     
         public int Id { get; set; }
-        public int NameId { get; set; }
         public bool Active { get; set; }
+        public int NameId { get; set; }
         public int AddressId { get; set; }
         public int PhoneId { get; set; }
         public int EmailId { get; set; }
-        public Nullable<int> CustomerOrderId { get; set; }
     
         public virtual Address Address { get; set; }
-        public virtual Name Name { get; set; }
         public virtual Email Email { get; set; }
+        public virtual Name Name { get; set; }
         public virtual Phone Phone { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CustomerOrder> CustomerOrders { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

@@ -16,7 +16,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -79,14 +79,12 @@
     <Compile Include="Mapping\CheeseMap.cs" />
     <Compile Include="Mapping\CrustMap.cs" />
     <Compile Include="Mapping\CustomerMap.cs" />
-    <Compile Include="Mapping\CustomerOrderMap.cs" />
     <Compile Include="Mapping\EmailMap.cs" />
     <Compile Include="Mapping\NameMap.cs" />
     <Compile Include="Mapping\OrderMap.cs" />
     <Compile Include="Mapping\PhoneMap.cs" />
     <Compile Include="Mapping\PizzaCheeseMap.cs" />
     <Compile Include="Mapping\PizzaMap.cs" />
-    <Compile Include="Mapping\PizzaOrderMap.cs" />
     <Compile Include="Mapping\PizzaToppingMap.cs" />
     <Compile Include="Mapping\SauceMap.cs" />
     <Compile Include="Mapping\SizeMap.cs" />
@@ -96,14 +94,12 @@
     <Compile Include="Models\CheeseDAO.cs" />
     <Compile Include="Models\CrustDAO.cs" />
     <Compile Include="Models\CustomerDAO.cs" />
-    <Compile Include="Models\CustomerOrderDAO.cs" />
     <Compile Include="Models\EmailDAO.cs" />
     <Compile Include="Models\NameDAO.cs" />
     <Compile Include="Models\OrderDAO.cs" />
     <Compile Include="Models\PhoneDAO.cs" />
     <Compile Include="Models\PizzaCheeseDAO.cs" />
     <Compile Include="Models\PizzaDAO.cs" />
-    <Compile Include="Models\PizzaOrderDAO.cs" />
     <Compile Include="Models\PizzaToppingDAO.cs" />
     <Compile Include="Models\SauceDAO.cs" />
     <Compile Include="Models\SizeDAO.cs" />
@@ -147,7 +143,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>57380</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/PizService</IISUrl>
+          <IISUrl>http://localhost:57380/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

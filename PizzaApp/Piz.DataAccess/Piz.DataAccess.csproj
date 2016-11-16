@@ -63,9 +63,6 @@
     <Compile Include="Customer.cs">
       <DependentUpon>PizzaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="CustomerOrder.cs">
-      <DependentUpon>PizzaModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="EF.cs" />
     <Compile Include="Email.cs">
       <DependentUpon>PizzaModel.tt</DependentUpon>
@@ -100,9 +97,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PizzaModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="PizzaOrder.cs">
-      <DependentUpon>PizzaModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="PizzaTopping.cs">
       <DependentUpon>PizzaModel.tt</DependentUpon>
     </Compile>
@@ -113,7 +107,16 @@
     <Compile Include="Size.cs">
       <DependentUpon>PizzaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>PizzaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>PizzaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Store.cs">
+      <DependentUpon>PizzaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
       <DependentUpon>PizzaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Topping.cs">
@@ -121,17 +124,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
     <EntityDeploy Include="PizzaModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>PizzaModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
-    <None Include="packages.config" />
     <None Include="PizzaModel.edmx.diagram">
       <DependentUpon>PizzaModel.edmx</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="PizzaModel.Context.tt">
@@ -144,9 +148,6 @@
       <DependentUpon>PizzaModel.edmx</DependentUpon>
       <LastGenOutput>PizzaModel.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

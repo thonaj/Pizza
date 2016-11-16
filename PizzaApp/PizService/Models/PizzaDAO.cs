@@ -13,14 +13,22 @@ namespace PizService.Models
    public class PizzaDAO
    {
       [DataMember]
-      public virtual Crust Crust { get; set; }
+      public string Name { get; set; }
       [DataMember]
-      public virtual Sauce Sauce { get; set; }
+      public int CrustId { get; set; }
       [DataMember]
-      public virtual Size Size { get; set; }
+      public int SauceId { get; set; }
       [DataMember]
-      public virtual ICollection<PizzaCheese> PizzaCheese { get; set; }
+      public int SizeId { get; set; }
       [DataMember]
-      public virtual ICollection<PizzaTopping> PizzaToppings { get; set; }
+      public Nullable<int> OrderId { get; set; }
+      [DataMember]
+      public virtual CrustDAO Crust { get; set; }
+      [DataMember]
+      public virtual OrderDAO Order { get; set; }
+      [DataMember]
+      public virtual SauceDAO Sauce { get; set; }
+      [DataMember]
+      public virtual SizeDAO Size { get; set; }
    }
 }

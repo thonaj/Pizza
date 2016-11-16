@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace PizService.Models
 {
-   [DataContract]
+   //[DataContract]
+   [DataContract(IsReference = true)]
    public class PhoneDAO
    {
       [DataMember]

@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace PizService.Models
 {
-   [DataContract]
+   [DataContract(IsReference = true)]
+
+   //[DataContract]
    public class EmailDAO
    {
       [DataMember]

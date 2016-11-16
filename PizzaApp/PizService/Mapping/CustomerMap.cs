@@ -12,10 +12,19 @@ namespace PizService.Mapping
       public static Customer MapToCustomer(CustomerDAO b)
       {
          var a = new Customer();
-         a.Address = b.Address;
-         a.Email = b.Email;
-         a.Name = b.Name;
-         a.Phone = b.Phone;
+         a.Address = AddressMap.MapToAddress(b.Address);
+         a.Email = EmailMap.MapToEmail(b.Email);
+         a.Name = NameMap.MapToName(b.Name);
+         a.Phone = PhoneMap.MapToPhone(b.Phone);
+         a.AddressId = b.AddressId;         
+         a.EmailId = b.EmailId;
+         a.NameId = b.NameId;
+         a.PhoneId = b.PhoneId;
+         foreach (var item in b.Orders)
+         {
+            a.Orders.Add(OrderMap.MapToOrder(item));
+         }        
+         
          return a;
 
       }
@@ -23,10 +32,18 @@ namespace PizService.Mapping
       public static CustomerDAO MapToCustomerDAO(Customer b)
       {
          var a = new CustomerDAO();
-         a.Address = b.Address;
-         a.Email = b.Email;
-         a.Name = b.Name;
-         a.Phone = b.Phone;
+         a.Address = AddressMap.MapToAddressDAO(b.Address);
+         a.Email = EmailMap.MapToEmailDAO(b.Email);
+         a.Name = NameMap.MapToNameDAO(b.Name);
+         a.Phone = PhoneMap.MapToPhoneDAO(b.Phone);
+         a.AddressId = b.AddressId;
+         a.EmailId = b.EmailId;
+         a.NameId = b.NameId;
+         a.PhoneId = b.PhoneId;
+         foreach (var item in b.Orders)
+         {
+            a.Orders.Add(OrderMap.MapToOrderDAO(item));
+         }
          return a;
 
       }

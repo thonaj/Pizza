@@ -21,9 +21,9 @@ namespace Piz.DataAccess
         }
     
         public int Id { get; set; }
+        public bool Active { get; set; }
         public string First { get; set; }
         public string Last { get; set; }
-        public bool Active { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Customer> Customers { get; set; }

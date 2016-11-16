@@ -23,8 +23,7 @@ namespace PizService
       List<CrustDAO> GetCrusts();
       [OperationContract]
       List<CustomerDAO> GetCustomers();
-      [OperationContract]
-      List<CustomerOrderDAO> GetCustomerOrder();
+     
       [OperationContract]
       List<EmailDAO> GetEmails();
       [OperationContract]
@@ -37,8 +36,7 @@ namespace PizService
       List<PizzaCheeseDAO> GetPizzaCheeses();
       [OperationContract]
       List<PizzaDAO> GetPizzas();
-      [OperationContract]
-      List<PizzaOrderDAO> GetPizzaOrders();
+     
       [OperationContract]
       List<PizzaToppingDAO> GetPizzaToppings();
       [OperationContract]
@@ -62,8 +60,7 @@ namespace PizService
       bool InsertCrust(CrustDAO itm);
       [OperationContract]
       bool InsertCustomer(CustomerDAO itm);
-      [OperationContract]
-      bool InsertCustomerOrder(CustomerOrderDAO itm);
+     
       [OperationContract]
       bool InsertEmail(EmailDAO itm);
       [OperationContract]
@@ -76,8 +73,7 @@ namespace PizService
       bool InsertPizzaCheese(PizzaCheeseDAO itm);
       [OperationContract]
       bool InsertPizza(PizzaDAO itm);
-      [OperationContract]
-      bool InsertPizzaOrder(PizzaOrderDAO itm);
+     
       [OperationContract]
       bool InsertPizzaTopping(PizzaToppingDAO itm);
       [OperationContract]
@@ -101,8 +97,7 @@ namespace PizService
       bool UpdateCrust(CrustDAO itm);
       [OperationContract]
       bool UpdateCustomer(CustomerDAO itm);
-      [OperationContract]
-      bool UpdateCustomerOrder(CustomerOrderDAO itm);
+     
       [OperationContract]
       bool UpdateEmail(EmailDAO itm);
       [OperationContract]
@@ -115,8 +110,7 @@ namespace PizService
       bool UpdatePizzaCheese(PizzaCheeseDAO itm);
       [OperationContract]
       bool UpdatePizza(PizzaDAO itm);
-      [OperationContract]
-      bool UpdatePizzaOrder(PizzaOrderDAO itm);
+      
       [OperationContract]
       bool UpdatePizzaTopping(PizzaToppingDAO itm);
       [OperationContract]
@@ -140,8 +134,7 @@ namespace PizService
       bool DeleteCrust(CrustDAO itm);
       [OperationContract]
       bool DeleteCustomer(CustomerDAO itm);
-      [OperationContract]
-      bool DeleteCustomerOrder(CustomerOrderDAO itm);
+     
       [OperationContract]
       bool DeleteEmail(EmailDAO itm);
       [OperationContract]
@@ -154,8 +147,7 @@ namespace PizService
       bool DeletePizzaCheese(PizzaCheeseDAO itm);
       [OperationContract]
       bool DeletePizza(PizzaDAO itm);
-      [OperationContract]
-      bool DeletePizzaOrder(PizzaOrderDAO itm);
+     
       [OperationContract]
       bool DeletePizzaTopping(PizzaToppingDAO itm);
       [OperationContract]

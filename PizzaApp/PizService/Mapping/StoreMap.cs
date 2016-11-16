@@ -12,16 +12,16 @@ namespace PizService.Mapping
       public static Store MapToStore(StoreDAO b)
       {
          var a = new Store();
-         a.Address = b.Address;
-         a.Phone = b.Phone;
+         a.Address = AddressMap.MapToAddress(b.Address);
+         a.Phone = PhoneMap.MapToPhone(b.Phone);
          a.LocationId = b.LocationId;
          return a;
       }
       public static StoreDAO MapToStoreDAO(Store b)
       {
          var a = new StoreDAO();
-         a.Address = b.Address;
-         a.Phone = b.Phone;
+         a.Address = AddressMap.MapToAddressDAO(b.Address);
+         a.Phone = PhoneMap.MapToPhoneDAO(b.Phone);
          a.LocationId = b.LocationId;
          return a;
       }

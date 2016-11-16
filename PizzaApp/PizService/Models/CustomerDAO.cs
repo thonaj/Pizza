@@ -10,18 +10,29 @@ using Piz.DataAccess;
 
 namespace PizService.Models
 {
-   [DataContract]
+   [DataContract(IsReference = true)]
+   //[DataContract]
    public class CustomerDAO
    {
+     
       [DataMember]
-      public virtual Address Address { get; set; }
+      public int NameId { get; set; }     
       [DataMember]
-      public virtual Name Name { get; set; }
+      public int AddressId { get; set; }
       [DataMember]
-      public virtual Email Email { get; set; }
+      public int PhoneId { get; set; }
       [DataMember]
-      public virtual Phone Phone { get; set; }
+      public int EmailId { get; set; }
       [DataMember]
-      public virtual ICollection<CustomerOrder> CustomerOrders { get; set; }
+      public virtual AddressDAO Address { get; set; }
+      [DataMember]
+      public virtual NameDAO Name { get; set; }
+      [DataMember]
+      public virtual EmailDAO Email { get; set; }
+      [DataMember]
+      public virtual PhoneDAO Phone { get; set; }
+      [DataMember]
+      [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+      public virtual ICollection<OrderDAO> Orders { get; set; }
    }
 }

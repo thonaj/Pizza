@@ -33,10 +33,7 @@ namespace Piz.DataAccess
          {
             return db.Customers.ToList();
          }
-         public List<CustomerOrder> getCustomerOrders()
-         {
-            return db.CustomerOrders.ToList();
-         }
+         
          public List<Email> getEmails()
          {
             return db.Emails.ToList();
@@ -61,10 +58,7 @@ namespace Piz.DataAccess
          {
             return db.Pizzas.ToList();
          }
-         public List<PizzaOrder> getPizzaOrders()
-         {
-            return db.PizzaOrders.ToList();
-         }
+         
          public List<PizzaTopping> getPizzaToppings()
          {
             return db.PizzaToppings.ToList();
@@ -115,12 +109,7 @@ namespace Piz.DataAccess
             entry.State = state;
             return db.SaveChanges() > 0;
          }
-         private bool changeCustomerOrder(CustomerOrder itm, EntityState state)
-         {
-            var entry = db.Entry<CustomerOrder>(itm);
-            entry.State = state;
-            return db.SaveChanges() > 0;
-         }
+         
          private bool changeEmail(Email itm, EntityState state)
          {
             var entry = db.Entry<Email>(itm);
@@ -157,12 +146,7 @@ namespace Piz.DataAccess
             entry.State = state;
             return db.SaveChanges() > 0;
          }
-         private bool changePizzaOrder(PizzaOrder itm, EntityState state)
-         {
-            var entry = db.Entry<PizzaOrder>(itm);
-            entry.State = state;
-            return db.SaveChanges() > 0;
-         }
+         
          private bool changePizzaTopping(PizzaTopping itm, EntityState state)
          {
             var entry = db.Entry<PizzaTopping>(itm);
@@ -216,10 +200,7 @@ namespace Piz.DataAccess
 
             return changeCustomer(itm, EntityState.Modified);
          }
-         public bool updateCustomerOrder(CustomerOrder itm)
-         {
-            return changeCustomerOrder(itm, EntityState.Modified);
-         }
+        
          public bool updateEmail(Email itm)
          {
             return changeEmail(itm, EntityState.Modified);
@@ -244,10 +225,7 @@ namespace Piz.DataAccess
          {
             return changePizza(itm, EntityState.Modified);
          }
-         public bool UpdatePizzaOrder(PizzaOrder itm)
-         {
-            return changePizzaOrder(itm, EntityState.Modified);
-         }
+         
          public bool updatePizzaTopping(PizzaTopping itm)
          {
             return changePizzaTopping(itm, EntityState.Modified);
@@ -293,11 +271,7 @@ namespace Piz.DataAccess
             itm.Active = false;
             return changeCustomer(itm, EntityState.Modified);
          }
-         public bool deleteCustomerOrder(CustomerOrder itm)
-         {
-            itm.Active = false;
-            return changeCustomerOrder(itm, EntityState.Modified);
-         }
+        
          public bool deleteEmail(Email itm)
          {
             itm.Active = false;
@@ -328,11 +302,7 @@ namespace Piz.DataAccess
             itm.Active = false;
             return changePizza(itm, EntityState.Modified);
          }
-         public bool deletePizzaOrder(PizzaOrder itm)
-         {
-            itm.Active = false;
-            return changePizzaOrder(itm, EntityState.Modified);
-         }
+        
          public bool deletePizzaTopping(PizzaTopping itm)
          {
             itm.Active = false;
@@ -383,11 +353,7 @@ namespace Piz.DataAccess
             db.Customers.Add(itm);
             return db.SaveChanges() > 0;
          }
-         public bool InsertCustomerOrder(CustomerOrder itm)
-         {
-            db.CustomerOrders.Add(itm);
-            return db.SaveChanges() > 0;
-         }
+        
          public bool InsertEmail(Email itm)
          {
             db.Emails.Add(itm);
@@ -418,11 +384,7 @@ namespace Piz.DataAccess
             db.Pizzas.Add(itm);
             return db.SaveChanges() > 0;
          }
-         public bool InsertPizzaOrder(PizzaOrder itm)
-         {
-            db.PizzaOrders.Add(itm);
-            return db.SaveChanges() > 0;
-         }
+        
          public bool InsertPizzaTopping(PizzaTopping itm)
          {
             db.PizzaToppings.Add(itm);

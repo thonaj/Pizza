@@ -17,21 +17,19 @@ namespace Piz.DataAccess
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Order()
         {
-            this.CustomerOrders = new HashSet<CustomerOrder>();
-            this.PizzaOrders = new HashSet<PizzaOrder>();
+            this.Pizzas = new HashSet<Pizza>();
         }
     
         public int Id { get; set; }
+        public bool Active { get; set; }
         public string Name { get; set; }
         public decimal Value { get; set; }
-        public bool Active { get; set; }
-        public Nullable<int> StoreId { get; set; }
-        public Nullable<int> PizzaOrderId { get; set; }
+        public int StoreId { get; set; }
+        public int CustomerId { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CustomerOrder> CustomerOrders { get; set; }
+        public virtual Customer Customer { get; set; }
         public virtual Store Store { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PizzaOrder> PizzaOrders { get; set; }
+        public virtual ICollection<Pizza> Pizzas { get; set; }
     }
 }

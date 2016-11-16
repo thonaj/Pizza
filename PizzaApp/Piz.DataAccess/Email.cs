@@ -21,8 +21,8 @@ namespace Piz.DataAccess
         }
     
         public int Id { get; set; }
-        public string EmailString { get; set; }
         public bool Active { get; set; }
+        public string EmailString { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Customer> Customers { get; set; }

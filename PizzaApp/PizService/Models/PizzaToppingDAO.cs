@@ -13,8 +13,10 @@ namespace PizService.Models
    public class PizzaToppingDAO
    {
       [DataMember]
-      public virtual Pizza Pizza { get; set; }
+      public int ToppingId { get; set; }
       [DataMember]
-      public virtual Topping Topping { get; set; }
+      public int PizzaId { get; set; }
+      [DataMember]
+      public virtual ToppingDAO Topping { get; set; }
    }
 }

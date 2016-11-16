@@ -15,10 +15,10 @@ namespace PizService.Models
       [DataMember]
       public string LocationId { get; set; }
       [DataMember]
-      public virtual Address Address { get; set; }
+      public virtual AddressDAO Address { get; set; }
       [DataMember]
-      public virtual ICollection<Order> Orders { get; set; }
+      public virtual ICollection<OrderDAO> Orders { get; set; }
       [DataMember]
-      public virtual Phone Phone { get; set; }
+      public virtual PhoneDAO Phone { get; set; }
    }
 }
