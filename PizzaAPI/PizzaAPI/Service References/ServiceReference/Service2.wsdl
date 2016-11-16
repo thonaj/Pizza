@@ -1,0 +1,1313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service2" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/PizService/Service2.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/PizService/Service2.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/PizService/Service2.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/PizService.Models" />
+      <xsd:import schemaLocation="http://localhost/PizService/Service2.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Piz.DataAccess" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService2_GetAddresses_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddresses" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetAddresses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddressesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetCheeses_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCheeses" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetCheeses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCheesesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetCrusts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCrusts" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetCrusts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCrustsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetCustomers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomers" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetCustomers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetCustomerOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerOrder" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetCustomerOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetEmails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmails" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetEmails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNames" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrders" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetPhones_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhones" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetPhones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhonesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetPizzaCheeses_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPizzaCheeses" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetPizzaCheeses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPizzaCheesesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetPizzas_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPizzas" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetPizzas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPizzasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetPizzaOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPizzaOrders" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetPizzaOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPizzaOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetPizzaToppings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPizzaToppings" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetPizzaToppings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPizzaToppingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetSaucess_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaucess" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetSaucess_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSaucessResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetSizes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSizes" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetSizes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSizesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetStores_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStores" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetStores_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetToppings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetToppings" />
+  </wsdl:message>
+  <wsdl:message name="IService2_GetToppings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetToppingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAddress" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertCheese_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCheese" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertCheese_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCheeseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertCrust_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCrust" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertCrust_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCrustResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertCustomerOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCustomerOrder" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertCustomerOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCustomerOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertEmail" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertName_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertName" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOrder" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertPhone_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPhone" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertPhone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPhoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertPizzaCheese_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPizzaCheese" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertPizzaCheese_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPizzaCheeseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertPizza_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPizza" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertPizza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPizzaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertPizzaOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPizzaOrder" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertPizzaOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPizzaOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertPizzaTopping_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPizzaTopping" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertPizzaTopping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPizzaToppingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertSauce_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSauce" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertSauce_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSauceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertSize_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSize" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertSize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertStore_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertStore" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertStore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertStoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertTopping_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTopping" />
+  </wsdl:message>
+  <wsdl:message name="IService2_InsertTopping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertToppingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdateAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAddress" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdateAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdateCheese_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCheese" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdateCheese_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCheeseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdateCrust_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCrust" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdateCrust_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCrustResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdateCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdateCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdateCustomerOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCustomerOrder" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdateCustomerOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCustomerOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdateEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEmail" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdateEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdateName_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateName" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdateName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdateOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrder" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdateOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdatePhone_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePhone" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdatePhone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePhoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdatePizzaCheese_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePizzaCheese" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdatePizzaCheese_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePizzaCheeseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdatePizza_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePizza" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdatePizza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePizzaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdatePizzaOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePizzaOrder" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdatePizzaOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePizzaOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdatePizzaTopping_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePizzaTopping" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdatePizzaTopping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePizzaToppingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdateSauce_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSauce" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdateSauce_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSauceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdateSize_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSize" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdateSize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdateStore_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStore" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdateStore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdateTopping_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTopping" />
+  </wsdl:message>
+  <wsdl:message name="IService2_UpdateTopping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateToppingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeleteAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAddress" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeleteAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeleteCheese_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCheese" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeleteCheese_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCheeseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeleteCrust_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCrust" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeleteCrust_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCrustResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeleteCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeleteCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeleteCustomerOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCustomerOrder" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeleteCustomerOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCustomerOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeleteEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEmail" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeleteEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeleteName_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteName" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeleteName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeleteOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOrder" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeleteOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeletePhone_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePhone" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeletePhone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePhoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeletePizzaCheese_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePizzaCheese" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeletePizzaCheese_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePizzaCheeseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeletePizza_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePizza" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeletePizza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePizzaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeletePizzaOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePizzaOrder" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeletePizzaOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePizzaOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeletePizzaTopping_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePizzaTopping" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeletePizzaTopping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePizzaToppingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeleteSauce_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSauce" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeleteSauce_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSauceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeleteSize_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSize" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeleteSize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeleteStore_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteStore" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeleteStore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteStoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeleteTopping_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTopping" />
+  </wsdl:message>
+  <wsdl:message name="IService2_DeleteTopping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteToppingResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService2">
+    <wsdl:operation name="GetAddresses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/GetAddresses" message="tns:IService2_GetAddresses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/GetAddressesResponse" message="tns:IService2_GetAddresses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCheeses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/GetCheeses" message="tns:IService2_GetCheeses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/GetCheesesResponse" message="tns:IService2_GetCheeses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCrusts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/GetCrusts" message="tns:IService2_GetCrusts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/GetCrustsResponse" message="tns:IService2_GetCrusts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/GetCustomers" message="tns:IService2_GetCustomers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/GetCustomersResponse" message="tns:IService2_GetCustomers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/GetCustomerOrder" message="tns:IService2_GetCustomerOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/GetCustomerOrderResponse" message="tns:IService2_GetCustomerOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/GetEmails" message="tns:IService2_GetEmails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/GetEmailsResponse" message="tns:IService2_GetEmails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/GetNames" message="tns:IService2_GetNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/GetNamesResponse" message="tns:IService2_GetNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/GetOrders" message="tns:IService2_GetOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/GetOrdersResponse" message="tns:IService2_GetOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/GetPhones" message="tns:IService2_GetPhones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/GetPhonesResponse" message="tns:IService2_GetPhones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPizzaCheeses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/GetPizzaCheeses" message="tns:IService2_GetPizzaCheeses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/GetPizzaCheesesResponse" message="tns:IService2_GetPizzaCheeses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPizzas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/GetPizzas" message="tns:IService2_GetPizzas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/GetPizzasResponse" message="tns:IService2_GetPizzas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPizzaOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/GetPizzaOrders" message="tns:IService2_GetPizzaOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/GetPizzaOrdersResponse" message="tns:IService2_GetPizzaOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPizzaToppings">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/GetPizzaToppings" message="tns:IService2_GetPizzaToppings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/GetPizzaToppingsResponse" message="tns:IService2_GetPizzaToppings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSaucess">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/GetSaucess" message="tns:IService2_GetSaucess_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/GetSaucessResponse" message="tns:IService2_GetSaucess_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSizes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/GetSizes" message="tns:IService2_GetSizes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/GetSizesResponse" message="tns:IService2_GetSizes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStores">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/GetStores" message="tns:IService2_GetStores_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/GetStoresResponse" message="tns:IService2_GetStores_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetToppings">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/GetToppings" message="tns:IService2_GetToppings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/GetToppingsResponse" message="tns:IService2_GetToppings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/InsertAddress" message="tns:IService2_InsertAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/InsertAddressResponse" message="tns:IService2_InsertAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCheese">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/InsertCheese" message="tns:IService2_InsertCheese_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/InsertCheeseResponse" message="tns:IService2_InsertCheese_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCrust">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/InsertCrust" message="tns:IService2_InsertCrust_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/InsertCrustResponse" message="tns:IService2_InsertCrust_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/InsertCustomer" message="tns:IService2_InsertCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/InsertCustomerResponse" message="tns:IService2_InsertCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/InsertCustomerOrder" message="tns:IService2_InsertCustomerOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/InsertCustomerOrderResponse" message="tns:IService2_InsertCustomerOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/InsertEmail" message="tns:IService2_InsertEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/InsertEmailResponse" message="tns:IService2_InsertEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/InsertName" message="tns:IService2_InsertName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/InsertNameResponse" message="tns:IService2_InsertName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/InsertOrder" message="tns:IService2_InsertOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/InsertOrderResponse" message="tns:IService2_InsertOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPhone">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/InsertPhone" message="tns:IService2_InsertPhone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/InsertPhoneResponse" message="tns:IService2_InsertPhone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPizzaCheese">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/InsertPizzaCheese" message="tns:IService2_InsertPizzaCheese_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/InsertPizzaCheeseResponse" message="tns:IService2_InsertPizzaCheese_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPizza">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/InsertPizza" message="tns:IService2_InsertPizza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/InsertPizzaResponse" message="tns:IService2_InsertPizza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPizzaOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/InsertPizzaOrder" message="tns:IService2_InsertPizzaOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/InsertPizzaOrderResponse" message="tns:IService2_InsertPizzaOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPizzaTopping">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/InsertPizzaTopping" message="tns:IService2_InsertPizzaTopping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/InsertPizzaToppingResponse" message="tns:IService2_InsertPizzaTopping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertSauce">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/InsertSauce" message="tns:IService2_InsertSauce_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/InsertSauceResponse" message="tns:IService2_InsertSauce_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertSize">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/InsertSize" message="tns:IService2_InsertSize_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/InsertSizeResponse" message="tns:IService2_InsertSize_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertStore">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/InsertStore" message="tns:IService2_InsertStore_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/InsertStoreResponse" message="tns:IService2_InsertStore_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertTopping">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/InsertTopping" message="tns:IService2_InsertTopping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/InsertToppingResponse" message="tns:IService2_InsertTopping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/UpdateAddress" message="tns:IService2_UpdateAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/UpdateAddressResponse" message="tns:IService2_UpdateAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCheese">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/UpdateCheese" message="tns:IService2_UpdateCheese_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/UpdateCheeseResponse" message="tns:IService2_UpdateCheese_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCrust">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/UpdateCrust" message="tns:IService2_UpdateCrust_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/UpdateCrustResponse" message="tns:IService2_UpdateCrust_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/UpdateCustomer" message="tns:IService2_UpdateCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/UpdateCustomerResponse" message="tns:IService2_UpdateCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomerOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/UpdateCustomerOrder" message="tns:IService2_UpdateCustomerOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/UpdateCustomerOrderResponse" message="tns:IService2_UpdateCustomerOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/UpdateEmail" message="tns:IService2_UpdateEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/UpdateEmailResponse" message="tns:IService2_UpdateEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/UpdateName" message="tns:IService2_UpdateName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/UpdateNameResponse" message="tns:IService2_UpdateName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/UpdateOrder" message="tns:IService2_UpdateOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/UpdateOrderResponse" message="tns:IService2_UpdateOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePhone">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/UpdatePhone" message="tns:IService2_UpdatePhone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/UpdatePhoneResponse" message="tns:IService2_UpdatePhone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePizzaCheese">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/UpdatePizzaCheese" message="tns:IService2_UpdatePizzaCheese_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/UpdatePizzaCheeseResponse" message="tns:IService2_UpdatePizzaCheese_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePizza">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/UpdatePizza" message="tns:IService2_UpdatePizza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/UpdatePizzaResponse" message="tns:IService2_UpdatePizza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePizzaOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/UpdatePizzaOrder" message="tns:IService2_UpdatePizzaOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/UpdatePizzaOrderResponse" message="tns:IService2_UpdatePizzaOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePizzaTopping">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/UpdatePizzaTopping" message="tns:IService2_UpdatePizzaTopping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/UpdatePizzaToppingResponse" message="tns:IService2_UpdatePizzaTopping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSauce">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/UpdateSauce" message="tns:IService2_UpdateSauce_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/UpdateSauceResponse" message="tns:IService2_UpdateSauce_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSize">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/UpdateSize" message="tns:IService2_UpdateSize_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/UpdateSizeResponse" message="tns:IService2_UpdateSize_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStore">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/UpdateStore" message="tns:IService2_UpdateStore_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/UpdateStoreResponse" message="tns:IService2_UpdateStore_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTopping">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/UpdateTopping" message="tns:IService2_UpdateTopping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/UpdateToppingResponse" message="tns:IService2_UpdateTopping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/DeleteAddress" message="tns:IService2_DeleteAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/DeleteAddressResponse" message="tns:IService2_DeleteAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCheese">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/DeleteCheese" message="tns:IService2_DeleteCheese_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/DeleteCheeseResponse" message="tns:IService2_DeleteCheese_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCrust">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/DeleteCrust" message="tns:IService2_DeleteCrust_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/DeleteCrustResponse" message="tns:IService2_DeleteCrust_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/DeleteCustomer" message="tns:IService2_DeleteCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/DeleteCustomerResponse" message="tns:IService2_DeleteCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomerOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/DeleteCustomerOrder" message="tns:IService2_DeleteCustomerOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/DeleteCustomerOrderResponse" message="tns:IService2_DeleteCustomerOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/DeleteEmail" message="tns:IService2_DeleteEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/DeleteEmailResponse" message="tns:IService2_DeleteEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/DeleteName" message="tns:IService2_DeleteName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/DeleteNameResponse" message="tns:IService2_DeleteName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/DeleteOrder" message="tns:IService2_DeleteOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/DeleteOrderResponse" message="tns:IService2_DeleteOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePhone">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/DeletePhone" message="tns:IService2_DeletePhone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/DeletePhoneResponse" message="tns:IService2_DeletePhone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePizzaCheese">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/DeletePizzaCheese" message="tns:IService2_DeletePizzaCheese_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/DeletePizzaCheeseResponse" message="tns:IService2_DeletePizzaCheese_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePizza">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/DeletePizza" message="tns:IService2_DeletePizza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/DeletePizzaResponse" message="tns:IService2_DeletePizza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePizzaOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/DeletePizzaOrder" message="tns:IService2_DeletePizzaOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/DeletePizzaOrderResponse" message="tns:IService2_DeletePizzaOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePizzaTopping">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/DeletePizzaTopping" message="tns:IService2_DeletePizzaTopping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/DeletePizzaToppingResponse" message="tns:IService2_DeletePizzaTopping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSauce">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/DeleteSauce" message="tns:IService2_DeleteSauce_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/DeleteSauceResponse" message="tns:IService2_DeleteSauce_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSize">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/DeleteSize" message="tns:IService2_DeleteSize_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/DeleteSizeResponse" message="tns:IService2_DeleteSize_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStore">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/DeleteStore" message="tns:IService2_DeleteStore_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/DeleteStoreResponse" message="tns:IService2_DeleteStore_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTopping">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService2/DeleteTopping" message="tns:IService2_DeleteTopping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService2/DeleteToppingResponse" message="tns:IService2_DeleteTopping_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService2" type="tns:IService2">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAddresses">
+      <soap:operation soapAction="http://tempuri.org/IService2/GetAddresses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCheeses">
+      <soap:operation soapAction="http://tempuri.org/IService2/GetCheeses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCrusts">
+      <soap:operation soapAction="http://tempuri.org/IService2/GetCrusts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomers">
+      <soap:operation soapAction="http://tempuri.org/IService2/GetCustomers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerOrder">
+      <soap:operation soapAction="http://tempuri.org/IService2/GetCustomerOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmails">
+      <soap:operation soapAction="http://tempuri.org/IService2/GetEmails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNames">
+      <soap:operation soapAction="http://tempuri.org/IService2/GetNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrders">
+      <soap:operation soapAction="http://tempuri.org/IService2/GetOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhones">
+      <soap:operation soapAction="http://tempuri.org/IService2/GetPhones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPizzaCheeses">
+      <soap:operation soapAction="http://tempuri.org/IService2/GetPizzaCheeses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPizzas">
+      <soap:operation soapAction="http://tempuri.org/IService2/GetPizzas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPizzaOrders">
+      <soap:operation soapAction="http://tempuri.org/IService2/GetPizzaOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPizzaToppings">
+      <soap:operation soapAction="http://tempuri.org/IService2/GetPizzaToppings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSaucess">
+      <soap:operation soapAction="http://tempuri.org/IService2/GetSaucess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSizes">
+      <soap:operation soapAction="http://tempuri.org/IService2/GetSizes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStores">
+      <soap:operation soapAction="http://tempuri.org/IService2/GetStores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetToppings">
+      <soap:operation soapAction="http://tempuri.org/IService2/GetToppings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAddress">
+      <soap:operation soapAction="http://tempuri.org/IService2/InsertAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCheese">
+      <soap:operation soapAction="http://tempuri.org/IService2/InsertCheese" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCrust">
+      <soap:operation soapAction="http://tempuri.org/IService2/InsertCrust" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomer">
+      <soap:operation soapAction="http://tempuri.org/IService2/InsertCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerOrder">
+      <soap:operation soapAction="http://tempuri.org/IService2/InsertCustomerOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertEmail">
+      <soap:operation soapAction="http://tempuri.org/IService2/InsertEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertName">
+      <soap:operation soapAction="http://tempuri.org/IService2/InsertName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertOrder">
+      <soap:operation soapAction="http://tempuri.org/IService2/InsertOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPhone">
+      <soap:operation soapAction="http://tempuri.org/IService2/InsertPhone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPizzaCheese">
+      <soap:operation soapAction="http://tempuri.org/IService2/InsertPizzaCheese" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPizza">
+      <soap:operation soapAction="http://tempuri.org/IService2/InsertPizza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPizzaOrder">
+      <soap:operation soapAction="http://tempuri.org/IService2/InsertPizzaOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPizzaTopping">
+      <soap:operation soapAction="http://tempuri.org/IService2/InsertPizzaTopping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertSauce">
+      <soap:operation soapAction="http://tempuri.org/IService2/InsertSauce" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertSize">
+      <soap:operation soapAction="http://tempuri.org/IService2/InsertSize" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertStore">
+      <soap:operation soapAction="http://tempuri.org/IService2/InsertStore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertTopping">
+      <soap:operation soapAction="http://tempuri.org/IService2/InsertTopping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAddress">
+      <soap:operation soapAction="http://tempuri.org/IService2/UpdateAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCheese">
+      <soap:operation soapAction="http://tempuri.org/IService2/UpdateCheese" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCrust">
+      <soap:operation soapAction="http://tempuri.org/IService2/UpdateCrust" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomer">
+      <soap:operation soapAction="http://tempuri.org/IService2/UpdateCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomerOrder">
+      <soap:operation soapAction="http://tempuri.org/IService2/UpdateCustomerOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmail">
+      <soap:operation soapAction="http://tempuri.org/IService2/UpdateEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateName">
+      <soap:operation soapAction="http://tempuri.org/IService2/UpdateName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrder">
+      <soap:operation soapAction="http://tempuri.org/IService2/UpdateOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePhone">
+      <soap:operation soapAction="http://tempuri.org/IService2/UpdatePhone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePizzaCheese">
+      <soap:operation soapAction="http://tempuri.org/IService2/UpdatePizzaCheese" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePizza">
+      <soap:operation soapAction="http://tempuri.org/IService2/UpdatePizza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePizzaOrder">
+      <soap:operation soapAction="http://tempuri.org/IService2/UpdatePizzaOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePizzaTopping">
+      <soap:operation soapAction="http://tempuri.org/IService2/UpdatePizzaTopping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSauce">
+      <soap:operation soapAction="http://tempuri.org/IService2/UpdateSauce" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSize">
+      <soap:operation soapAction="http://tempuri.org/IService2/UpdateSize" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStore">
+      <soap:operation soapAction="http://tempuri.org/IService2/UpdateStore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTopping">
+      <soap:operation soapAction="http://tempuri.org/IService2/UpdateTopping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAddress">
+      <soap:operation soapAction="http://tempuri.org/IService2/DeleteAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCheese">
+      <soap:operation soapAction="http://tempuri.org/IService2/DeleteCheese" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCrust">
+      <soap:operation soapAction="http://tempuri.org/IService2/DeleteCrust" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomer">
+      <soap:operation soapAction="http://tempuri.org/IService2/DeleteCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomerOrder">
+      <soap:operation soapAction="http://tempuri.org/IService2/DeleteCustomerOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmail">
+      <soap:operation soapAction="http://tempuri.org/IService2/DeleteEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteName">
+      <soap:operation soapAction="http://tempuri.org/IService2/DeleteName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOrder">
+      <soap:operation soapAction="http://tempuri.org/IService2/DeleteOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePhone">
+      <soap:operation soapAction="http://tempuri.org/IService2/DeletePhone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePizzaCheese">
+      <soap:operation soapAction="http://tempuri.org/IService2/DeletePizzaCheese" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePizza">
+      <soap:operation soapAction="http://tempuri.org/IService2/DeletePizza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePizzaOrder">
+      <soap:operation soapAction="http://tempuri.org/IService2/DeletePizzaOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePizzaTopping">
+      <soap:operation soapAction="http://tempuri.org/IService2/DeletePizzaTopping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSauce">
+      <soap:operation soapAction="http://tempuri.org/IService2/DeleteSauce" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSize">
+      <soap:operation soapAction="http://tempuri.org/IService2/DeleteSize" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStore">
+      <soap:operation soapAction="http://tempuri.org/IService2/DeleteStore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTopping">
+      <soap:operation soapAction="http://tempuri.org/IService2/DeleteTopping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service2">
+    <wsdl:port name="BasicHttpBinding_IService2" binding="tns:BasicHttpBinding_IService2">
+      <soap:address location="http://localhost/PizService/Service2.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

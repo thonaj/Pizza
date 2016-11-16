@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2f48d72d-4bfd-482d-842b-e754d4bfeb50" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/PizService/Service2.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service2.xsd" MetadataType="Schema" ID="fffcbbe5-df31-4fca-ba2f-634d6322702d" SourceId="1" SourceUrl="http://localhost/PizService/Service2.svc?xsd=xsd3" />
+    <MetadataFile FileName="Service2.wsdl" MetadataType="Wsdl" ID="3300c4e9-c472-42bd-8f3f-52b460f788b8" SourceId="1" SourceUrl="http://localhost/PizService/Service2.svc?wsdl" />
+    <MetadataFile FileName="Service2.disco" MetadataType="Disco" ID="c772f9a8-9bf9-406e-8436-d9b8989deb80" SourceId="1" SourceUrl="http://localhost/PizService/Service2.svc?disco" />
+    <MetadataFile FileName="Service21.xsd" MetadataType="Schema" ID="71d02a9e-1421-4d04-9955-ca468c01d331" SourceId="1" SourceUrl="http://localhost/PizService/Service2.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service22.xsd" MetadataType="Schema" ID="0193aa18-7a95-4974-b65a-cc11696dbb5b" SourceId="1" SourceUrl="http://localhost/PizService/Service2.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service23.xsd" MetadataType="Schema" ID="ba6d131e-73f2-43e2-88c1-bc23a659b32e" SourceId="1" SourceUrl="http://localhost/PizService/Service2.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

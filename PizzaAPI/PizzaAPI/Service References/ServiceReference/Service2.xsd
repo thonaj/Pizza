@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Piz.DataAccess" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Piz.DataAccess" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Address">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Customers" nillable="true" type="tns:ArrayOfCustomer" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Stores" nillable="true" type="tns:ArrayOfStore" />
+      <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Address" nillable="true" type="tns:Address" />
+  <xs:complexType name="ArrayOfCustomer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Customer" nillable="true" type="tns:Customer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomer" nillable="true" type="tns:ArrayOfCustomer" />
+  <xs:complexType name="Customer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Address" nillable="true" type="tns:Address" />
+      <xs:element minOccurs="0" name="AddressId" type="xs:int" />
+      <xs:element minOccurs="0" name="CustomerOrderId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CustomerOrders" nillable="true" type="tns:ArrayOfCustomerOrder" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="tns:Email" />
+      <xs:element minOccurs="0" name="EmailId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="tns:Name" />
+      <xs:element minOccurs="0" name="NameId" type="xs:int" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="tns:Phone" />
+      <xs:element minOccurs="0" name="PhoneId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Customer" nillable="true" type="tns:Customer" />
+  <xs:complexType name="ArrayOfCustomerOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomerOrder" nillable="true" type="tns:CustomerOrder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomerOrder" nillable="true" type="tns:ArrayOfCustomerOrder" />
+  <xs:complexType name="CustomerOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Customer" nillable="true" type="tns:Customer" />
+      <xs:element minOccurs="0" name="CustomerId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Order" nillable="true" type="tns:Order" />
+      <xs:element minOccurs="0" name="OrderId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomerOrder" nillable="true" type="tns:CustomerOrder" />
+  <xs:complexType name="Order">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CustomerOrders" nillable="true" type="tns:ArrayOfCustomerOrder" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PizzaOrderId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PizzaOrders" nillable="true" type="tns:ArrayOfPizzaOrder" />
+      <xs:element minOccurs="0" name="Store" nillable="true" type="tns:Store" />
+      <xs:element minOccurs="0" name="StoreId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Value" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Order" nillable="true" type="tns:Order" />
+  <xs:complexType name="ArrayOfPizzaOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PizzaOrder" nillable="true" type="tns:PizzaOrder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPizzaOrder" nillable="true" type="tns:ArrayOfPizzaOrder" />
+  <xs:complexType name="PizzaOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Order" nillable="true" type="tns:Order" />
+      <xs:element minOccurs="0" name="OrderId" type="xs:int" />
+      <xs:element minOccurs="0" name="Pizza" nillable="true" type="tns:Pizza" />
+      <xs:element minOccurs="0" name="PizzaId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PizzaOrder" nillable="true" type="tns:PizzaOrder" />
+  <xs:complexType name="Pizza">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Crust" nillable="true" type="tns:Crust" />
+      <xs:element minOccurs="0" name="CrustId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PizzaCheese" nillable="true" type="tns:ArrayOfPizzaCheese" />
+      <xs:element minOccurs="0" name="PizzaCheeseId" type="xs:int" />
+      <xs:element minOccurs="0" name="PizzaOrders" nillable="true" type="tns:ArrayOfPizzaOrder" />
+      <xs:element minOccurs="0" name="PizzaToppingId" type="xs:int" />
+      <xs:element minOccurs="0" name="PizzaToppings" nillable="true" type="tns:ArrayOfPizzaTopping" />
+      <xs:element minOccurs="0" name="Sauce" nillable="true" type="tns:Sauce" />
+      <xs:element minOccurs="0" name="SauceId" type="xs:int" />
+      <xs:element minOccurs="0" name="Size" nillable="true" type="tns:Size" />
+      <xs:element minOccurs="0" name="SizeId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Pizza" nillable="true" type="tns:Pizza" />
+  <xs:complexType name="Crust">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pizzas" nillable="true" type="tns:ArrayOfPizza" />
+      <xs:element minOccurs="0" name="Value" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Crust" nillable="true" type="tns:Crust" />
+  <xs:complexType name="ArrayOfPizza">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Pizza" nillable="true" type="tns:Pizza" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPizza" nillable="true" type="tns:ArrayOfPizza" />
+  <xs:complexType name="ArrayOfPizzaCheese">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PizzaCheese" nillable="true" type="tns:PizzaCheese" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPizzaCheese" nillable="true" type="tns:ArrayOfPizzaCheese" />
+  <xs:complexType name="PizzaCheese">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Cheese" nillable="true" type="tns:Cheese" />
+      <xs:element minOccurs="0" name="CheeseId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Pizza" nillable="true" type="tns:Pizza" />
+      <xs:element minOccurs="0" name="PizzaId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PizzaCheese" nillable="true" type="tns:PizzaCheese" />
+  <xs:complexType name="Cheese">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PizzaCheese" nillable="true" type="tns:ArrayOfPizzaCheese" />
+      <xs:element minOccurs="0" name="Value" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cheese" nillable="true" type="tns:Cheese" />
+  <xs:complexType name="ArrayOfPizzaTopping">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PizzaTopping" nillable="true" type="tns:PizzaTopping" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPizzaTopping" nillable="true" type="tns:ArrayOfPizzaTopping" />
+  <xs:complexType name="PizzaTopping">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Pizza" nillable="true" type="tns:Pizza" />
+      <xs:element minOccurs="0" name="PizzaId" type="xs:int" />
+      <xs:element minOccurs="0" name="Topping" nillable="true" type="tns:Topping" />
+      <xs:element minOccurs="0" name="ToppingId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PizzaTopping" nillable="true" type="tns:PizzaTopping" />
+  <xs:complexType name="Topping">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PizzaToppings" nillable="true" type="tns:ArrayOfPizzaTopping" />
+      <xs:element minOccurs="0" name="Value" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Topping" nillable="true" type="tns:Topping" />
+  <xs:complexType name="Sauce">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pizzas" nillable="true" type="tns:ArrayOfPizza" />
+      <xs:element minOccurs="0" name="Value" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Sauce" nillable="true" type="tns:Sauce" />
+  <xs:complexType name="Size">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pizzas" nillable="true" type="tns:ArrayOfPizza" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Size" nillable="true" type="tns:Size" />
+  <xs:complexType name="Store">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Address" nillable="true" type="tns:Address" />
+      <xs:element minOccurs="0" name="AddressId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="LocationId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Orders" nillable="true" type="tns:ArrayOfOrder" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="tns:Phone" />
+      <xs:element minOccurs="0" name="PhoneId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Store" nillable="true" type="tns:Store" />
+  <xs:complexType name="ArrayOfOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Order" nillable="true" type="tns:Order" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrder" nillable="true" type="tns:ArrayOfOrder" />
+  <xs:complexType name="Phone">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Customers" nillable="true" type="tns:ArrayOfCustomer" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Stores" nillable="true" type="tns:ArrayOfStore" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Phone" nillable="true" type="tns:Phone" />
+  <xs:complexType name="ArrayOfStore">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Store" nillable="true" type="tns:Store" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStore" nillable="true" type="tns:ArrayOfStore" />
+  <xs:complexType name="Email">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Customers" nillable="true" type="tns:ArrayOfCustomer" />
+      <xs:element minOccurs="0" name="EmailString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Email" nillable="true" type="tns:Email" />
+  <xs:complexType name="Name">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Customers" nillable="true" type="tns:ArrayOfCustomer" />
+      <xs:element minOccurs="0" name="First" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Last" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Name" nillable="true" type="tns:Name" />
+</xs:schema>
