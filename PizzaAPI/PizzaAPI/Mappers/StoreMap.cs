@@ -15,6 +15,8 @@ namespace PizzaAPI.Mappers
          a.Address = AddressMap.MapToAddressDTO(b.Address);
          a.LocationId = b.LocationId;
          a.Phone = PhoneMap.MapToPhoneDTO(b.Phone);
+         a.AddressId = a.AddressId;
+         a.PhoneId = b.PhoneId;
          if(b.Orders!=null)
          {
             foreach (var item in b.Orders)
@@ -34,8 +36,9 @@ namespace PizzaAPI.Mappers
          a.Address = AddressMap.MapToAddressDAO(b.Address);
          a.LocationId = b.LocationId;
          a.Phone = PhoneMap.MapToPhoneDAO(b.Phone);
+         a.AddressId = a.AddressId;
+         a.PhoneId = b.PhoneId;
 
-         
 
 
          return a;

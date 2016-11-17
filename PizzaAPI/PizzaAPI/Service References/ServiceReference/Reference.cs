@@ -356,6 +356,9 @@ namespace PizzaAPI.ServiceReference {
         private PizzaAPI.ServiceReference.AddressDAO AddressField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int AddressIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string LocationIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -363,6 +366,9 @@ namespace PizzaAPI.ServiceReference {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private PizzaAPI.ServiceReference.PhoneDAO PhoneField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PhoneIdField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -383,6 +389,19 @@ namespace PizzaAPI.ServiceReference {
                 if ((object.ReferenceEquals(this.AddressField, value) != true)) {
                     this.AddressField = value;
                     this.RaisePropertyChanged("Address");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int AddressId {
+            get {
+                return this.AddressIdField;
+            }
+            set {
+                if ((this.AddressIdField.Equals(value) != true)) {
+                    this.AddressIdField = value;
+                    this.RaisePropertyChanged("AddressId");
                 }
             }
         }
@@ -426,6 +445,19 @@ namespace PizzaAPI.ServiceReference {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PhoneId {
+            get {
+                return this.PhoneIdField;
+            }
+            set {
+                if ((this.PhoneIdField.Equals(value) != true)) {
+                    this.PhoneIdField = value;
+                    this.RaisePropertyChanged("PhoneId");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -446,6 +478,9 @@ namespace PizzaAPI.ServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PizzaAPI.ServiceReference.CustomerDAO[] CustomersField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string EmailStringField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -455,6 +490,19 @@ namespace PizzaAPI.ServiceReference {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public PizzaAPI.ServiceReference.CustomerDAO[] Customers {
+            get {
+                return this.CustomersField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomersField, value) != true)) {
+                    this.CustomersField = value;
+                    this.RaisePropertyChanged("Customers");
+                }
             }
         }
         
@@ -491,6 +539,9 @@ namespace PizzaAPI.ServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PizzaAPI.ServiceReference.CustomerDAO[] CustomersField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string FirstField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -503,6 +554,19 @@ namespace PizzaAPI.ServiceReference {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public PizzaAPI.ServiceReference.CustomerDAO[] Customers {
+            get {
+                return this.CustomersField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomersField, value) != true)) {
+                    this.CustomersField = value;
+                    this.RaisePropertyChanged("Customers");
+                }
             }
         }
         
@@ -1225,6 +1289,9 @@ namespace PizzaAPI.ServiceReference {
         private int CheeseIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PizzaAPI.ServiceReference.PizzaDAO PizzaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int PizzaIdField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -1264,6 +1331,19 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public PizzaAPI.ServiceReference.PizzaDAO Pizza {
+            get {
+                return this.PizzaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PizzaField, value) != true)) {
+                    this.PizzaField = value;
+                    this.RaisePropertyChanged("Pizza");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int PizzaId {
             get {
                 return this.PizzaIdField;
@@ -1296,6 +1376,9 @@ namespace PizzaAPI.ServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PizzaAPI.ServiceReference.PizzaDAO PizzaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int PizzaIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -1311,6 +1394,19 @@ namespace PizzaAPI.ServiceReference {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public PizzaAPI.ServiceReference.PizzaDAO Pizza {
+            get {
+                return this.PizzaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PizzaField, value) != true)) {
+                    this.PizzaField = value;
+                    this.RaisePropertyChanged("Pizza");
+                }
             }
         }
         

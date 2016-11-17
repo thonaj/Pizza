@@ -11,5 +11,7 @@ namespace PizzaAPI.Models
       public virtual AddressDTO Address { get; set; }
       public virtual ICollection<OrderDTO> Orders { get; set; }
       public virtual PhoneDTO Phone { get; set; }
+      public int AddressId { get; set; }
+      public int PhoneId { get; set; }
    }
 }

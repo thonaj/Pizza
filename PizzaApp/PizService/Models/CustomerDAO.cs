@@ -14,7 +14,8 @@ namespace PizService.Models
    //[DataContract]
    public class CustomerDAO
    {
-     
+      [DataMember]
+      public int Id { get; set; }
       [DataMember]
       public int NameId { get; set; }     
       [DataMember]

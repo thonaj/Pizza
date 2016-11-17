@@ -21,6 +21,8 @@ namespace PizService.Models
       [DataMember]
       public int Id { get; set; }
       [DataMember]
+      public int Id { get; set; }
+      [DataMember]
       public string Street { get; set; }
       [DataMember]
       public string City { get; set; }

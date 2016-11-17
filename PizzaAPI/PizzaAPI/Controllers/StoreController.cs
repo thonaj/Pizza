@@ -28,6 +28,9 @@ namespace PizzaAPI.Controllers
      
       public void Post([FromBody]StoreDTO item)
       {
+         //psc.insertPhone(item.Phone);
+         //var newphone= psc.getPhones().Where(p => p.Number == item.Phone.Number).FirstOrDefault();
+         //item.PhoneId = newphone.
          psc.insertStore(item);
       }
 

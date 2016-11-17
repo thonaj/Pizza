@@ -11,6 +11,8 @@ namespace PizService.Models
    public class ToppingDAO
    {
       [DataMember]
+      public int Id { get; set; }
+      [DataMember]
       public string Name { get; set; }
       [DataMember]
       public decimal Value { get; set; }

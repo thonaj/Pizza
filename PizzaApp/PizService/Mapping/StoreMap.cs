@@ -15,6 +15,13 @@ namespace PizService.Mapping
          a.Address = AddressMap.MapToAddress(b.Address);
          a.Phone = PhoneMap.MapToPhone(b.Phone);
          a.LocationId = b.LocationId;
+         a.AddressId = b.AddressId;
+         a.PhoneId = b.PhoneId;
+         //foreach (var item in b.Orders)
+         //{
+         //   a.Orders.Add(Mapping.OrderMap.MapToOrder(item));
+         //}
+         
          return a;
       }
       public static StoreDAO MapToStoreDAO(Store b)
@@ -23,6 +30,12 @@ namespace PizService.Mapping
          a.Address = AddressMap.MapToAddressDAO(b.Address);
          a.Phone = PhoneMap.MapToPhoneDAO(b.Phone);
          a.LocationId = b.LocationId;
+         a.AddressId = b.AddressId;
+         a.PhoneId = b.PhoneId;
+         foreach (var item in b.Orders)
+         {
+            a.Orders.Add(Mapping.OrderMap.MapToOrderDAO(item));
+         }
          return a;
       }
    }

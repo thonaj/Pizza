@@ -13,5 +13,7 @@ namespace PizService.Models
    {
       [DataMember]
       public string Number { get; set; }
+      [DataMember]
+      public int Id { get; set; }
    }
 }
