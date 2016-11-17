@@ -10,7 +10,7 @@ namespace PizzaAPI
    public class PizzaServiceClient
    {
       private Service2Client sc = new Service2Client();
-
+      #region gets
       public List<CrustDTO> getCrusts()
       {
          var list = new List<CrustDTO>();
@@ -97,5 +97,141 @@ namespace PizzaAPI
          }
          return list;
       }
+      public List<CustomerDTO> getCustomers()
+      {
+         var list = new List<CustomerDTO>();
+         foreach (var item in sc.GetCustomers())
+         {
+            list.Add(Mappers.CustomerMap.MapToCustomerDTO(item));
+         }
+         return list;
+      }
+
+      public List<OrderDTO> getOrders()
+      {
+         var list = new List<OrderDTO>();
+         foreach (var item in sc.GetOrders())
+         {
+            list.Add(Mappers.OrderMap.MapToOrderDTO(item));
+         }
+         return list;
+      }
+
+      public List<PizzaCheeseDTO> getPizzaCheese()
+      {
+         var list = new List<PizzaCheeseDTO>();
+         foreach (var item in sc.GetPizzaCheeses())
+         {
+            list.Add(Mappers.PizzaCheeseMap.MapToPizzaCheeseDTO(item));
+         }
+         return list;
+      }
+
+      public List<PizzaDTO> getPizzas()
+      {
+         var list = new List<PizzaDTO>();
+         foreach (var item in sc.GetPizzas())
+         {
+            list.Add(Mappers.PizzaMap.MapToPizzaDTO(item));
+         }
+         return list;
+      }
+      public List<PizzaToppingDTO> getPizzaToppings()
+      {
+         var list = new List<PizzaToppingDTO>();
+         foreach (var item in sc.GetPizzaToppings())
+         {
+            list.Add(Mappers.PizzaToppingMap.MapToPizzaToppingDTO(item));
+         }
+         return list;
+      }
+
+      public List<StoreDTO> getStore()
+      {
+         var list = new List<StoreDTO>();
+         foreach (var item in sc.GetStores())
+         {
+            list.Add(Mappers.StoreMap.MapToStoreDTO(item));
+         }
+         return list;
+      }
+      #endregion
+
+      #region post
+      public bool insertTopping(ToppingDTO t)
+      {
+         return sc.InsertTopping(Mappers.ToppingMap.MapToToppingDAO(t));
+      }
+
+      public bool insertSize(SizeDTO t)
+      {
+         return sc.InsertSize(Mappers.SizeMap.MapToSizeDAO(t));
+      }
+
+      public bool insertSauce(SauceDTO t)
+      {
+         return sc.InsertSauce(Mappers.SauceMap.MapToSauceDAO(t));
+      }
+
+      public bool insertPhone(PhoneDTO t)
+      {
+         return sc.InsertPhone(Mappers.PhoneMap.MapToPhoneDAO(t));
+      }
+
+      public bool insertName(NameDTO t)
+      {
+         return sc.InsertName(Mappers.NameMap.MapToNameDAO(t));
+      }
+
+      public bool insertEmail(EmailDTO t)
+      {
+         return sc.InsertEmail(Mappers.EmailMap.MapToEmailDAO(t));
+      }
+
+      public bool insertCheese(CheeseDTO t)
+      {
+         return sc.InsertCheese(Mappers.CheeseMap.MapToCheeseDAO(t));
+      }
+
+      public bool insertCrust(CrustDTO t)
+      {
+         return sc.InsertCrust(Mappers.CrustMap.MapToCrustDAO(t));
+      }
+
+      public bool insertAddress(AddressDTO t)
+      {
+         return sc.InsertAddress(Mappers.AddressMap.MapToAddressDAO(t));
+      }
+
+      public bool insertStore(StoreDTO t)
+      {
+         //sc.InsertPhone(Mappers.PhoneMap.MapToPhoneDAO(t.Phone));
+         
+         return sc.InsertStore(Mappers.StoreMap.MapToStoreDAO(t));
+      }
+
+
+
+
+
+
+
+      #endregion
+
+      #region puts
+
+      public bool updateTopping(ToppingDTO t)
+      {
+         return sc.UpdateTopping(Mappers.ToppingMap.MapToToppingDAO(t));
+      }
+
+      #endregion
+
+      #region deletes
+      public bool deleteTopping(ToppingDTO t)
+      {
+         return sc.DeleteTopping(Mappers.ToppingMap.MapToToppingDAO(t));
+      }
+      #endregion
    }
 }

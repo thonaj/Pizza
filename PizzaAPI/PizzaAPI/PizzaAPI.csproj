@@ -210,12 +210,18 @@
     <Compile Include="Controllers\AddressController.cs" />
     <Compile Include="Controllers\CheeseController.cs" />
     <Compile Include="Controllers\CrustController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NameController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\PhoneController.cs" />
+    <Compile Include="Controllers\PizzaCheeseController.cs" />
+    <Compile Include="Controllers\PizzaController.cs" />
+    <Compile Include="Controllers\PizzaToppingController.cs" />
     <Compile Include="Controllers\SauceController.cs" />
     <Compile Include="Controllers\SizeController.cs" />
+    <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Controllers\ToppingController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -224,11 +230,17 @@
     <Compile Include="Mappers\AddressMap.cs" />
     <Compile Include="Mappers\CheeseMap.cs" />
     <Compile Include="Mappers\CrustMap.cs" />
+    <Compile Include="Mappers\CustomerMap.cs" />
     <Compile Include="Mappers\EmailMap.cs" />
     <Compile Include="Mappers\NameMap.cs" />
+    <Compile Include="Mappers\OrderMap.cs" />
     <Compile Include="Mappers\PhoneMap.cs" />
+    <Compile Include="Mappers\PizzaCheeseMap.cs" />
+    <Compile Include="Mappers\PizzaMap.cs" />
+    <Compile Include="Mappers\PizzaToppingMap.cs" />
     <Compile Include="Mappers\SauceMap.cs" />
     <Compile Include="Mappers\SizeMap.cs" />
+    <Compile Include="Mappers\StoreMap.cs" />
     <Compile Include="Mappers\ToppingMap.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -236,7 +248,6 @@
     <Compile Include="Models\CheeseDTO.cs" />
     <Compile Include="Models\CrustDTO.cs" />
     <Compile Include="Models\CustomerDTO.cs" />
-    <Compile Include="Models\CustomerOrderDTO.cs" />
     <Compile Include="Models\EmailDTO.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\NameDTO.cs" />
@@ -244,7 +255,6 @@
     <Compile Include="Models\PhoneDTO.cs" />
     <Compile Include="Models\PizzaCheeseDTO.cs" />
     <Compile Include="Models\PizzaDTO.cs" />
-    <Compile Include="Models\PizzaOrderDTO.cs" />
     <Compile Include="Models\PizzaToppingDTO.cs" />
     <Compile Include="Models\SauceDTO.cs" />
     <Compile Include="Models\SizeDTO.cs" />
@@ -312,9 +322,6 @@
     <Content Include="Service References\ServiceReference\PizzaAPI.ServiceReference.CustomerDAO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\ServiceReference\PizzaAPI.ServiceReference.CustomerOrderDAO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Service References\ServiceReference\PizzaAPI.ServiceReference.EmailDAO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -331,9 +338,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Service References\ServiceReference\PizzaAPI.ServiceReference.PizzaDAO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\ServiceReference\PizzaAPI.ServiceReference.PizzaOrderDAO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Service References\ServiceReference\PizzaAPI.ServiceReference.PizzaToppingDAO.datasource">
@@ -374,9 +378,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <None Include="Service References\ServiceReference\Service2.wsdl" />
-    <None Include="Service References\ServiceReference\Service2.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\ServiceReference\Service21.xsd">
       <SubType>Designer</SubType>
     </None>

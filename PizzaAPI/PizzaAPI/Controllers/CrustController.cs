@@ -29,13 +29,14 @@ namespace PizzaAPI.Controllers
          return Request.CreateResponse<CrustDTO>(HttpStatusCode.OK, itm);
         }
 
-        // POST: api/Crust
-        public void Post([FromBody]string value)
-        {
-        }
+      // POST: api/Crust
+      public void Post([FromBody]CrustDTO item)
+      {
+         psc.insertCrust(item);
+      }
 
-        // PUT: api/Crust/5
-        public void Put(int id, [FromBody]string value)
+      // PUT: api/Crust/5
+      public void Put(int id, [FromBody]string value)
         {
         }
 

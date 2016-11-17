@@ -26,8 +26,9 @@ namespace PizzaAPI.Controllers
       }
 
       // POST: api/Address
-      public void Post([FromBody]string value)
+      public void Post([FromBody]AddressDTO item)
       {
+         psc.insertAddress(item);
       }
 
       // PUT: api/Address/5

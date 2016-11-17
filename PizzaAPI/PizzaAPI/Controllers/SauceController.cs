@@ -26,18 +26,19 @@ namespace PizzaAPI.Controllers
       }
 
       // POST: api/Sauce
-      public void Post([FromBody]string value)
-        {
-        }
+      public void Post([FromBody]SauceDTO item)
+      {
+         psc.insertSauce(item);
+      }
 
-        // PUT: api/Sauce/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
+      // PUT: api/Sauce/5
+      public void Put(int id, [FromBody]string value)
+      {
+      }
 
-        // DELETE: api/Sauce/5
-        public void Delete(int id)
-        {
-        }
+      // DELETE: api/Sauce/5
+      public void Delete(int id)
+      {
+      }
     }
 }

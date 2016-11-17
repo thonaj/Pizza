@@ -7,10 +7,14 @@ namespace PizzaAPI.Models
 {
    public class PizzaDTO
    {
+      public string Name { get; set; }
+      public int CrustId { get; set; }
+      public int SauceId { get; set; }
+      public int SizeId { get; set; }
+      public Nullable<int> OrderId { get; set; }
       public virtual CrustDTO Crust { get; set; }
+      public virtual OrderDTO Order { get; set; }
       public virtual SauceDTO Sauce { get; set; }
       public virtual SizeDTO Size { get; set; }
-      public virtual ICollection<PizzaCheeseDTO> PizzaCheese { get; set; }
-      public virtual ICollection<PizzaToppingDTO> PizzaToppings { get; set; }
    }
 }

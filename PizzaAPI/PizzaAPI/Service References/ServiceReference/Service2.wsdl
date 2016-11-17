@@ -5,7 +5,6 @@
       <xsd:import schemaLocation="http://localhost/PizService/Service2.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost/PizService/Service2.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost/PizService/Service2.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/PizService.Models" />
-      <xsd:import schemaLocation="http://localhost/PizService/Service2.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Piz.DataAccess" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IService2_GetAddresses_InputMessage">
@@ -31,12 +30,6 @@
   </wsdl:message>
   <wsdl:message name="IService2_GetCustomers_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetCustomersResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService2_GetCustomerOrder_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetCustomerOrder" />
-  </wsdl:message>
-  <wsdl:message name="IService2_GetCustomerOrder_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetCustomerOrderResponse" />
   </wsdl:message>
   <wsdl:message name="IService2_GetEmails_InputMessage">
     <wsdl:part name="parameters" element="tns:GetEmails" />
@@ -73,12 +66,6 @@
   </wsdl:message>
   <wsdl:message name="IService2_GetPizzas_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetPizzasResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService2_GetPizzaOrders_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetPizzaOrders" />
-  </wsdl:message>
-  <wsdl:message name="IService2_GetPizzaOrders_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetPizzaOrdersResponse" />
   </wsdl:message>
   <wsdl:message name="IService2_GetPizzaToppings_InputMessage">
     <wsdl:part name="parameters" element="tns:GetPizzaToppings" />
@@ -134,12 +121,6 @@
   <wsdl:message name="IService2_InsertCustomer_OutputMessage">
     <wsdl:part name="parameters" element="tns:InsertCustomerResponse" />
   </wsdl:message>
-  <wsdl:message name="IService2_InsertCustomerOrder_InputMessage">
-    <wsdl:part name="parameters" element="tns:InsertCustomerOrder" />
-  </wsdl:message>
-  <wsdl:message name="IService2_InsertCustomerOrder_OutputMessage">
-    <wsdl:part name="parameters" element="tns:InsertCustomerOrderResponse" />
-  </wsdl:message>
   <wsdl:message name="IService2_InsertEmail_InputMessage">
     <wsdl:part name="parameters" element="tns:InsertEmail" />
   </wsdl:message>
@@ -175,12 +156,6 @@
   </wsdl:message>
   <wsdl:message name="IService2_InsertPizza_OutputMessage">
     <wsdl:part name="parameters" element="tns:InsertPizzaResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService2_InsertPizzaOrder_InputMessage">
-    <wsdl:part name="parameters" element="tns:InsertPizzaOrder" />
-  </wsdl:message>
-  <wsdl:message name="IService2_InsertPizzaOrder_OutputMessage">
-    <wsdl:part name="parameters" element="tns:InsertPizzaOrderResponse" />
   </wsdl:message>
   <wsdl:message name="IService2_InsertPizzaTopping_InputMessage">
     <wsdl:part name="parameters" element="tns:InsertPizzaTopping" />
@@ -236,12 +211,6 @@
   <wsdl:message name="IService2_UpdateCustomer_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdateCustomerResponse" />
   </wsdl:message>
-  <wsdl:message name="IService2_UpdateCustomerOrder_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateCustomerOrder" />
-  </wsdl:message>
-  <wsdl:message name="IService2_UpdateCustomerOrder_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateCustomerOrderResponse" />
-  </wsdl:message>
   <wsdl:message name="IService2_UpdateEmail_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateEmail" />
   </wsdl:message>
@@ -277,12 +246,6 @@
   </wsdl:message>
   <wsdl:message name="IService2_UpdatePizza_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdatePizzaResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService2_UpdatePizzaOrder_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpdatePizzaOrder" />
-  </wsdl:message>
-  <wsdl:message name="IService2_UpdatePizzaOrder_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdatePizzaOrderResponse" />
   </wsdl:message>
   <wsdl:message name="IService2_UpdatePizzaTopping_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdatePizzaTopping" />
@@ -338,12 +301,6 @@
   <wsdl:message name="IService2_DeleteCustomer_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeleteCustomerResponse" />
   </wsdl:message>
-  <wsdl:message name="IService2_DeleteCustomerOrder_InputMessage">
-    <wsdl:part name="parameters" element="tns:DeleteCustomerOrder" />
-  </wsdl:message>
-  <wsdl:message name="IService2_DeleteCustomerOrder_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DeleteCustomerOrderResponse" />
-  </wsdl:message>
   <wsdl:message name="IService2_DeleteEmail_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteEmail" />
   </wsdl:message>
@@ -379,12 +336,6 @@
   </wsdl:message>
   <wsdl:message name="IService2_DeletePizza_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeletePizzaResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService2_DeletePizzaOrder_InputMessage">
-    <wsdl:part name="parameters" element="tns:DeletePizzaOrder" />
-  </wsdl:message>
-  <wsdl:message name="IService2_DeletePizzaOrder_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DeletePizzaOrderResponse" />
   </wsdl:message>
   <wsdl:message name="IService2_DeletePizzaTopping_InputMessage">
     <wsdl:part name="parameters" element="tns:DeletePizzaTopping" />
@@ -433,10 +384,6 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService2/GetCustomers" message="tns:IService2_GetCustomers_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService2/GetCustomersResponse" message="tns:IService2_GetCustomers_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetCustomerOrder">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService2/GetCustomerOrder" message="tns:IService2_GetCustomerOrder_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService2/GetCustomerOrderResponse" message="tns:IService2_GetCustomerOrder_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="GetEmails">
       <wsdl:input wsaw:Action="http://tempuri.org/IService2/GetEmails" message="tns:IService2_GetEmails_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService2/GetEmailsResponse" message="tns:IService2_GetEmails_OutputMessage" />
@@ -460,10 +407,6 @@
     <wsdl:operation name="GetPizzas">
       <wsdl:input wsaw:Action="http://tempuri.org/IService2/GetPizzas" message="tns:IService2_GetPizzas_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService2/GetPizzasResponse" message="tns:IService2_GetPizzas_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetPizzaOrders">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService2/GetPizzaOrders" message="tns:IService2_GetPizzaOrders_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService2/GetPizzaOrdersResponse" message="tns:IService2_GetPizzaOrders_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetPizzaToppings">
       <wsdl:input wsaw:Action="http://tempuri.org/IService2/GetPizzaToppings" message="tns:IService2_GetPizzaToppings_InputMessage" />
@@ -501,10 +444,6 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService2/InsertCustomer" message="tns:IService2_InsertCustomer_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService2/InsertCustomerResponse" message="tns:IService2_InsertCustomer_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="InsertCustomerOrder">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService2/InsertCustomerOrder" message="tns:IService2_InsertCustomerOrder_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService2/InsertCustomerOrderResponse" message="tns:IService2_InsertCustomerOrder_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="InsertEmail">
       <wsdl:input wsaw:Action="http://tempuri.org/IService2/InsertEmail" message="tns:IService2_InsertEmail_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService2/InsertEmailResponse" message="tns:IService2_InsertEmail_OutputMessage" />
@@ -528,10 +467,6 @@
     <wsdl:operation name="InsertPizza">
       <wsdl:input wsaw:Action="http://tempuri.org/IService2/InsertPizza" message="tns:IService2_InsertPizza_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService2/InsertPizzaResponse" message="tns:IService2_InsertPizza_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="InsertPizzaOrder">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService2/InsertPizzaOrder" message="tns:IService2_InsertPizzaOrder_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService2/InsertPizzaOrderResponse" message="tns:IService2_InsertPizzaOrder_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="InsertPizzaTopping">
       <wsdl:input wsaw:Action="http://tempuri.org/IService2/InsertPizzaTopping" message="tns:IService2_InsertPizzaTopping_InputMessage" />
@@ -569,10 +504,6 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService2/UpdateCustomer" message="tns:IService2_UpdateCustomer_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService2/UpdateCustomerResponse" message="tns:IService2_UpdateCustomer_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="UpdateCustomerOrder">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService2/UpdateCustomerOrder" message="tns:IService2_UpdateCustomerOrder_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService2/UpdateCustomerOrderResponse" message="tns:IService2_UpdateCustomerOrder_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="UpdateEmail">
       <wsdl:input wsaw:Action="http://tempuri.org/IService2/UpdateEmail" message="tns:IService2_UpdateEmail_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService2/UpdateEmailResponse" message="tns:IService2_UpdateEmail_OutputMessage" />
@@ -596,10 +527,6 @@
     <wsdl:operation name="UpdatePizza">
       <wsdl:input wsaw:Action="http://tempuri.org/IService2/UpdatePizza" message="tns:IService2_UpdatePizza_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService2/UpdatePizzaResponse" message="tns:IService2_UpdatePizza_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="UpdatePizzaOrder">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService2/UpdatePizzaOrder" message="tns:IService2_UpdatePizzaOrder_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService2/UpdatePizzaOrderResponse" message="tns:IService2_UpdatePizzaOrder_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="UpdatePizzaTopping">
       <wsdl:input wsaw:Action="http://tempuri.org/IService2/UpdatePizzaTopping" message="tns:IService2_UpdatePizzaTopping_InputMessage" />
@@ -637,10 +564,6 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService2/DeleteCustomer" message="tns:IService2_DeleteCustomer_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService2/DeleteCustomerResponse" message="tns:IService2_DeleteCustomer_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="DeleteCustomerOrder">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService2/DeleteCustomerOrder" message="tns:IService2_DeleteCustomerOrder_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService2/DeleteCustomerOrderResponse" message="tns:IService2_DeleteCustomerOrder_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="DeleteEmail">
       <wsdl:input wsaw:Action="http://tempuri.org/IService2/DeleteEmail" message="tns:IService2_DeleteEmail_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService2/DeleteEmailResponse" message="tns:IService2_DeleteEmail_OutputMessage" />
@@ -664,10 +587,6 @@
     <wsdl:operation name="DeletePizza">
       <wsdl:input wsaw:Action="http://tempuri.org/IService2/DeletePizza" message="tns:IService2_DeletePizza_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService2/DeletePizzaResponse" message="tns:IService2_DeletePizza_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="DeletePizzaOrder">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService2/DeletePizzaOrder" message="tns:IService2_DeletePizzaOrder_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService2/DeletePizzaOrderResponse" message="tns:IService2_DeletePizzaOrder_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="DeletePizzaTopping">
       <wsdl:input wsaw:Action="http://tempuri.org/IService2/DeletePizzaTopping" message="tns:IService2_DeletePizzaTopping_InputMessage" />
@@ -728,15 +647,6 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetCustomerOrder">
-      <soap:operation soapAction="http://tempuri.org/IService2/GetCustomerOrder" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="GetEmails">
       <soap:operation soapAction="http://tempuri.org/IService2/GetEmails" style="document" />
       <wsdl:input>
@@ -784,15 +694,6 @@
     </wsdl:operation>
     <wsdl:operation name="GetPizzas">
       <soap:operation soapAction="http://tempuri.org/IService2/GetPizzas" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetPizzaOrders">
-      <soap:operation soapAction="http://tempuri.org/IService2/GetPizzaOrders" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -881,15 +782,6 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="InsertCustomerOrder">
-      <soap:operation soapAction="http://tempuri.org/IService2/InsertCustomerOrder" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="InsertEmail">
       <soap:operation soapAction="http://tempuri.org/IService2/InsertEmail" style="document" />
       <wsdl:input>
@@ -937,15 +829,6 @@
     </wsdl:operation>
     <wsdl:operation name="InsertPizza">
       <soap:operation soapAction="http://tempuri.org/IService2/InsertPizza" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="InsertPizzaOrder">
-      <soap:operation soapAction="http://tempuri.org/IService2/InsertPizzaOrder" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1034,15 +917,6 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="UpdateCustomerOrder">
-      <soap:operation soapAction="http://tempuri.org/IService2/UpdateCustomerOrder" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="UpdateEmail">
       <soap:operation soapAction="http://tempuri.org/IService2/UpdateEmail" style="document" />
       <wsdl:input>
@@ -1090,15 +964,6 @@
     </wsdl:operation>
     <wsdl:operation name="UpdatePizza">
       <soap:operation soapAction="http://tempuri.org/IService2/UpdatePizza" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="UpdatePizzaOrder">
-      <soap:operation soapAction="http://tempuri.org/IService2/UpdatePizzaOrder" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1187,15 +1052,6 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="DeleteCustomerOrder">
-      <soap:operation soapAction="http://tempuri.org/IService2/DeleteCustomerOrder" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="DeleteEmail">
       <soap:operation soapAction="http://tempuri.org/IService2/DeleteEmail" style="document" />
       <wsdl:input>
@@ -1243,15 +1099,6 @@
     </wsdl:operation>
     <wsdl:operation name="DeletePizza">
       <soap:operation soapAction="http://tempuri.org/IService2/DeletePizza" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="DeletePizzaOrder">
-      <soap:operation soapAction="http://tempuri.org/IService2/DeletePizzaOrder" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

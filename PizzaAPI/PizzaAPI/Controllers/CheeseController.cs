@@ -24,13 +24,14 @@ namespace PizzaAPI.Controllers
          return Request.CreateResponse<CheeseDTO>(HttpStatusCode.OK, itm);
       }
 
-        // POST: api/Cheese
-        public void Post([FromBody]string value)
-        {
-        }
+      // POST: api/Cheese
+      public void Post([FromBody]CheeseDTO item)
+      {
+         psc.insertCheese(item);
+      }
 
-        // PUT: api/Cheese/5
-        public void Put(int id, [FromBody]string value)
+      // PUT: api/Cheese/5
+      public void Put(int id, [FromBody]string value)
         {
         }
 

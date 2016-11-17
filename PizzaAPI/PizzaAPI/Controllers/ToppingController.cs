@@ -26,18 +26,25 @@ namespace PizzaAPI.Controllers
       }
 
       // POST: api/Topping
-      public void Post([FromBody]string value)
-        {
-        }
+      public void Post([FromBody]ToppingDTO topping)
+      {
+         psc.insertTopping(topping);
+      }
 
-        // PUT: api/Topping/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
+      // PUT: api/Topping/5
+      public void Put(string id, [FromBody]ToppingDTO value)
+      {
+         var old = psc.getToppings().Where(t => t.Name == id).FirstOrDefault();
+         old.Name = value.Name;
+         old.Value = value.Value;
+         psc.updateTopping(old);
+      }
 
-        // DELETE: api/Topping/5
-        public void Delete(int id)
-        {
-        }
+      // DELETE: api/Topping/5
+      public void Delete(string id)
+      {
+         var topping = psc.getToppings().Where(t => t.Name == id).FirstOrDefault();
+         psc.deleteTopping(topping);
+      }
     }
 }

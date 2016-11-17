@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/PizService.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PizService.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost/PizService/Service2.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Piz.DataAccess" />
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/PizService.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PizService.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/PizService/Service2.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
   <xs:complexType name="ArrayOfAddressDAO">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="AddressDAO" nillable="true" type="tns:AddressDAO" />
@@ -9,39 +9,17 @@
   <xs:element name="ArrayOfAddressDAO" nillable="true" type="tns:ArrayOfAddressDAO" />
   <xs:complexType name="AddressDAO">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
       <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomersDAO" nillable="true" type="tns:ArrayOfCustomerDAO" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoresDAO" nillable="true" type="tns:ArrayOfStoreDAO" />
       <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="AddressDAO" nillable="true" type="tns:AddressDAO" />
-  <xs:complexType name="ArrayOfCheeseDAO">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="CheeseDAO" nillable="true" type="tns:CheeseDAO" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfCheeseDAO" nillable="true" type="tns:ArrayOfCheeseDAO" />
-  <xs:complexType name="CheeseDAO">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Value" type="xs:decimal" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="CheeseDAO" nillable="true" type="tns:CheeseDAO" />
-  <xs:complexType name="ArrayOfCrustDAO">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="CrustDAO" nillable="true" type="tns:CrustDAO" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfCrustDAO" nillable="true" type="tns:ArrayOfCrustDAO" />
-  <xs:complexType name="CrustDAO">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Value" type="xs:decimal" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="CrustDAO" nillable="true" type="tns:CrustDAO" />
   <xs:complexType name="ArrayOfCustomerDAO">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomerDAO" nillable="true" type="tns:CustomerDAO" />
@@ -50,50 +28,35 @@
   <xs:element name="ArrayOfCustomerDAO" nillable="true" type="tns:ArrayOfCustomerDAO" />
   <xs:complexType name="CustomerDAO">
     <xs:sequence>
-      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Piz.DataAccess" minOccurs="0" name="Address" nillable="true" type="q1:Address" />
-      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Piz.DataAccess" minOccurs="0" name="CustomerOrders" nillable="true" type="q2:ArrayOfCustomerOrder" />
-      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Piz.DataAccess" minOccurs="0" name="Email" nillable="true" type="q3:Email" />
-      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Piz.DataAccess" minOccurs="0" name="Name" nillable="true" type="q4:Name" />
-      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Piz.DataAccess" minOccurs="0" name="Phone" nillable="true" type="q5:Phone" />
+      <xs:element minOccurs="0" name="Address" nillable="true" type="tns:AddressDAO" />
+      <xs:element minOccurs="0" name="AddressId" type="xs:int" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="tns:EmailDAO" />
+      <xs:element minOccurs="0" name="EmailId" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="tns:NameDAO" />
+      <xs:element minOccurs="0" name="NameId" type="xs:int" />
+      <xs:element minOccurs="0" name="Orders" nillable="true" type="tns:ArrayOfOrderDAO" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="tns:PhoneDAO" />
+      <xs:element minOccurs="0" name="PhoneId" type="xs:int" />
     </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
   </xs:complexType>
   <xs:element name="CustomerDAO" nillable="true" type="tns:CustomerDAO" />
-  <xs:complexType name="ArrayOfCustomerOrderDAO">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomerOrderDAO" nillable="true" type="tns:CustomerOrderDAO" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfCustomerOrderDAO" nillable="true" type="tns:ArrayOfCustomerOrderDAO" />
-  <xs:complexType name="CustomerOrderDAO">
-    <xs:sequence>
-      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Piz.DataAccess" minOccurs="0" name="Customer" nillable="true" type="q6:Customer" />
-      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Piz.DataAccess" minOccurs="0" name="Order" nillable="true" type="q7:Order" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="CustomerOrderDAO" nillable="true" type="tns:CustomerOrderDAO" />
-  <xs:complexType name="ArrayOfEmailDAO">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmailDAO" nillable="true" type="tns:EmailDAO" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfEmailDAO" nillable="true" type="tns:ArrayOfEmailDAO" />
   <xs:complexType name="EmailDAO">
     <xs:sequence>
       <xs:element minOccurs="0" name="EmailString" nillable="true" type="xs:string" />
     </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
   </xs:complexType>
   <xs:element name="EmailDAO" nillable="true" type="tns:EmailDAO" />
-  <xs:complexType name="ArrayOfNameDAO">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="NameDAO" nillable="true" type="tns:NameDAO" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfNameDAO" nillable="true" type="tns:ArrayOfNameDAO" />
   <xs:complexType name="NameDAO">
     <xs:sequence>
       <xs:element minOccurs="0" name="First" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Last" nillable="true" type="xs:string" />
     </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
   </xs:complexType>
   <xs:element name="NameDAO" nillable="true" type="tns:NameDAO" />
   <xs:complexType name="ArrayOfOrderDAO">
@@ -104,38 +67,16 @@
   <xs:element name="ArrayOfOrderDAO" nillable="true" type="tns:ArrayOfOrderDAO" />
   <xs:complexType name="OrderDAO">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Customer" nillable="true" type="tns:CustomerDAO" />
+      <xs:element minOccurs="0" name="CustomerId" type="xs:int" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
-      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Piz.DataAccess" minOccurs="0" name="PizzaOrders" nillable="true" type="q8:ArrayOfPizzaOrder" />
-      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Piz.DataAccess" minOccurs="0" name="Store" nillable="true" type="q9:Store" />
+      <xs:element minOccurs="0" name="Pizzas" nillable="true" type="tns:ArrayOfPizzaDAO" />
+      <xs:element minOccurs="0" name="Store" nillable="true" type="tns:StoreDAO" />
+      <xs:element minOccurs="0" name="StoreId" type="xs:int" />
       <xs:element minOccurs="0" name="Value" type="xs:decimal" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="OrderDAO" nillable="true" type="tns:OrderDAO" />
-  <xs:complexType name="ArrayOfPhoneDAO">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhoneDAO" nillable="true" type="tns:PhoneDAO" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfPhoneDAO" nillable="true" type="tns:ArrayOfPhoneDAO" />
-  <xs:complexType name="PhoneDAO">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Number" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="PhoneDAO" nillable="true" type="tns:PhoneDAO" />
-  <xs:complexType name="ArrayOfPizzaCheeseDAO">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="PizzaCheeseDAO" nillable="true" type="tns:PizzaCheeseDAO" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfPizzaCheeseDAO" nillable="true" type="tns:ArrayOfPizzaCheeseDAO" />
-  <xs:complexType name="PizzaCheeseDAO">
-    <xs:sequence>
-      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Piz.DataAccess" minOccurs="0" name="Cheese" nillable="true" type="q10:Cheese" />
-      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Piz.DataAccess" minOccurs="0" name="Pizza" nillable="true" type="q11:Pizza" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="PizzaCheeseDAO" nillable="true" type="tns:PizzaCheeseDAO" />
   <xs:complexType name="ArrayOfPizzaDAO">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="PizzaDAO" nillable="true" type="tns:PizzaDAO" />
@@ -144,27 +85,117 @@
   <xs:element name="ArrayOfPizzaDAO" nillable="true" type="tns:ArrayOfPizzaDAO" />
   <xs:complexType name="PizzaDAO">
     <xs:sequence>
-      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Piz.DataAccess" minOccurs="0" name="Crust" nillable="true" type="q12:Crust" />
-      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Piz.DataAccess" minOccurs="0" name="PizzaCheese" nillable="true" type="q13:ArrayOfPizzaCheese" />
-      <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Piz.DataAccess" minOccurs="0" name="PizzaToppings" nillable="true" type="q14:ArrayOfPizzaTopping" />
-      <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Piz.DataAccess" minOccurs="0" name="Sauce" nillable="true" type="q15:Sauce" />
-      <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Piz.DataAccess" minOccurs="0" name="Size" nillable="true" type="q16:Size" />
+      <xs:element minOccurs="0" name="Crust" nillable="true" type="tns:CrustDAO" />
+      <xs:element minOccurs="0" name="CrustId" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Order" nillable="true" type="tns:OrderDAO" />
+      <xs:element minOccurs="0" name="OrderId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Sauce" nillable="true" type="tns:SauceDAO" />
+      <xs:element minOccurs="0" name="SauceId" type="xs:int" />
+      <xs:element minOccurs="0" name="Size" nillable="true" type="tns:SizeDAO" />
+      <xs:element minOccurs="0" name="SizeId" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="PizzaDAO" nillable="true" type="tns:PizzaDAO" />
-  <xs:complexType name="ArrayOfPizzaOrderDAO">
+  <xs:complexType name="CrustDAO">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="PizzaOrderDAO" nillable="true" type="tns:PizzaOrderDAO" />
+      <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pizzas" nillable="true" type="tns:ArrayOfPizzaDAO" />
+      <xs:element minOccurs="0" name="Value" type="xs:decimal" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfPizzaOrderDAO" nillable="true" type="tns:ArrayOfPizzaOrderDAO" />
-  <xs:complexType name="PizzaOrderDAO">
+  <xs:element name="CrustDAO" nillable="true" type="tns:CrustDAO" />
+  <xs:complexType name="SauceDAO">
     <xs:sequence>
-      <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Piz.DataAccess" minOccurs="0" name="Order" nillable="true" type="q17:Order" />
-      <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Piz.DataAccess" minOccurs="0" name="Pizza" nillable="true" type="q18:Pizza" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" type="xs:decimal" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="PizzaOrderDAO" nillable="true" type="tns:PizzaOrderDAO" />
+  <xs:element name="SauceDAO" nillable="true" type="tns:SauceDAO" />
+  <xs:complexType name="SizeDAO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SizeDAO" nillable="true" type="tns:SizeDAO" />
+  <xs:complexType name="StoreDAO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="tns:AddressDAO" />
+      <xs:element minOccurs="0" name="LocationId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Orders" nillable="true" type="tns:ArrayOfOrderDAO" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="tns:PhoneDAO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StoreDAO" nillable="true" type="tns:StoreDAO" />
+  <xs:complexType name="PhoneDAO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Number" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="PhoneDAO" nillable="true" type="tns:PhoneDAO" />
+  <xs:complexType name="ArrayOfStoreDAO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StoreDAO" nillable="true" type="tns:StoreDAO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStoreDAO" nillable="true" type="tns:ArrayOfStoreDAO" />
+  <xs:complexType name="ArrayOfCheeseDAO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CheeseDAO" nillable="true" type="tns:CheeseDAO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCheeseDAO" nillable="true" type="tns:ArrayOfCheeseDAO" />
+  <xs:complexType name="CheeseDAO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PizzaCheeseDAO" nillable="true" type="tns:ArrayOfPizzaCheeseDAO" />
+      <xs:element minOccurs="0" name="Value" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CheeseDAO" nillable="true" type="tns:CheeseDAO" />
+  <xs:complexType name="ArrayOfPizzaCheeseDAO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PizzaCheeseDAO" nillable="true" type="tns:PizzaCheeseDAO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPizzaCheeseDAO" nillable="true" type="tns:ArrayOfPizzaCheeseDAO" />
+  <xs:complexType name="PizzaCheeseDAO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cheese" nillable="true" type="tns:CheeseDAO" />
+      <xs:element minOccurs="0" name="CheeseId" type="xs:int" />
+      <xs:element minOccurs="0" name="PizzaId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PizzaCheeseDAO" nillable="true" type="tns:PizzaCheeseDAO" />
+  <xs:complexType name="ArrayOfCrustDAO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CrustDAO" nillable="true" type="tns:CrustDAO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCrustDAO" nillable="true" type="tns:ArrayOfCrustDAO" />
+  <xs:complexType name="ArrayOfEmailDAO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmailDAO" nillable="true" type="tns:EmailDAO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmailDAO" nillable="true" type="tns:ArrayOfEmailDAO" />
+  <xs:complexType name="ArrayOfNameDAO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NameDAO" nillable="true" type="tns:NameDAO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNameDAO" nillable="true" type="tns:ArrayOfNameDAO" />
+  <xs:complexType name="ArrayOfPhoneDAO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhoneDAO" nillable="true" type="tns:PhoneDAO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhoneDAO" nillable="true" type="tns:ArrayOfPhoneDAO" />
   <xs:complexType name="ArrayOfPizzaToppingDAO">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="PizzaToppingDAO" nillable="true" type="tns:PizzaToppingDAO" />
@@ -173,58 +204,12 @@
   <xs:element name="ArrayOfPizzaToppingDAO" nillable="true" type="tns:ArrayOfPizzaToppingDAO" />
   <xs:complexType name="PizzaToppingDAO">
     <xs:sequence>
-      <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Piz.DataAccess" minOccurs="0" name="Pizza" nillable="true" type="q19:Pizza" />
-      <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Piz.DataAccess" minOccurs="0" name="Topping" nillable="true" type="q20:Topping" />
+      <xs:element minOccurs="0" name="PizzaId" type="xs:int" />
+      <xs:element minOccurs="0" name="Topping" nillable="true" type="tns:ToppingDAO" />
+      <xs:element minOccurs="0" name="ToppingId" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="PizzaToppingDAO" nillable="true" type="tns:PizzaToppingDAO" />
-  <xs:complexType name="ArrayOfSauceDAO">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="SauceDAO" nillable="true" type="tns:SauceDAO" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfSauceDAO" nillable="true" type="tns:ArrayOfSauceDAO" />
-  <xs:complexType name="SauceDAO">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Value" type="xs:decimal" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="SauceDAO" nillable="true" type="tns:SauceDAO" />
-  <xs:complexType name="ArrayOfSizeDAO">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="SizeDAO" nillable="true" type="tns:SizeDAO" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfSizeDAO" nillable="true" type="tns:ArrayOfSizeDAO" />
-  <xs:complexType name="SizeDAO">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Value" type="xs:decimal" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="SizeDAO" nillable="true" type="tns:SizeDAO" />
-  <xs:complexType name="ArrayOfStoreDAO">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="StoreDAO" nillable="true" type="tns:StoreDAO" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfStoreDAO" nillable="true" type="tns:ArrayOfStoreDAO" />
-  <xs:complexType name="StoreDAO">
-    <xs:sequence>
-      <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Piz.DataAccess" minOccurs="0" name="Address" nillable="true" type="q21:Address" />
-      <xs:element minOccurs="0" name="LocationId" nillable="true" type="xs:string" />
-      <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Piz.DataAccess" minOccurs="0" name="Orders" nillable="true" type="q22:ArrayOfOrder" />
-      <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Piz.DataAccess" minOccurs="0" name="Phone" nillable="true" type="q23:Phone" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="StoreDAO" nillable="true" type="tns:StoreDAO" />
-  <xs:complexType name="ArrayOfToppingDAO">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="ToppingDAO" nillable="true" type="tns:ToppingDAO" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfToppingDAO" nillable="true" type="tns:ArrayOfToppingDAO" />
   <xs:complexType name="ToppingDAO">
     <xs:sequence>
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
@@ -232,4 +217,22 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ToppingDAO" nillable="true" type="tns:ToppingDAO" />
+  <xs:complexType name="ArrayOfSauceDAO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SauceDAO" nillable="true" type="tns:SauceDAO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSauceDAO" nillable="true" type="tns:ArrayOfSauceDAO" />
+  <xs:complexType name="ArrayOfSizeDAO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SizeDAO" nillable="true" type="tns:SizeDAO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSizeDAO" nillable="true" type="tns:ArrayOfSizeDAO" />
+  <xs:complexType name="ArrayOfToppingDAO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ToppingDAO" nillable="true" type="tns:ToppingDAO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfToppingDAO" nillable="true" type="tns:ArrayOfToppingDAO" />
 </xs:schema>

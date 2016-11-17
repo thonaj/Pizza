@@ -8,34 +8,35 @@ using System.Web.Http;
 
 namespace PizzaAPI.Controllers
 {
-    public class PhoneController : ApiController
+    public class StoreController : ApiController
     {
       private PizzaServiceClient psc = new PizzaServiceClient();
-      // GET: api/Phone
+      // GET: api/Store
       public HttpResponseMessage Get()
       {
-         return Request.CreateResponse<List<PhoneDTO>>(HttpStatusCode.OK, psc.getPhones());
+         return Request.CreateResponse<List<StoreDTO>>(HttpStatusCode.OK, psc.getStore());
       }
 
-      // GET: api/Phone/5
+      // GET: api/Store/5
       public HttpResponseMessage Get(string id)
       {
-         var itm = psc.getPhones().Where(i => i.Number == id).FirstOrDefault();
-         return Request.CreateResponse<PhoneDTO>(HttpStatusCode.OK, itm);
+         var itm = psc.getStore().Where(i => i.LocationId == id).FirstOrDefault();
+         return Request.CreateResponse<StoreDTO>(HttpStatusCode.OK, itm);
       }
 
-      // POST: api/Phone
-      public void Post([FromBody]PhoneDTO item)
+      // POST: api/Store
+     
+      public void Post([FromBody]StoreDTO item)
       {
-         psc.insertPhone(item);
+         psc.insertStore(item);
       }
 
-      // PUT: api/Phone/5
+      // PUT: api/Store/5
       public void Put(int id, [FromBody]string value)
       {
       }
 
-      // DELETE: api/Phone/5
+      // DELETE: api/Store/5
       public void Delete(int id)
       {
       }

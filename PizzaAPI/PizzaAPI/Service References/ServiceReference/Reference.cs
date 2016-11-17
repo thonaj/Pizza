@@ -23,10 +23,22 @@ namespace PizzaAPI.ServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool ActiveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CityField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PizzaAPI.ServiceReference.CustomerDAO[] CustomersDAOField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string StateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PizzaAPI.ServiceReference.StoreDAO[] StoresDAOField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string StreetField;
@@ -45,6 +57,19 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Active {
+            get {
+                return this.ActiveField;
+            }
+            set {
+                if ((this.ActiveField.Equals(value) != true)) {
+                    this.ActiveField = value;
+                    this.RaisePropertyChanged("Active");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string City {
             get {
                 return this.CityField;
@@ -58,6 +83,32 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public PizzaAPI.ServiceReference.CustomerDAO[] CustomersDAO {
+            get {
+                return this.CustomersDAOField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomersDAOField, value) != true)) {
+                    this.CustomersDAOField = value;
+                    this.RaisePropertyChanged("CustomersDAO");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string State {
             get {
                 return this.StateField;
@@ -66,6 +117,19 @@ namespace PizzaAPI.ServiceReference {
                 if ((object.ReferenceEquals(this.StateField, value) != true)) {
                     this.StateField = value;
                     this.RaisePropertyChanged("State");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public PizzaAPI.ServiceReference.StoreDAO[] StoresDAO {
+            get {
+                return this.StoresDAOField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StoresDAOField, value) != true)) {
+                    this.StoresDAOField = value;
+                    this.RaisePropertyChanged("StoresDAO");
                 }
             }
         }
@@ -108,129 +172,7 @@ namespace PizzaAPI.ServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CheeseDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
-    [System.SerializableAttribute()]
-    public partial class CheeseDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal ValueField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Value {
-            get {
-                return this.ValueField;
-            }
-            set {
-                if ((this.ValueField.Equals(value) != true)) {
-                    this.ValueField = value;
-                    this.RaisePropertyChanged("Value");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CrustDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
-    [System.SerializableAttribute()]
-    public partial class CrustDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal ValueField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Value {
-            get {
-                return this.ValueField;
-            }
-            set {
-                if ((this.ValueField.Equals(value) != true)) {
-                    this.ValueField = value;
-                    this.RaisePropertyChanged("Value");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CustomerDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CustomerDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models", IsReference=true)]
     [System.SerializableAttribute()]
     public partial class CustomerDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -238,739 +180,28 @@ namespace PizzaAPI.ServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Address AddressField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.CustomerOrder[] CustomerOrdersField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Email EmailField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Name NameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Phone PhoneField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Address Address {
-            get {
-                return this.AddressField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.AddressField, value) != true)) {
-                    this.AddressField = value;
-                    this.RaisePropertyChanged("Address");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.CustomerOrder[] CustomerOrders {
-            get {
-                return this.CustomerOrdersField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CustomerOrdersField, value) != true)) {
-                    this.CustomerOrdersField = value;
-                    this.RaisePropertyChanged("CustomerOrders");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Email Email {
-            get {
-                return this.EmailField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
-                    this.EmailField = value;
-                    this.RaisePropertyChanged("Email");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Name Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Phone Phone {
-            get {
-                return this.PhoneField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PhoneField, value) != true)) {
-                    this.PhoneField = value;
-                    this.RaisePropertyChanged("Phone");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Address", Namespace="http://schemas.datacontract.org/2004/07/Piz.DataAccess")]
-    [System.SerializableAttribute()]
-    public partial class Address : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ActiveField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Customer[] CustomersField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Store[] StoresField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StreetField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ZipField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Active {
-            get {
-                return this.ActiveField;
-            }
-            set {
-                if ((this.ActiveField.Equals(value) != true)) {
-                    this.ActiveField = value;
-                    this.RaisePropertyChanged("Active");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string City {
-            get {
-                return this.CityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CityField, value) != true)) {
-                    this.CityField = value;
-                    this.RaisePropertyChanged("City");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Customer[] Customers {
-            get {
-                return this.CustomersField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CustomersField, value) != true)) {
-                    this.CustomersField = value;
-                    this.RaisePropertyChanged("Customers");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string State {
-            get {
-                return this.StateField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StateField, value) != true)) {
-                    this.StateField = value;
-                    this.RaisePropertyChanged("State");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Store[] Stores {
-            get {
-                return this.StoresField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StoresField, value) != true)) {
-                    this.StoresField = value;
-                    this.RaisePropertyChanged("Stores");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Street {
-            get {
-                return this.StreetField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StreetField, value) != true)) {
-                    this.StreetField = value;
-                    this.RaisePropertyChanged("Street");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Zip {
-            get {
-                return this.ZipField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ZipField, value) != true)) {
-                    this.ZipField = value;
-                    this.RaisePropertyChanged("Zip");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Email", Namespace="http://schemas.datacontract.org/2004/07/Piz.DataAccess")]
-    [System.SerializableAttribute()]
-    public partial class Email : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ActiveField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Customer[] CustomersField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EmailStringField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Active {
-            get {
-                return this.ActiveField;
-            }
-            set {
-                if ((this.ActiveField.Equals(value) != true)) {
-                    this.ActiveField = value;
-                    this.RaisePropertyChanged("Active");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Customer[] Customers {
-            get {
-                return this.CustomersField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CustomersField, value) != true)) {
-                    this.CustomersField = value;
-                    this.RaisePropertyChanged("Customers");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EmailString {
-            get {
-                return this.EmailStringField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EmailStringField, value) != true)) {
-                    this.EmailStringField = value;
-                    this.RaisePropertyChanged("EmailString");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Name", Namespace="http://schemas.datacontract.org/2004/07/Piz.DataAccess")]
-    [System.SerializableAttribute()]
-    public partial class Name : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ActiveField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Customer[] CustomersField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FirstField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LastField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Active {
-            get {
-                return this.ActiveField;
-            }
-            set {
-                if ((this.ActiveField.Equals(value) != true)) {
-                    this.ActiveField = value;
-                    this.RaisePropertyChanged("Active");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Customer[] Customers {
-            get {
-                return this.CustomersField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CustomersField, value) != true)) {
-                    this.CustomersField = value;
-                    this.RaisePropertyChanged("Customers");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string First {
-            get {
-                return this.FirstField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FirstField, value) != true)) {
-                    this.FirstField = value;
-                    this.RaisePropertyChanged("First");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Last {
-            get {
-                return this.LastField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.LastField, value) != true)) {
-                    this.LastField = value;
-                    this.RaisePropertyChanged("Last");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Phone", Namespace="http://schemas.datacontract.org/2004/07/Piz.DataAccess")]
-    [System.SerializableAttribute()]
-    public partial class Phone : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ActiveField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Customer[] CustomersField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NumberField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Store[] StoresField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Active {
-            get {
-                return this.ActiveField;
-            }
-            set {
-                if ((this.ActiveField.Equals(value) != true)) {
-                    this.ActiveField = value;
-                    this.RaisePropertyChanged("Active");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Customer[] Customers {
-            get {
-                return this.CustomersField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CustomersField, value) != true)) {
-                    this.CustomersField = value;
-                    this.RaisePropertyChanged("Customers");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Number {
-            get {
-                return this.NumberField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NumberField, value) != true)) {
-                    this.NumberField = value;
-                    this.RaisePropertyChanged("Number");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Store[] Stores {
-            get {
-                return this.StoresField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StoresField, value) != true)) {
-                    this.StoresField = value;
-                    this.RaisePropertyChanged("Stores");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CustomerOrder", Namespace="http://schemas.datacontract.org/2004/07/Piz.DataAccess")]
-    [System.SerializableAttribute()]
-    public partial class CustomerOrder : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ActiveField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Customer CustomerField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int CustomerIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Order OrderField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int OrderIdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Active {
-            get {
-                return this.ActiveField;
-            }
-            set {
-                if ((this.ActiveField.Equals(value) != true)) {
-                    this.ActiveField = value;
-                    this.RaisePropertyChanged("Active");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Customer Customer {
-            get {
-                return this.CustomerField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CustomerField, value) != true)) {
-                    this.CustomerField = value;
-                    this.RaisePropertyChanged("Customer");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int CustomerId {
-            get {
-                return this.CustomerIdField;
-            }
-            set {
-                if ((this.CustomerIdField.Equals(value) != true)) {
-                    this.CustomerIdField = value;
-                    this.RaisePropertyChanged("CustomerId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Order Order {
-            get {
-                return this.OrderField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.OrderField, value) != true)) {
-                    this.OrderField = value;
-                    this.RaisePropertyChanged("Order");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int OrderId {
-            get {
-                return this.OrderIdField;
-            }
-            set {
-                if ((this.OrderIdField.Equals(value) != true)) {
-                    this.OrderIdField = value;
-                    this.RaisePropertyChanged("OrderId");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Customer", Namespace="http://schemas.datacontract.org/2004/07/Piz.DataAccess")]
-    [System.SerializableAttribute()]
-    public partial class Customer : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ActiveField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Address AddressField;
+        private PizzaAPI.ServiceReference.AddressDAO AddressField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int AddressIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> CustomerOrderIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.CustomerOrder[] CustomerOrdersField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Email EmailField;
+        private PizzaAPI.ServiceReference.EmailDAO EmailField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int EmailIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Name NameField;
+        private PizzaAPI.ServiceReference.NameDAO NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int NameIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Phone PhoneField;
+        private PizzaAPI.ServiceReference.OrderDAO[] OrdersField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PizzaAPI.ServiceReference.PhoneDAO PhoneField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int PhoneIdField;
@@ -986,20 +217,7 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Active {
-            get {
-                return this.ActiveField;
-            }
-            set {
-                if ((this.ActiveField.Equals(value) != true)) {
-                    this.ActiveField = value;
-                    this.RaisePropertyChanged("Active");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Address Address {
+        public PizzaAPI.ServiceReference.AddressDAO Address {
             get {
                 return this.AddressField;
             }
@@ -1025,33 +243,7 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> CustomerOrderId {
-            get {
-                return this.CustomerOrderIdField;
-            }
-            set {
-                if ((this.CustomerOrderIdField.Equals(value) != true)) {
-                    this.CustomerOrderIdField = value;
-                    this.RaisePropertyChanged("CustomerOrderId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.CustomerOrder[] CustomerOrders {
-            get {
-                return this.CustomerOrdersField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CustomerOrdersField, value) != true)) {
-                    this.CustomerOrdersField = value;
-                    this.RaisePropertyChanged("CustomerOrders");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Email Email {
+        public PizzaAPI.ServiceReference.EmailDAO Email {
             get {
                 return this.EmailField;
             }
@@ -1077,20 +269,7 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Name Name {
+        public PizzaAPI.ServiceReference.NameDAO Name {
             get {
                 return this.NameField;
             }
@@ -1116,7 +295,20 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Phone Phone {
+        public PizzaAPI.ServiceReference.OrderDAO[] Orders {
+            get {
+                return this.OrdersField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OrdersField, value) != true)) {
+                    this.OrdersField = value;
+                    this.RaisePropertyChanged("Orders");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public PizzaAPI.ServiceReference.PhoneDAO Phone {
             get {
                 return this.PhoneField;
             }
@@ -1153,36 +345,24 @@ namespace PizzaAPI.ServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Store", Namespace="http://schemas.datacontract.org/2004/07/Piz.DataAccess")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="StoreDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
     [System.SerializableAttribute()]
-    public partial class Store : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class StoreDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ActiveField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Address AddressField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int AddressIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
+        private PizzaAPI.ServiceReference.AddressDAO AddressField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string LocationIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Order[] OrdersField;
+        private PizzaAPI.ServiceReference.OrderDAO[] OrdersField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Phone PhoneField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int PhoneIdField;
+        private PizzaAPI.ServiceReference.PhoneDAO PhoneField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -1195,20 +375,7 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Active {
-            get {
-                return this.ActiveField;
-            }
-            set {
-                if ((this.ActiveField.Equals(value) != true)) {
-                    this.ActiveField = value;
-                    this.RaisePropertyChanged("Active");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Address Address {
+        public PizzaAPI.ServiceReference.AddressDAO Address {
             get {
                 return this.AddressField;
             }
@@ -1216,32 +383,6 @@ namespace PizzaAPI.ServiceReference {
                 if ((object.ReferenceEquals(this.AddressField, value) != true)) {
                     this.AddressField = value;
                     this.RaisePropertyChanged("Address");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int AddressId {
-            get {
-                return this.AddressIdField;
-            }
-            set {
-                if ((this.AddressIdField.Equals(value) != true)) {
-                    this.AddressIdField = value;
-                    this.RaisePropertyChanged("AddressId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
                 }
             }
         }
@@ -1260,7 +401,7 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Order[] Orders {
+        public PizzaAPI.ServiceReference.OrderDAO[] Orders {
             get {
                 return this.OrdersField;
             }
@@ -1273,7 +414,7 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Phone Phone {
+        public PizzaAPI.ServiceReference.PhoneDAO Phone {
             get {
                 return this.PhoneField;
             }
@@ -1285,19 +426,6 @@ namespace PizzaAPI.ServiceReference {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PhoneId {
-            get {
-                return this.PhoneIdField;
-            }
-            set {
-                if ((this.PhoneIdField.Equals(value) != true)) {
-                    this.PhoneIdField = value;
-                    this.RaisePropertyChanged("PhoneId");
-                }
-            }
-        }
-        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -1310,1414 +438,7 @@ namespace PizzaAPI.ServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Order", Namespace="http://schemas.datacontract.org/2004/07/Piz.DataAccess")]
-    [System.SerializableAttribute()]
-    public partial class Order : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ActiveField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.CustomerOrder[] CustomerOrdersField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> PizzaOrderIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.PizzaOrder[] PizzaOrdersField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Store StoreField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> StoreIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal ValueField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Active {
-            get {
-                return this.ActiveField;
-            }
-            set {
-                if ((this.ActiveField.Equals(value) != true)) {
-                    this.ActiveField = value;
-                    this.RaisePropertyChanged("Active");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.CustomerOrder[] CustomerOrders {
-            get {
-                return this.CustomerOrdersField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CustomerOrdersField, value) != true)) {
-                    this.CustomerOrdersField = value;
-                    this.RaisePropertyChanged("CustomerOrders");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> PizzaOrderId {
-            get {
-                return this.PizzaOrderIdField;
-            }
-            set {
-                if ((this.PizzaOrderIdField.Equals(value) != true)) {
-                    this.PizzaOrderIdField = value;
-                    this.RaisePropertyChanged("PizzaOrderId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.PizzaOrder[] PizzaOrders {
-            get {
-                return this.PizzaOrdersField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PizzaOrdersField, value) != true)) {
-                    this.PizzaOrdersField = value;
-                    this.RaisePropertyChanged("PizzaOrders");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Store Store {
-            get {
-                return this.StoreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StoreField, value) != true)) {
-                    this.StoreField = value;
-                    this.RaisePropertyChanged("Store");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> StoreId {
-            get {
-                return this.StoreIdField;
-            }
-            set {
-                if ((this.StoreIdField.Equals(value) != true)) {
-                    this.StoreIdField = value;
-                    this.RaisePropertyChanged("StoreId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Value {
-            get {
-                return this.ValueField;
-            }
-            set {
-                if ((this.ValueField.Equals(value) != true)) {
-                    this.ValueField = value;
-                    this.RaisePropertyChanged("Value");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PizzaOrder", Namespace="http://schemas.datacontract.org/2004/07/Piz.DataAccess")]
-    [System.SerializableAttribute()]
-    public partial class PizzaOrder : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ActiveField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Order OrderField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int OrderIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Pizza PizzaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int PizzaIdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Active {
-            get {
-                return this.ActiveField;
-            }
-            set {
-                if ((this.ActiveField.Equals(value) != true)) {
-                    this.ActiveField = value;
-                    this.RaisePropertyChanged("Active");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Order Order {
-            get {
-                return this.OrderField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.OrderField, value) != true)) {
-                    this.OrderField = value;
-                    this.RaisePropertyChanged("Order");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int OrderId {
-            get {
-                return this.OrderIdField;
-            }
-            set {
-                if ((this.OrderIdField.Equals(value) != true)) {
-                    this.OrderIdField = value;
-                    this.RaisePropertyChanged("OrderId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Pizza Pizza {
-            get {
-                return this.PizzaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PizzaField, value) != true)) {
-                    this.PizzaField = value;
-                    this.RaisePropertyChanged("Pizza");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PizzaId {
-            get {
-                return this.PizzaIdField;
-            }
-            set {
-                if ((this.PizzaIdField.Equals(value) != true)) {
-                    this.PizzaIdField = value;
-                    this.RaisePropertyChanged("PizzaId");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Pizza", Namespace="http://schemas.datacontract.org/2004/07/Piz.DataAccess")]
-    [System.SerializableAttribute()]
-    public partial class Pizza : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ActiveField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Crust CrustField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int CrustIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.PizzaCheese[] PizzaCheeseField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int PizzaCheeseIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.PizzaOrder[] PizzaOrdersField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int PizzaToppingIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.PizzaTopping[] PizzaToppingsField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Sauce SauceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int SauceIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Size SizeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int SizeIdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Active {
-            get {
-                return this.ActiveField;
-            }
-            set {
-                if ((this.ActiveField.Equals(value) != true)) {
-                    this.ActiveField = value;
-                    this.RaisePropertyChanged("Active");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Crust Crust {
-            get {
-                return this.CrustField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CrustField, value) != true)) {
-                    this.CrustField = value;
-                    this.RaisePropertyChanged("Crust");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int CrustId {
-            get {
-                return this.CrustIdField;
-            }
-            set {
-                if ((this.CrustIdField.Equals(value) != true)) {
-                    this.CrustIdField = value;
-                    this.RaisePropertyChanged("CrustId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.PizzaCheese[] PizzaCheese {
-            get {
-                return this.PizzaCheeseField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PizzaCheeseField, value) != true)) {
-                    this.PizzaCheeseField = value;
-                    this.RaisePropertyChanged("PizzaCheese");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PizzaCheeseId {
-            get {
-                return this.PizzaCheeseIdField;
-            }
-            set {
-                if ((this.PizzaCheeseIdField.Equals(value) != true)) {
-                    this.PizzaCheeseIdField = value;
-                    this.RaisePropertyChanged("PizzaCheeseId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.PizzaOrder[] PizzaOrders {
-            get {
-                return this.PizzaOrdersField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PizzaOrdersField, value) != true)) {
-                    this.PizzaOrdersField = value;
-                    this.RaisePropertyChanged("PizzaOrders");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PizzaToppingId {
-            get {
-                return this.PizzaToppingIdField;
-            }
-            set {
-                if ((this.PizzaToppingIdField.Equals(value) != true)) {
-                    this.PizzaToppingIdField = value;
-                    this.RaisePropertyChanged("PizzaToppingId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.PizzaTopping[] PizzaToppings {
-            get {
-                return this.PizzaToppingsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PizzaToppingsField, value) != true)) {
-                    this.PizzaToppingsField = value;
-                    this.RaisePropertyChanged("PizzaToppings");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Sauce Sauce {
-            get {
-                return this.SauceField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SauceField, value) != true)) {
-                    this.SauceField = value;
-                    this.RaisePropertyChanged("Sauce");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int SauceId {
-            get {
-                return this.SauceIdField;
-            }
-            set {
-                if ((this.SauceIdField.Equals(value) != true)) {
-                    this.SauceIdField = value;
-                    this.RaisePropertyChanged("SauceId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Size Size {
-            get {
-                return this.SizeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SizeField, value) != true)) {
-                    this.SizeField = value;
-                    this.RaisePropertyChanged("Size");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int SizeId {
-            get {
-                return this.SizeIdField;
-            }
-            set {
-                if ((this.SizeIdField.Equals(value) != true)) {
-                    this.SizeIdField = value;
-                    this.RaisePropertyChanged("SizeId");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Crust", Namespace="http://schemas.datacontract.org/2004/07/Piz.DataAccess")]
-    [System.SerializableAttribute()]
-    public partial class Crust : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ActiveField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Pizza[] PizzasField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal ValueField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Active {
-            get {
-                return this.ActiveField;
-            }
-            set {
-                if ((this.ActiveField.Equals(value) != true)) {
-                    this.ActiveField = value;
-                    this.RaisePropertyChanged("Active");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Pizza[] Pizzas {
-            get {
-                return this.PizzasField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PizzasField, value) != true)) {
-                    this.PizzasField = value;
-                    this.RaisePropertyChanged("Pizzas");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Value {
-            get {
-                return this.ValueField;
-            }
-            set {
-                if ((this.ValueField.Equals(value) != true)) {
-                    this.ValueField = value;
-                    this.RaisePropertyChanged("Value");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Sauce", Namespace="http://schemas.datacontract.org/2004/07/Piz.DataAccess")]
-    [System.SerializableAttribute()]
-    public partial class Sauce : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ActiveField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Pizza[] PizzasField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal ValueField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Active {
-            get {
-                return this.ActiveField;
-            }
-            set {
-                if ((this.ActiveField.Equals(value) != true)) {
-                    this.ActiveField = value;
-                    this.RaisePropertyChanged("Active");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Pizza[] Pizzas {
-            get {
-                return this.PizzasField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PizzasField, value) != true)) {
-                    this.PizzasField = value;
-                    this.RaisePropertyChanged("Pizzas");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Value {
-            get {
-                return this.ValueField;
-            }
-            set {
-                if ((this.ValueField.Equals(value) != true)) {
-                    this.ValueField = value;
-                    this.RaisePropertyChanged("Value");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Size", Namespace="http://schemas.datacontract.org/2004/07/Piz.DataAccess")]
-    [System.SerializableAttribute()]
-    public partial class Size : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ActiveField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Pizza[] PizzasField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<decimal> ValueField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Active {
-            get {
-                return this.ActiveField;
-            }
-            set {
-                if ((this.ActiveField.Equals(value) != true)) {
-                    this.ActiveField = value;
-                    this.RaisePropertyChanged("Active");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Pizza[] Pizzas {
-            get {
-                return this.PizzasField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PizzasField, value) != true)) {
-                    this.PizzasField = value;
-                    this.RaisePropertyChanged("Pizzas");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<decimal> Value {
-            get {
-                return this.ValueField;
-            }
-            set {
-                if ((this.ValueField.Equals(value) != true)) {
-                    this.ValueField = value;
-                    this.RaisePropertyChanged("Value");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PizzaCheese", Namespace="http://schemas.datacontract.org/2004/07/Piz.DataAccess")]
-    [System.SerializableAttribute()]
-    public partial class PizzaCheese : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ActiveField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Cheese CheeseField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int CheeseIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Pizza PizzaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int PizzaIdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Active {
-            get {
-                return this.ActiveField;
-            }
-            set {
-                if ((this.ActiveField.Equals(value) != true)) {
-                    this.ActiveField = value;
-                    this.RaisePropertyChanged("Active");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Cheese Cheese {
-            get {
-                return this.CheeseField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CheeseField, value) != true)) {
-                    this.CheeseField = value;
-                    this.RaisePropertyChanged("Cheese");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int CheeseId {
-            get {
-                return this.CheeseIdField;
-            }
-            set {
-                if ((this.CheeseIdField.Equals(value) != true)) {
-                    this.CheeseIdField = value;
-                    this.RaisePropertyChanged("CheeseId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Pizza Pizza {
-            get {
-                return this.PizzaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PizzaField, value) != true)) {
-                    this.PizzaField = value;
-                    this.RaisePropertyChanged("Pizza");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PizzaId {
-            get {
-                return this.PizzaIdField;
-            }
-            set {
-                if ((this.PizzaIdField.Equals(value) != true)) {
-                    this.PizzaIdField = value;
-                    this.RaisePropertyChanged("PizzaId");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PizzaTopping", Namespace="http://schemas.datacontract.org/2004/07/Piz.DataAccess")]
-    [System.SerializableAttribute()]
-    public partial class PizzaTopping : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ActiveField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Pizza PizzaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int PizzaIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Topping ToppingField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ToppingIdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Active {
-            get {
-                return this.ActiveField;
-            }
-            set {
-                if ((this.ActiveField.Equals(value) != true)) {
-                    this.ActiveField = value;
-                    this.RaisePropertyChanged("Active");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Pizza Pizza {
-            get {
-                return this.PizzaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PizzaField, value) != true)) {
-                    this.PizzaField = value;
-                    this.RaisePropertyChanged("Pizza");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PizzaId {
-            get {
-                return this.PizzaIdField;
-            }
-            set {
-                if ((this.PizzaIdField.Equals(value) != true)) {
-                    this.PizzaIdField = value;
-                    this.RaisePropertyChanged("PizzaId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Topping Topping {
-            get {
-                return this.ToppingField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ToppingField, value) != true)) {
-                    this.ToppingField = value;
-                    this.RaisePropertyChanged("Topping");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ToppingId {
-            get {
-                return this.ToppingIdField;
-            }
-            set {
-                if ((this.ToppingIdField.Equals(value) != true)) {
-                    this.ToppingIdField = value;
-                    this.RaisePropertyChanged("ToppingId");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Cheese", Namespace="http://schemas.datacontract.org/2004/07/Piz.DataAccess")]
-    [System.SerializableAttribute()]
-    public partial class Cheese : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ActiveField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.PizzaCheese[] PizzaCheeseField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal ValueField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Active {
-            get {
-                return this.ActiveField;
-            }
-            set {
-                if ((this.ActiveField.Equals(value) != true)) {
-                    this.ActiveField = value;
-                    this.RaisePropertyChanged("Active");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.PizzaCheese[] PizzaCheese {
-            get {
-                return this.PizzaCheeseField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PizzaCheeseField, value) != true)) {
-                    this.PizzaCheeseField = value;
-                    this.RaisePropertyChanged("PizzaCheese");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Value {
-            get {
-                return this.ValueField;
-            }
-            set {
-                if ((this.ValueField.Equals(value) != true)) {
-                    this.ValueField = value;
-                    this.RaisePropertyChanged("Value");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Topping", Namespace="http://schemas.datacontract.org/2004/07/Piz.DataAccess")]
-    [System.SerializableAttribute()]
-    public partial class Topping : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ActiveField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.PizzaTopping[] PizzaToppingsField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal ValueField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Active {
-            get {
-                return this.ActiveField;
-            }
-            set {
-                if ((this.ActiveField.Equals(value) != true)) {
-                    this.ActiveField = value;
-                    this.RaisePropertyChanged("Active");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.PizzaTopping[] PizzaToppings {
-            get {
-                return this.PizzaToppingsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PizzaToppingsField, value) != true)) {
-                    this.PizzaToppingsField = value;
-                    this.RaisePropertyChanged("PizzaToppings");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Value {
-            get {
-                return this.ValueField;
-            }
-            set {
-                if ((this.ValueField.Equals(value) != true)) {
-                    this.ValueField = value;
-                    this.RaisePropertyChanged("Value");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CustomerOrderDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
-    [System.SerializableAttribute()]
-    public partial class CustomerOrderDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Customer CustomerField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Order OrderField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Customer Customer {
-            get {
-                return this.CustomerField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CustomerField, value) != true)) {
-                    this.CustomerField = value;
-                    this.RaisePropertyChanged("Customer");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Order Order {
-            get {
-                return this.OrderField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.OrderField, value) != true)) {
-                    this.OrderField = value;
-                    this.RaisePropertyChanged("Order");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EmailDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EmailDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models", IsReference=true)]
     [System.SerializableAttribute()]
     public partial class EmailDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -2762,7 +483,7 @@ namespace PizzaAPI.ServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="NameDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="NameDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models", IsReference=true)]
     [System.SerializableAttribute()]
     public partial class NameDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -2823,100 +544,7 @@ namespace PizzaAPI.ServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="OrderDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
-    [System.SerializableAttribute()]
-    public partial class OrderDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.PizzaOrder[] PizzaOrdersField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Store StoreField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal ValueField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.PizzaOrder[] PizzaOrders {
-            get {
-                return this.PizzaOrdersField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PizzaOrdersField, value) != true)) {
-                    this.PizzaOrdersField = value;
-                    this.RaisePropertyChanged("PizzaOrders");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Store Store {
-            get {
-                return this.StoreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StoreField, value) != true)) {
-                    this.StoreField = value;
-                    this.RaisePropertyChanged("Store");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Value {
-            get {
-                return this.ValueField;
-            }
-            set {
-                if ((this.ValueField.Equals(value) != true)) {
-                    this.ValueField = value;
-                    this.RaisePropertyChanged("Value");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PhoneDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PhoneDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models", IsReference=true)]
     [System.SerializableAttribute()]
     public partial class PhoneDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -2961,18 +589,33 @@ namespace PizzaAPI.ServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PizzaCheeseDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OrderDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
     [System.SerializableAttribute()]
-    public partial class PizzaCheeseDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class OrderDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Cheese CheeseField;
+        private PizzaAPI.ServiceReference.CustomerDAO CustomerField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Pizza PizzaField;
+        private int CustomerIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PizzaAPI.ServiceReference.PizzaDAO[] PizzasField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PizzaAPI.ServiceReference.StoreDAO StoreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int StoreIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal ValueField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -2985,27 +628,92 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Cheese Cheese {
+        public PizzaAPI.ServiceReference.CustomerDAO Customer {
             get {
-                return this.CheeseField;
+                return this.CustomerField;
             }
             set {
-                if ((object.ReferenceEquals(this.CheeseField, value) != true)) {
-                    this.CheeseField = value;
-                    this.RaisePropertyChanged("Cheese");
+                if ((object.ReferenceEquals(this.CustomerField, value) != true)) {
+                    this.CustomerField = value;
+                    this.RaisePropertyChanged("Customer");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Pizza Pizza {
+        public int CustomerId {
             get {
-                return this.PizzaField;
+                return this.CustomerIdField;
             }
             set {
-                if ((object.ReferenceEquals(this.PizzaField, value) != true)) {
-                    this.PizzaField = value;
-                    this.RaisePropertyChanged("Pizza");
+                if ((this.CustomerIdField.Equals(value) != true)) {
+                    this.CustomerIdField = value;
+                    this.RaisePropertyChanged("CustomerId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public PizzaAPI.ServiceReference.PizzaDAO[] Pizzas {
+            get {
+                return this.PizzasField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PizzasField, value) != true)) {
+                    this.PizzasField = value;
+                    this.RaisePropertyChanged("Pizzas");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public PizzaAPI.ServiceReference.StoreDAO Store {
+            get {
+                return this.StoreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StoreField, value) != true)) {
+                    this.StoreField = value;
+                    this.RaisePropertyChanged("Store");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int StoreId {
+            get {
+                return this.StoreIdField;
+            }
+            set {
+                if ((this.StoreIdField.Equals(value) != true)) {
+                    this.StoreIdField = value;
+                    this.RaisePropertyChanged("StoreId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Value {
+            get {
+                return this.ValueField;
+            }
+            set {
+                if ((this.ValueField.Equals(value) != true)) {
+                    this.ValueField = value;
+                    this.RaisePropertyChanged("Value");
                 }
             }
         }
@@ -3030,19 +738,31 @@ namespace PizzaAPI.ServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Crust CrustField;
+        private PizzaAPI.ServiceReference.CrustDAO CrustField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.PizzaCheese[] PizzaCheeseField;
+        private int CrustIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.PizzaTopping[] PizzaToppingsField;
+        private string NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Sauce SauceField;
+        private PizzaAPI.ServiceReference.OrderDAO OrderField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Size SizeField;
+        private System.Nullable<int> OrderIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PizzaAPI.ServiceReference.SauceDAO SauceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SauceIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PizzaAPI.ServiceReference.SizeDAO SizeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SizeIdField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -3055,7 +775,7 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Crust Crust {
+        public PizzaAPI.ServiceReference.CrustDAO Crust {
             get {
                 return this.CrustField;
             }
@@ -3068,94 +788,33 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.PizzaCheese[] PizzaCheese {
+        public int CrustId {
             get {
-                return this.PizzaCheeseField;
+                return this.CrustIdField;
             }
             set {
-                if ((object.ReferenceEquals(this.PizzaCheeseField, value) != true)) {
-                    this.PizzaCheeseField = value;
-                    this.RaisePropertyChanged("PizzaCheese");
+                if ((this.CrustIdField.Equals(value) != true)) {
+                    this.CrustIdField = value;
+                    this.RaisePropertyChanged("CrustId");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.PizzaTopping[] PizzaToppings {
+        public string Name {
             get {
-                return this.PizzaToppingsField;
+                return this.NameField;
             }
             set {
-                if ((object.ReferenceEquals(this.PizzaToppingsField, value) != true)) {
-                    this.PizzaToppingsField = value;
-                    this.RaisePropertyChanged("PizzaToppings");
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Sauce Sauce {
-            get {
-                return this.SauceField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SauceField, value) != true)) {
-                    this.SauceField = value;
-                    this.RaisePropertyChanged("Sauce");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Size Size {
-            get {
-                return this.SizeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SizeField, value) != true)) {
-                    this.SizeField = value;
-                    this.RaisePropertyChanged("Size");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PizzaOrderDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
-    [System.SerializableAttribute()]
-    public partial class PizzaOrderDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Order OrderField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Pizza PizzaField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Order Order {
+        public PizzaAPI.ServiceReference.OrderDAO Order {
             get {
                 return this.OrderField;
             }
@@ -3168,14 +827,66 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Pizza Pizza {
+        public System.Nullable<int> OrderId {
             get {
-                return this.PizzaField;
+                return this.OrderIdField;
             }
             set {
-                if ((object.ReferenceEquals(this.PizzaField, value) != true)) {
-                    this.PizzaField = value;
-                    this.RaisePropertyChanged("Pizza");
+                if ((this.OrderIdField.Equals(value) != true)) {
+                    this.OrderIdField = value;
+                    this.RaisePropertyChanged("OrderId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public PizzaAPI.ServiceReference.SauceDAO Sauce {
+            get {
+                return this.SauceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SauceField, value) != true)) {
+                    this.SauceField = value;
+                    this.RaisePropertyChanged("Sauce");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int SauceId {
+            get {
+                return this.SauceIdField;
+            }
+            set {
+                if ((this.SauceIdField.Equals(value) != true)) {
+                    this.SauceIdField = value;
+                    this.RaisePropertyChanged("SauceId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public PizzaAPI.ServiceReference.SizeDAO Size {
+            get {
+                return this.SizeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SizeField, value) != true)) {
+                    this.SizeField = value;
+                    this.RaisePropertyChanged("Size");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int SizeId {
+            get {
+                return this.SizeIdField;
+            }
+            set {
+                if ((this.SizeIdField.Equals(value) != true)) {
+                    this.SizeIdField = value;
+                    this.RaisePropertyChanged("SizeId");
                 }
             }
         }
@@ -3192,18 +903,27 @@ namespace PizzaAPI.ServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PizzaToppingDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CrustDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
     [System.SerializableAttribute()]
-    public partial class PizzaToppingDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class CrustDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Pizza PizzaField;
+        private bool ActiveField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Topping ToppingField;
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PizzaAPI.ServiceReference.PizzaDAO[] PizzasField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal ValueField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -3216,27 +936,66 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Pizza Pizza {
+        public bool Active {
             get {
-                return this.PizzaField;
+                return this.ActiveField;
             }
             set {
-                if ((object.ReferenceEquals(this.PizzaField, value) != true)) {
-                    this.PizzaField = value;
-                    this.RaisePropertyChanged("Pizza");
+                if ((this.ActiveField.Equals(value) != true)) {
+                    this.ActiveField = value;
+                    this.RaisePropertyChanged("Active");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Topping Topping {
+        public int Id {
             get {
-                return this.ToppingField;
+                return this.IdField;
             }
             set {
-                if ((object.ReferenceEquals(this.ToppingField, value) != true)) {
-                    this.ToppingField = value;
-                    this.RaisePropertyChanged("Topping");
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public PizzaAPI.ServiceReference.PizzaDAO[] Pizzas {
+            get {
+                return this.PizzasField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PizzasField, value) != true)) {
+                    this.PizzasField = value;
+                    this.RaisePropertyChanged("Pizzas");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Value {
+            get {
+                return this.ValueField;
+            }
+            set {
+                if ((this.ValueField.Equals(value) != true)) {
+                    this.ValueField = value;
+                    this.RaisePropertyChanged("Value");
                 }
             }
         }
@@ -3375,24 +1134,21 @@ namespace PizzaAPI.ServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="StoreDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CheeseDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
     [System.SerializableAttribute()]
-    public partial class StoreDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class CheeseDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Address AddressField;
+        private string NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LocationIdField;
+        private PizzaAPI.ServiceReference.PizzaCheeseDAO[] PizzaCheeseDAOField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Order[] OrdersField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.Phone PhoneField;
+        private decimal ValueField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -3405,53 +1161,194 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Address Address {
+        public string Name {
             get {
-                return this.AddressField;
+                return this.NameField;
             }
             set {
-                if ((object.ReferenceEquals(this.AddressField, value) != true)) {
-                    this.AddressField = value;
-                    this.RaisePropertyChanged("Address");
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LocationId {
+        public PizzaAPI.ServiceReference.PizzaCheeseDAO[] PizzaCheeseDAO {
             get {
-                return this.LocationIdField;
+                return this.PizzaCheeseDAOField;
             }
             set {
-                if ((object.ReferenceEquals(this.LocationIdField, value) != true)) {
-                    this.LocationIdField = value;
-                    this.RaisePropertyChanged("LocationId");
+                if ((object.ReferenceEquals(this.PizzaCheeseDAOField, value) != true)) {
+                    this.PizzaCheeseDAOField = value;
+                    this.RaisePropertyChanged("PizzaCheeseDAO");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Order[] Orders {
+        public decimal Value {
             get {
-                return this.OrdersField;
+                return this.ValueField;
             }
             set {
-                if ((object.ReferenceEquals(this.OrdersField, value) != true)) {
-                    this.OrdersField = value;
-                    this.RaisePropertyChanged("Orders");
+                if ((this.ValueField.Equals(value) != true)) {
+                    this.ValueField = value;
+                    this.RaisePropertyChanged("Value");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PizzaCheeseDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
+    [System.SerializableAttribute()]
+    public partial class PizzaCheeseDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PizzaAPI.ServiceReference.CheeseDAO CheeseField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CheeseIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PizzaIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public PizzaAPI.ServiceReference.CheeseDAO Cheese {
+            get {
+                return this.CheeseField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CheeseField, value) != true)) {
+                    this.CheeseField = value;
+                    this.RaisePropertyChanged("Cheese");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.Phone Phone {
+        public int CheeseId {
             get {
-                return this.PhoneField;
+                return this.CheeseIdField;
             }
             set {
-                if ((object.ReferenceEquals(this.PhoneField, value) != true)) {
-                    this.PhoneField = value;
-                    this.RaisePropertyChanged("Phone");
+                if ((this.CheeseIdField.Equals(value) != true)) {
+                    this.CheeseIdField = value;
+                    this.RaisePropertyChanged("CheeseId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PizzaId {
+            get {
+                return this.PizzaIdField;
+            }
+            set {
+                if ((this.PizzaIdField.Equals(value) != true)) {
+                    this.PizzaIdField = value;
+                    this.RaisePropertyChanged("PizzaId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PizzaToppingDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
+    [System.SerializableAttribute()]
+    public partial class PizzaToppingDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PizzaIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PizzaAPI.ServiceReference.ToppingDAO ToppingField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ToppingIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PizzaId {
+            get {
+                return this.PizzaIdField;
+            }
+            set {
+                if ((this.PizzaIdField.Equals(value) != true)) {
+                    this.PizzaIdField = value;
+                    this.RaisePropertyChanged("PizzaId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public PizzaAPI.ServiceReference.ToppingDAO Topping {
+            get {
+                return this.ToppingField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ToppingField, value) != true)) {
+                    this.ToppingField = value;
+                    this.RaisePropertyChanged("Topping");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ToppingId {
+            get {
+                return this.ToppingIdField;
+            }
+            set {
+                if ((this.ToppingIdField.Equals(value) != true)) {
+                    this.ToppingIdField = value;
+                    this.RaisePropertyChanged("ToppingId");
                 }
             }
         }
@@ -3555,12 +1452,6 @@ namespace PizzaAPI.ServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetCustomers", ReplyAction="http://tempuri.org/IService2/GetCustomersResponse")]
         System.Threading.Tasks.Task<PizzaAPI.ServiceReference.CustomerDAO[]> GetCustomersAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetCustomerOrder", ReplyAction="http://tempuri.org/IService2/GetCustomerOrderResponse")]
-        PizzaAPI.ServiceReference.CustomerOrderDAO[] GetCustomerOrder();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetCustomerOrder", ReplyAction="http://tempuri.org/IService2/GetCustomerOrderResponse")]
-        System.Threading.Tasks.Task<PizzaAPI.ServiceReference.CustomerOrderDAO[]> GetCustomerOrderAsync();
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetEmails", ReplyAction="http://tempuri.org/IService2/GetEmailsResponse")]
         PizzaAPI.ServiceReference.EmailDAO[] GetEmails();
         
@@ -3596,12 +1487,6 @@ namespace PizzaAPI.ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetPizzas", ReplyAction="http://tempuri.org/IService2/GetPizzasResponse")]
         System.Threading.Tasks.Task<PizzaAPI.ServiceReference.PizzaDAO[]> GetPizzasAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetPizzaOrders", ReplyAction="http://tempuri.org/IService2/GetPizzaOrdersResponse")]
-        PizzaAPI.ServiceReference.PizzaOrderDAO[] GetPizzaOrders();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetPizzaOrders", ReplyAction="http://tempuri.org/IService2/GetPizzaOrdersResponse")]
-        System.Threading.Tasks.Task<PizzaAPI.ServiceReference.PizzaOrderDAO[]> GetPizzaOrdersAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetPizzaToppings", ReplyAction="http://tempuri.org/IService2/GetPizzaToppingsResponse")]
         PizzaAPI.ServiceReference.PizzaToppingDAO[] GetPizzaToppings();
@@ -3657,12 +1542,6 @@ namespace PizzaAPI.ServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertCustomer", ReplyAction="http://tempuri.org/IService2/InsertCustomerResponse")]
         System.Threading.Tasks.Task<bool> InsertCustomerAsync(PizzaAPI.ServiceReference.CustomerDAO itm);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertCustomerOrder", ReplyAction="http://tempuri.org/IService2/InsertCustomerOrderResponse")]
-        bool InsertCustomerOrder(PizzaAPI.ServiceReference.CustomerOrderDAO itm);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertCustomerOrder", ReplyAction="http://tempuri.org/IService2/InsertCustomerOrderResponse")]
-        System.Threading.Tasks.Task<bool> InsertCustomerOrderAsync(PizzaAPI.ServiceReference.CustomerOrderDAO itm);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertEmail", ReplyAction="http://tempuri.org/IService2/InsertEmailResponse")]
         bool InsertEmail(PizzaAPI.ServiceReference.EmailDAO itm);
         
@@ -3698,12 +1577,6 @@ namespace PizzaAPI.ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertPizza", ReplyAction="http://tempuri.org/IService2/InsertPizzaResponse")]
         System.Threading.Tasks.Task<bool> InsertPizzaAsync(PizzaAPI.ServiceReference.PizzaDAO itm);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertPizzaOrder", ReplyAction="http://tempuri.org/IService2/InsertPizzaOrderResponse")]
-        bool InsertPizzaOrder(PizzaAPI.ServiceReference.PizzaOrderDAO itm);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertPizzaOrder", ReplyAction="http://tempuri.org/IService2/InsertPizzaOrderResponse")]
-        System.Threading.Tasks.Task<bool> InsertPizzaOrderAsync(PizzaAPI.ServiceReference.PizzaOrderDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertPizzaTopping", ReplyAction="http://tempuri.org/IService2/InsertPizzaToppingResponse")]
         bool InsertPizzaTopping(PizzaAPI.ServiceReference.PizzaToppingDAO itm);
@@ -3759,12 +1632,6 @@ namespace PizzaAPI.ServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdateCustomer", ReplyAction="http://tempuri.org/IService2/UpdateCustomerResponse")]
         System.Threading.Tasks.Task<bool> UpdateCustomerAsync(PizzaAPI.ServiceReference.CustomerDAO itm);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdateCustomerOrder", ReplyAction="http://tempuri.org/IService2/UpdateCustomerOrderResponse")]
-        bool UpdateCustomerOrder(PizzaAPI.ServiceReference.CustomerOrderDAO itm);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdateCustomerOrder", ReplyAction="http://tempuri.org/IService2/UpdateCustomerOrderResponse")]
-        System.Threading.Tasks.Task<bool> UpdateCustomerOrderAsync(PizzaAPI.ServiceReference.CustomerOrderDAO itm);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdateEmail", ReplyAction="http://tempuri.org/IService2/UpdateEmailResponse")]
         bool UpdateEmail(PizzaAPI.ServiceReference.EmailDAO itm);
         
@@ -3800,12 +1667,6 @@ namespace PizzaAPI.ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdatePizza", ReplyAction="http://tempuri.org/IService2/UpdatePizzaResponse")]
         System.Threading.Tasks.Task<bool> UpdatePizzaAsync(PizzaAPI.ServiceReference.PizzaDAO itm);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdatePizzaOrder", ReplyAction="http://tempuri.org/IService2/UpdatePizzaOrderResponse")]
-        bool UpdatePizzaOrder(PizzaAPI.ServiceReference.PizzaOrderDAO itm);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdatePizzaOrder", ReplyAction="http://tempuri.org/IService2/UpdatePizzaOrderResponse")]
-        System.Threading.Tasks.Task<bool> UpdatePizzaOrderAsync(PizzaAPI.ServiceReference.PizzaOrderDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdatePizzaTopping", ReplyAction="http://tempuri.org/IService2/UpdatePizzaToppingResponse")]
         bool UpdatePizzaTopping(PizzaAPI.ServiceReference.PizzaToppingDAO itm);
@@ -3861,12 +1722,6 @@ namespace PizzaAPI.ServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeleteCustomer", ReplyAction="http://tempuri.org/IService2/DeleteCustomerResponse")]
         System.Threading.Tasks.Task<bool> DeleteCustomerAsync(PizzaAPI.ServiceReference.CustomerDAO itm);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeleteCustomerOrder", ReplyAction="http://tempuri.org/IService2/DeleteCustomerOrderResponse")]
-        bool DeleteCustomerOrder(PizzaAPI.ServiceReference.CustomerOrderDAO itm);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeleteCustomerOrder", ReplyAction="http://tempuri.org/IService2/DeleteCustomerOrderResponse")]
-        System.Threading.Tasks.Task<bool> DeleteCustomerOrderAsync(PizzaAPI.ServiceReference.CustomerOrderDAO itm);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeleteEmail", ReplyAction="http://tempuri.org/IService2/DeleteEmailResponse")]
         bool DeleteEmail(PizzaAPI.ServiceReference.EmailDAO itm);
         
@@ -3902,12 +1757,6 @@ namespace PizzaAPI.ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeletePizza", ReplyAction="http://tempuri.org/IService2/DeletePizzaResponse")]
         System.Threading.Tasks.Task<bool> DeletePizzaAsync(PizzaAPI.ServiceReference.PizzaDAO itm);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeletePizzaOrder", ReplyAction="http://tempuri.org/IService2/DeletePizzaOrderResponse")]
-        bool DeletePizzaOrder(PizzaAPI.ServiceReference.PizzaOrderDAO itm);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeletePizzaOrder", ReplyAction="http://tempuri.org/IService2/DeletePizzaOrderResponse")]
-        System.Threading.Tasks.Task<bool> DeletePizzaOrderAsync(PizzaAPI.ServiceReference.PizzaOrderDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeletePizzaTopping", ReplyAction="http://tempuri.org/IService2/DeletePizzaToppingResponse")]
         bool DeletePizzaTopping(PizzaAPI.ServiceReference.PizzaToppingDAO itm);
@@ -3999,14 +1848,6 @@ namespace PizzaAPI.ServiceReference {
             return base.Channel.GetCustomersAsync();
         }
         
-        public PizzaAPI.ServiceReference.CustomerOrderDAO[] GetCustomerOrder() {
-            return base.Channel.GetCustomerOrder();
-        }
-        
-        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference.CustomerOrderDAO[]> GetCustomerOrderAsync() {
-            return base.Channel.GetCustomerOrderAsync();
-        }
-        
         public PizzaAPI.ServiceReference.EmailDAO[] GetEmails() {
             return base.Channel.GetEmails();
         }
@@ -4053,14 +1894,6 @@ namespace PizzaAPI.ServiceReference {
         
         public System.Threading.Tasks.Task<PizzaAPI.ServiceReference.PizzaDAO[]> GetPizzasAsync() {
             return base.Channel.GetPizzasAsync();
-        }
-        
-        public PizzaAPI.ServiceReference.PizzaOrderDAO[] GetPizzaOrders() {
-            return base.Channel.GetPizzaOrders();
-        }
-        
-        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference.PizzaOrderDAO[]> GetPizzaOrdersAsync() {
-            return base.Channel.GetPizzaOrdersAsync();
         }
         
         public PizzaAPI.ServiceReference.PizzaToppingDAO[] GetPizzaToppings() {
@@ -4135,14 +1968,6 @@ namespace PizzaAPI.ServiceReference {
             return base.Channel.InsertCustomerAsync(itm);
         }
         
-        public bool InsertCustomerOrder(PizzaAPI.ServiceReference.CustomerOrderDAO itm) {
-            return base.Channel.InsertCustomerOrder(itm);
-        }
-        
-        public System.Threading.Tasks.Task<bool> InsertCustomerOrderAsync(PizzaAPI.ServiceReference.CustomerOrderDAO itm) {
-            return base.Channel.InsertCustomerOrderAsync(itm);
-        }
-        
         public bool InsertEmail(PizzaAPI.ServiceReference.EmailDAO itm) {
             return base.Channel.InsertEmail(itm);
         }
@@ -4189,14 +2014,6 @@ namespace PizzaAPI.ServiceReference {
         
         public System.Threading.Tasks.Task<bool> InsertPizzaAsync(PizzaAPI.ServiceReference.PizzaDAO itm) {
             return base.Channel.InsertPizzaAsync(itm);
-        }
-        
-        public bool InsertPizzaOrder(PizzaAPI.ServiceReference.PizzaOrderDAO itm) {
-            return base.Channel.InsertPizzaOrder(itm);
-        }
-        
-        public System.Threading.Tasks.Task<bool> InsertPizzaOrderAsync(PizzaAPI.ServiceReference.PizzaOrderDAO itm) {
-            return base.Channel.InsertPizzaOrderAsync(itm);
         }
         
         public bool InsertPizzaTopping(PizzaAPI.ServiceReference.PizzaToppingDAO itm) {
@@ -4271,14 +2088,6 @@ namespace PizzaAPI.ServiceReference {
             return base.Channel.UpdateCustomerAsync(itm);
         }
         
-        public bool UpdateCustomerOrder(PizzaAPI.ServiceReference.CustomerOrderDAO itm) {
-            return base.Channel.UpdateCustomerOrder(itm);
-        }
-        
-        public System.Threading.Tasks.Task<bool> UpdateCustomerOrderAsync(PizzaAPI.ServiceReference.CustomerOrderDAO itm) {
-            return base.Channel.UpdateCustomerOrderAsync(itm);
-        }
-        
         public bool UpdateEmail(PizzaAPI.ServiceReference.EmailDAO itm) {
             return base.Channel.UpdateEmail(itm);
         }
@@ -4325,14 +2134,6 @@ namespace PizzaAPI.ServiceReference {
         
         public System.Threading.Tasks.Task<bool> UpdatePizzaAsync(PizzaAPI.ServiceReference.PizzaDAO itm) {
             return base.Channel.UpdatePizzaAsync(itm);
-        }
-        
-        public bool UpdatePizzaOrder(PizzaAPI.ServiceReference.PizzaOrderDAO itm) {
-            return base.Channel.UpdatePizzaOrder(itm);
-        }
-        
-        public System.Threading.Tasks.Task<bool> UpdatePizzaOrderAsync(PizzaAPI.ServiceReference.PizzaOrderDAO itm) {
-            return base.Channel.UpdatePizzaOrderAsync(itm);
         }
         
         public bool UpdatePizzaTopping(PizzaAPI.ServiceReference.PizzaToppingDAO itm) {
@@ -4407,14 +2208,6 @@ namespace PizzaAPI.ServiceReference {
             return base.Channel.DeleteCustomerAsync(itm);
         }
         
-        public bool DeleteCustomerOrder(PizzaAPI.ServiceReference.CustomerOrderDAO itm) {
-            return base.Channel.DeleteCustomerOrder(itm);
-        }
-        
-        public System.Threading.Tasks.Task<bool> DeleteCustomerOrderAsync(PizzaAPI.ServiceReference.CustomerOrderDAO itm) {
-            return base.Channel.DeleteCustomerOrderAsync(itm);
-        }
-        
         public bool DeleteEmail(PizzaAPI.ServiceReference.EmailDAO itm) {
             return base.Channel.DeleteEmail(itm);
         }
@@ -4461,14 +2254,6 @@ namespace PizzaAPI.ServiceReference {
         
         public System.Threading.Tasks.Task<bool> DeletePizzaAsync(PizzaAPI.ServiceReference.PizzaDAO itm) {
             return base.Channel.DeletePizzaAsync(itm);
-        }
-        
-        public bool DeletePizzaOrder(PizzaAPI.ServiceReference.PizzaOrderDAO itm) {
-            return base.Channel.DeletePizzaOrder(itm);
-        }
-        
-        public System.Threading.Tasks.Task<bool> DeletePizzaOrderAsync(PizzaAPI.ServiceReference.PizzaOrderDAO itm) {
-            return base.Channel.DeletePizzaOrderAsync(itm);
         }
         
         public bool DeletePizzaTopping(PizzaAPI.ServiceReference.PizzaToppingDAO itm) {
