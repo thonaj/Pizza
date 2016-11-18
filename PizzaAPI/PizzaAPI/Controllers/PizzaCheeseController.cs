@@ -25,8 +25,9 @@ namespace PizzaAPI.Controllers
       }
 
       // POST: api/PizzaCheese
-      public void Post([FromBody]string value)
+      public void Post([FromBody]PizzaCheeseDTO value)
       {
+         psc.insertPizzaCheese(value);
       }
 
       // PUT: api/PizzaCheese/5

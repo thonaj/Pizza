@@ -30,8 +30,12 @@ namespace PizzaAPI.Controllers
       }
 
       // PUT: api/Pizza/5
-      public void Put(int id, [FromBody]string value)
+      public void Put(int id, [FromBody]PizzaDTO value)
       {
+         //value.Crust
+         //value.Sauce
+         //value.Size
+         //value.
       }
 
       // DELETE: api/Pizza/5

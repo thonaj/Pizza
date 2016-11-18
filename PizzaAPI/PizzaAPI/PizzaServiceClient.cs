@@ -10,6 +10,8 @@ namespace PizzaAPI
    public class PizzaServiceClient
    {
       private Service2Client sc = new Service2Client();
+      
+
       #region gets
       public List<CrustDTO> getCrusts()
       {
@@ -161,6 +163,7 @@ namespace PizzaAPI
       public bool insertTopping(ToppingDTO t)
       {
          return sc.InsertTopping(Mappers.ToppingMap.MapToToppingDAO(t));
+         
       }
 
       public bool insertSize(SizeDTO t)
@@ -209,8 +212,26 @@ namespace PizzaAPI
          
          return sc.InsertStore(Mappers.StoreMap.MapToStoreDAO(t));
       }
-
-
+      public bool insertCustomer(CustomerDTO t)
+      {
+         return sc.InsertCustomer(Mappers.CustomerMap.MapToCustomerDAO(t));
+      }
+      public bool insertPizza(PizzaDTO t)
+      {
+         return sc.InsertPizza(Mappers.PizzaMap.MapToPizzaDAO(t));
+      }
+      public bool insertOrder(OrderDTO t)
+      {
+         return sc.InsertOrder(Mappers.OrderMap.MapToOrderDAO(t));
+      }
+      public bool insertPizzaCheese(PizzaCheeseDTO t)
+      {
+         return sc.InsertPizzaCheese(Mappers.PizzaCheeseMap.MapToPizzaCheeseDAO(t));
+      }
+      public bool insertPizzaTopping(PizzaToppingDTO t)
+      {
+         return sc.InsertPizzaTopping(Mappers.PizzaToppingMap.MapToPizzaToppingDAO(t));
+      }
 
 
 

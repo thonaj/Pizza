@@ -12,6 +12,7 @@ namespace PizzaAPI.Models
       public OrderDTO()
       {
          this.Pizzas = new HashSet<PizzaDTO>();
+         this.Name = this.ToString();
       }
 
       public string Name { get; set; }
@@ -23,5 +24,10 @@ namespace PizzaAPI.Models
       public virtual StoreDTO Store { get; set; }
       [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
       public virtual ICollection<PizzaDTO> Pizzas { get; set; }
+
+      public override string ToString()
+      {
+         return string.Format("{0}_{1}_{2}", Name.ToString(), Value.ToString(), Pizzas.Count.ToString());
+      }
    }
 }

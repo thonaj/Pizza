@@ -32,6 +32,7 @@
       <xs:element minOccurs="0" name="AddressId" type="xs:int" />
       <xs:element minOccurs="0" name="Email" nillable="true" type="tns:EmailDAO" />
       <xs:element minOccurs="0" name="EmailId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="tns:NameDAO" />
       <xs:element minOccurs="0" name="NameId" type="xs:int" />
       <xs:element minOccurs="0" name="Orders" nillable="true" type="tns:ArrayOfOrderDAO" />
@@ -46,6 +47,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Customers" nillable="true" type="tns:ArrayOfCustomerDAO" />
       <xs:element minOccurs="0" name="EmailString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
     </xs:sequence>
     <xs:attribute ref="ser:Id" />
     <xs:attribute ref="ser:Ref" />
@@ -55,6 +57,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Customers" nillable="true" type="tns:ArrayOfCustomerDAO" />
       <xs:element minOccurs="0" name="First" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Last" nillable="true" type="xs:string" />
     </xs:sequence>
     <xs:attribute ref="ser:Id" />
@@ -71,6 +74,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Customer" nillable="true" type="tns:CustomerDAO" />
       <xs:element minOccurs="0" name="CustomerId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Pizzas" nillable="true" type="tns:ArrayOfPizzaDAO" />
       <xs:element minOccurs="0" name="Store" nillable="true" type="tns:StoreDAO" />
@@ -89,6 +93,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Crust" nillable="true" type="tns:CrustDAO" />
       <xs:element minOccurs="0" name="CrustId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Order" nillable="true" type="tns:OrderDAO" />
       <xs:element minOccurs="0" name="OrderId" nillable="true" type="xs:int" />
@@ -111,6 +116,7 @@
   <xs:element name="CrustDAO" nillable="true" type="tns:CrustDAO" />
   <xs:complexType name="SauceDAO">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Value" type="xs:decimal" />
     </xs:sequence>
@@ -118,6 +124,7 @@
   <xs:element name="SauceDAO" nillable="true" type="tns:SauceDAO" />
   <xs:complexType name="SizeDAO">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Value" type="xs:decimal" />
     </xs:sequence>
@@ -127,6 +134,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Address" nillable="true" type="tns:AddressDAO" />
       <xs:element minOccurs="0" name="AddressId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="LocationId" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Orders" nillable="true" type="tns:ArrayOfOrderDAO" />
       <xs:element minOccurs="0" name="Phone" nillable="true" type="tns:PhoneDAO" />
@@ -136,6 +144,7 @@
   <xs:element name="StoreDAO" nillable="true" type="tns:StoreDAO" />
   <xs:complexType name="PhoneDAO">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Number" nillable="true" type="xs:string" />
     </xs:sequence>
     <xs:attribute ref="ser:Id" />
@@ -156,6 +165,7 @@
   <xs:element name="ArrayOfCheeseDAO" nillable="true" type="tns:ArrayOfCheeseDAO" />
   <xs:complexType name="CheeseDAO">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="PizzaCheeseDAO" nillable="true" type="tns:ArrayOfPizzaCheeseDAO" />
       <xs:element minOccurs="0" name="Value" type="xs:decimal" />
@@ -172,6 +182,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Cheese" nillable="true" type="tns:CheeseDAO" />
       <xs:element minOccurs="0" name="CheeseId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Pizza" nillable="true" type="tns:PizzaDAO" />
       <xs:element minOccurs="0" name="PizzaId" type="xs:int" />
     </xs:sequence>
@@ -209,6 +220,7 @@
   <xs:element name="ArrayOfPizzaToppingDAO" nillable="true" type="tns:ArrayOfPizzaToppingDAO" />
   <xs:complexType name="PizzaToppingDAO">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Pizza" nillable="true" type="tns:PizzaDAO" />
       <xs:element minOccurs="0" name="PizzaId" type="xs:int" />
       <xs:element minOccurs="0" name="Topping" nillable="true" type="tns:ToppingDAO" />
@@ -218,6 +230,7 @@
   <xs:element name="PizzaToppingDAO" nillable="true" type="tns:PizzaToppingDAO" />
   <xs:complexType name="ToppingDAO">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Value" type="xs:decimal" />
     </xs:sequence>

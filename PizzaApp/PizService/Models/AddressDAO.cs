@@ -19,9 +19,7 @@ namespace PizService.Models
          this.StoresDAO = new HashSet<StoreDAO>();
       }
       [DataMember]
-      public int Id { get; set; }
-      [DataMember]
-      public int Id { get; set; }
+      public int Id { get; set; }     
       [DataMember]
       public string Street { get; set; }
       [DataMember]

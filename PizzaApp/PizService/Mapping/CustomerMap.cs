@@ -20,10 +20,15 @@ namespace PizService.Mapping
          a.EmailId = b.EmailId;
          a.NameId = b.NameId;
          a.PhoneId = b.PhoneId;
-         foreach (var item in b.Orders)
+         if(b.Orders!=null)
          {
-            a.Orders.Add(OrderMap.MapToOrder(item));
-         }        
+            foreach (var item in b.Orders)
+            {
+               a.Orders.Add(OrderMap.MapToOrder(item));
+            }
+
+         }
+             
          
          return a;
 
