@@ -13,6 +13,11 @@ namespace PizService.Mapping
       {
          var a = new Email();
          a.EmailString = b.EmailString;
+         //foreach (var item in b.Customers)
+         //{
+         //   a.Customers.Add(CustomerMap.MapToCustomer(item));
+         //}
+         a.Id = b.Id;
          return a;
       }
 
@@ -20,6 +25,11 @@ namespace PizService.Mapping
       {
          var a = new EmailDAO();
          a.EmailString = b.EmailString;
+         //foreach (var item in b.Customers)
+         //{
+         //   a.Customers.Add(CustomerMap.MapToCustomerDAO(item));
+         //}
+         a.Id = b.Id;
          return a;
       }
    }

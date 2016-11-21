@@ -18,10 +18,14 @@ namespace PizService.Mapping
          a.Customer = CustomerMap.MapToCustomer(b.Customer);
          a.CustomerId = b.CustomerId;         
          a.StoreId = b.StoreId;
-         foreach (var item in b.Pizzas)
-         {
-            a.Pizzas.Add(PizzaMap.MapToPizza(item));
-         }
+         
+         //if (b.Pizzas !=null)
+         //{
+         //   foreach (var item in b.Pizzas)
+         //   {
+         //      a.Pizzas.Add(PizzaMap.MapToPizza(item));
+         //   }         
+         //}
          return a;
       }
 
@@ -33,10 +37,14 @@ namespace PizService.Mapping
          a.Store = StoreMap.MapToStoreDAO(b.Store);
          a.Customer = CustomerMap.MapToCustomerDAO(b.Customer);
          a.CustomerId = b.CustomerId;
-         foreach (var item in b.Pizzas)
-         {
-            a.Pizzas.Add(PizzaMap.MapToPizzaDAO(item));
-         }
+         //if(a.Pizzas!=null)
+         //{
+         //   foreach (var item in b.Pizzas)
+         //   {
+         //      a.Pizzas.Add(PizzaMap.MapToPizzaDAO(item));
+         //   }
+         //}
+        
          a.StoreId = b.StoreId;
 
          return a;

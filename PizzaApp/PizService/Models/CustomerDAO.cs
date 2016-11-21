@@ -14,6 +14,11 @@ namespace PizService.Models
    //[DataContract]
    public class CustomerDAO
    {
+      //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+      //public CustomerDAO()
+      //{
+      //   this.Orders = new HashSet<OrderDAO>();
+      //}
       [DataMember]
       public int Id { get; set; }
       [DataMember]
@@ -32,8 +37,8 @@ namespace PizService.Models
       public virtual EmailDAO Email { get; set; }
       [DataMember]
       public virtual PhoneDAO Phone { get; set; }
-      [DataMember]
-      [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-      public virtual ICollection<OrderDAO> Orders { get; set; }
+      //[DataMember]
+      //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+      //public virtual ICollection<OrderDAO> Orders { get; set; }
    }
 }

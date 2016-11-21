@@ -25,9 +25,10 @@ namespace PizzaAPI.Controllers
       }
 
       // POST: api/Email
-      public void Post([FromBody]EmailDTO item)
+      public HttpResponseMessage Post([FromBody]EmailDTO item)
       {
          psc.insertEmail(item);
+         return Request.CreateResponse(HttpStatusCode.OK);
       }
 
       // PUT: api/Email/5

@@ -1,5 +1,5 @@
 ﻿using PizzaAPI.Models;
-using PizzaAPI.ServiceReference;
+using PizzaAPI.ServiceReference1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +15,8 @@ namespace PizzaAPI.Mappers
          a.Cheese = CheeseMap.MapToCheeseDTO(b.Cheese);
          a.CheeseId = b.CheeseId;
          a.PizzaId = b.PizzaId;
+         //a.Id = b.Id;
+         a.Pizza = PizzaMap.MapToPizzaDTO(b.Pizza);
          return a;
       }
 
@@ -24,6 +26,8 @@ namespace PizzaAPI.Mappers
          a.Cheese = CheeseMap.MapToCheeseDAO(b.Cheese);
          a.CheeseId = b.CheeseId;
          a.PizzaId = b.PizzaId;
+         //a.Id = b.Id;
+         a.Pizza = PizzaMap.MapToPizzaDAO(b.Pizza);
          return a;
       }
    }

@@ -25,9 +25,10 @@ namespace PizzaAPI.Controllers
       }
 
       // POST: api/Phone
-      public void Post([FromBody]PhoneDTO item)
+      public HttpResponseMessage Post([FromBody]PhoneDTO item)
       {
          psc.insertPhone(item);
+         return Request.CreateResponse(HttpStatusCode.Accepted);
       }
 
       // PUT: api/Phone/5

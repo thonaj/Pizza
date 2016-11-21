@@ -16,5 +16,14 @@ namespace PizzaAPI.Models
       public virtual OrderDTO Order { get; set; }
       public virtual SauceDTO Sauce { get; set; }
       public virtual SizeDTO Size { get; set; }
+      public List<ToppingDTO> toppings { get; set; }
+      public List<CheeseDTO> cheeses { get; set; }
+      //public int Id { get; set; }
+
+
+      //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+      //public virtual ICollection<PizzaCheeseDTO> PizzaCheese { get; set; }
+      //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+      //public virtual ICollection<PizzaToppingDTO> PizzaToppings { get; set; }
    }
 }

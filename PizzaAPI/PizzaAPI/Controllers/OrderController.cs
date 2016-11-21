@@ -25,18 +25,19 @@ namespace PizzaAPI.Controllers
       }
 
       // POST: api/Order
-      public void Post([FromBody]OrderDTO value)
+      public HttpResponseMessage Post([FromBody]OrderDTO value)
       {
          
-         foreach (var item in value.Pizzas)
-         {
-            var thispizza = new PizzaDTO();
-            thispizza.Crust = psc.getCrusts().Where(c => c.Name == item.Crust.Name).FirstOrDefault();
-            thispizza.Sauce = psc.getSauces().Where(s => s.Name == item.Sauce.Name).FirstOrDefault();
-            thispizza.Size = psc.getSizes().Where(s => s.Name == item.Size.Name).FirstOrDefault();
-            psc.insertPizza(item);
-         }
+         //foreach (var item in value.Pizzas)
+         //{
+         //   var thispizza = new PizzaDTO();
+         //   thispizza.Crust = psc.getCrusts().Where(c => c.Name == item.Crust.Name).FirstOrDefault();
+         //   thispizza.Sauce = psc.getSauces().Where(s => s.Name == item.Sauce.Name).FirstOrDefault();
+         //   thispizza.Size = psc.getSizes().Where(s => s.Name == item.Size.Name).FirstOrDefault();
+         //   psc.insertPizza(item);
+         //}
          psc.insertOrder(value);
+         return Request.CreateResponse(HttpStatusCode.OK);
 
       }
 

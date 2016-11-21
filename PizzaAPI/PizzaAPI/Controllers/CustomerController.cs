@@ -25,20 +25,20 @@ namespace PizzaAPI.Controllers
       }
 
       // POST: api/Customer
-      public void Post([FromBody]CustomerDTO value)
+      public HttpResponseMessage Post([FromBody]CustomerDTO value)
       {
-
-         psc.insertAddress(value.Address);
-         psc.insertEmail(value.Email);
-         psc.insertName(value.Name);
-         psc.insertPhone(value.Phone);
+         
+         //psc.insertAddress(value.Address);
+         //psc.insertEmail(value.Email);
+         //psc.insertName(value.Name);
+         //psc.insertPhone(value.Phone);
          
          //var newaddress = psc.getAddresses().Where(a => string.Equals(a.ToString(), value.Address.ToString())).FirstOrDefault();
          //var newemail = psc.getEmails().Where(a => string.Equals(a.EmailString, value.Email.EmailString)).FirstOrDefault();
          //var newname = psc.getNames().Where(a => string.Equals(a.ToString(), value.Name.ToString())).FirstOrDefault();
          //var newpone = psc.getPhones().Where(a => string.Equals(a.Number, value.Phone.Number)).FirstOrDefault();
          psc.insertCustomer(value);
-
+         return Request.CreateResponse(HttpStatusCode.OK);
 
       }
 

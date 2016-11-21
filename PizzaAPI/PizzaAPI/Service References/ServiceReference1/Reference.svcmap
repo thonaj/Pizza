@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e1acaaed-a017-467a-89d5-58b598eefe66" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://ec2-52-23-205-25.compute-1.amazonaws.com/pizzawcf/Service2.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service2.disco" MetadataType="Disco" ID="b9e4de3d-4e1e-4fb1-966d-541e7c54f099" SourceId="1" SourceUrl="http://ec2-52-23-205-25.compute-1.amazonaws.com/pizzawcf/Service2.svc?disco" />
+    <MetadataFile FileName="Service2.xsd" MetadataType="Schema" ID="ec60cfc9-f372-4d53-b65b-54504d7470fe" SourceId="1" SourceUrl="http://ec2-52-23-205-25.compute-1.amazonaws.com/pizzawcf/Service2.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service2.wsdl" MetadataType="Wsdl" ID="4dedd350-ab21-45ff-9e27-42c88dbc2758" SourceId="1" SourceUrl="http://ec2-52-23-205-25.compute-1.amazonaws.com/pizzawcf/Service2.svc?wsdl" />
+    <MetadataFile FileName="Service21.xsd" MetadataType="Schema" ID="1bfd8fef-3aea-4f4a-b6a1-0e829b67e80a" SourceId="1" SourceUrl="http://ec2-52-23-205-25.compute-1.amazonaws.com/pizzawcf/Service2.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service22.xsd" MetadataType="Schema" ID="4c8f3d66-05f4-4c76-a682-529dfb421a8e" SourceId="1" SourceUrl="http://ec2-52-23-205-25.compute-1.amazonaws.com/pizzawcf/Service2.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

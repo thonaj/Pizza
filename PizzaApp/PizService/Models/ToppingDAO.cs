@@ -10,11 +10,21 @@ namespace PizService.Models
    [DataContract]
    public class ToppingDAO
    {
+      //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+      //public ToppingDAO()
+      //{
+      //   this.PizzaToppings = new HashSet<PizzaToppingDAO>();
+      //}
       [DataMember]
       public int Id { get; set; }
       [DataMember]
       public string Name { get; set; }
       [DataMember]
       public decimal Value { get; set; }
+      [DataMember]
+      public bool Active { get; set; }
+      //[DataMember]
+      //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+      //public virtual ICollection<PizzaToppingDAO> PizzaToppings { get; set; }
    }
 }

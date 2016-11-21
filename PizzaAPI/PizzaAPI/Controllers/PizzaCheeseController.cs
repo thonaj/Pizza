@@ -25,9 +25,10 @@ namespace PizzaAPI.Controllers
       }
 
       // POST: api/PizzaCheese
-      public void Post([FromBody]PizzaCheeseDTO value)
+      public HttpResponseMessage Post([FromBody]PizzaCheeseDTO value)
       {
          psc.insertPizzaCheese(value);
+         return Request.CreateResponse(HttpStatusCode.OK);
       }
 
       // PUT: api/PizzaCheese/5

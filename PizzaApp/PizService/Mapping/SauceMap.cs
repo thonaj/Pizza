@@ -14,6 +14,12 @@ namespace PizService.Mapping
          var a = new Sauce();
          a.Name = b.Name;
          a.Value = b.Value;
+         a.Id = b.Id;
+         //foreach (var item in b.Pizzas)
+         //{
+         //   a.Pizzas.Add(PizzaMap.MapToPizza(item));
+         //}
+         
          return a;
       }
 
@@ -22,6 +28,11 @@ namespace PizService.Mapping
          var a = new SauceDAO();
          a.Name = b.Name;
          a.Value = b.Value;
+         a.Id = b.Id;
+         //foreach (var item in b.Pizzas)
+         //{
+         //   a.Pizzas.Add(PizzaMap.MapToPizzaDAO(item));
+         //}
          return a;
       }
    }

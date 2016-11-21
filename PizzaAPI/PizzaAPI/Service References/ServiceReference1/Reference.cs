@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PizzaAPI.ServiceReference {
+namespace PizzaAPI.ServiceReference1 {
     using System.Runtime.Serialization;
     using System;
     
@@ -23,22 +23,13 @@ namespace PizzaAPI.ServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ActiveField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.CustomerDAO[] CustomersDAOField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string StateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.StoreDAO[] StoresDAOField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string StreetField;
@@ -57,19 +48,6 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Active {
-            get {
-                return this.ActiveField;
-            }
-            set {
-                if ((this.ActiveField.Equals(value) != true)) {
-                    this.ActiveField = value;
-                    this.RaisePropertyChanged("Active");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public string City {
             get {
                 return this.CityField;
@@ -78,19 +56,6 @@ namespace PizzaAPI.ServiceReference {
                 if ((object.ReferenceEquals(this.CityField, value) != true)) {
                     this.CityField = value;
                     this.RaisePropertyChanged("City");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.CustomerDAO[] CustomersDAO {
-            get {
-                return this.CustomersDAOField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CustomersDAOField, value) != true)) {
-                    this.CustomersDAOField = value;
-                    this.RaisePropertyChanged("CustomersDAO");
                 }
             }
         }
@@ -117,19 +82,6 @@ namespace PizzaAPI.ServiceReference {
                 if ((object.ReferenceEquals(this.StateField, value) != true)) {
                     this.StateField = value;
                     this.RaisePropertyChanged("State");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.StoreDAO[] StoresDAO {
-            get {
-                return this.StoresDAOField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StoresDAOField, value) != true)) {
-                    this.StoresDAOField = value;
-                    this.RaisePropertyChanged("StoresDAO");
                 }
             }
         }
@@ -172,6 +124,176 @@ namespace PizzaAPI.ServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CheeseDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
+    [System.SerializableAttribute()]
+    public partial class CheeseDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal ValueField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Value {
+            get {
+                return this.ValueField;
+            }
+            set {
+                if ((this.ValueField.Equals(value) != true)) {
+                    this.ValueField = value;
+                    this.RaisePropertyChanged("Value");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CrustDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
+    [System.SerializableAttribute()]
+    public partial class CrustDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool ActiveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal ValueField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Active {
+            get {
+                return this.ActiveField;
+            }
+            set {
+                if ((this.ActiveField.Equals(value) != true)) {
+                    this.ActiveField = value;
+                    this.RaisePropertyChanged("Active");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Value {
+            get {
+                return this.ValueField;
+            }
+            set {
+                if ((this.ValueField.Equals(value) != true)) {
+                    this.ValueField = value;
+                    this.RaisePropertyChanged("Value");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CustomerDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models", IsReference=true)]
     [System.SerializableAttribute()]
     public partial class CustomerDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -180,13 +302,13 @@ namespace PizzaAPI.ServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.AddressDAO AddressField;
+        private PizzaAPI.ServiceReference1.AddressDAO AddressField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int AddressIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.EmailDAO EmailField;
+        private PizzaAPI.ServiceReference1.EmailDAO EmailField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int EmailIdField;
@@ -195,16 +317,13 @@ namespace PizzaAPI.ServiceReference {
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.NameDAO NameField;
+        private PizzaAPI.ServiceReference1.NameDAO NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int NameIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.OrderDAO[] OrdersField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.PhoneDAO PhoneField;
+        private PizzaAPI.ServiceReference1.PhoneDAO PhoneField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int PhoneIdField;
@@ -220,7 +339,7 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.AddressDAO Address {
+        public PizzaAPI.ServiceReference1.AddressDAO Address {
             get {
                 return this.AddressField;
             }
@@ -246,7 +365,7 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.EmailDAO Email {
+        public PizzaAPI.ServiceReference1.EmailDAO Email {
             get {
                 return this.EmailField;
             }
@@ -285,7 +404,7 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.NameDAO Name {
+        public PizzaAPI.ServiceReference1.NameDAO Name {
             get {
                 return this.NameField;
             }
@@ -311,161 +430,7 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.OrderDAO[] Orders {
-            get {
-                return this.OrdersField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.OrdersField, value) != true)) {
-                    this.OrdersField = value;
-                    this.RaisePropertyChanged("Orders");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.PhoneDAO Phone {
-            get {
-                return this.PhoneField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PhoneField, value) != true)) {
-                    this.PhoneField = value;
-                    this.RaisePropertyChanged("Phone");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PhoneId {
-            get {
-                return this.PhoneIdField;
-            }
-            set {
-                if ((this.PhoneIdField.Equals(value) != true)) {
-                    this.PhoneIdField = value;
-                    this.RaisePropertyChanged("PhoneId");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="StoreDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
-    [System.SerializableAttribute()]
-    public partial class StoreDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.AddressDAO AddressField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int AddressIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LocationIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.OrderDAO[] OrdersField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.PhoneDAO PhoneField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int PhoneIdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.AddressDAO Address {
-            get {
-                return this.AddressField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.AddressField, value) != true)) {
-                    this.AddressField = value;
-                    this.RaisePropertyChanged("Address");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int AddressId {
-            get {
-                return this.AddressIdField;
-            }
-            set {
-                if ((this.AddressIdField.Equals(value) != true)) {
-                    this.AddressIdField = value;
-                    this.RaisePropertyChanged("AddressId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LocationId {
-            get {
-                return this.LocationIdField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.LocationIdField, value) != true)) {
-                    this.LocationIdField = value;
-                    this.RaisePropertyChanged("LocationId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.OrderDAO[] Orders {
-            get {
-                return this.OrdersField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.OrdersField, value) != true)) {
-                    this.OrdersField = value;
-                    this.RaisePropertyChanged("Orders");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.PhoneDAO Phone {
+        public PizzaAPI.ServiceReference1.PhoneDAO Phone {
             get {
                 return this.PhoneField;
             }
@@ -510,9 +475,6 @@ namespace PizzaAPI.ServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.CustomerDAO[] CustomersField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string EmailStringField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -525,19 +487,6 @@ namespace PizzaAPI.ServiceReference {
             }
             set {
                 this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.CustomerDAO[] Customers {
-            get {
-                return this.CustomersField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CustomersField, value) != true)) {
-                    this.CustomersField = value;
-                    this.RaisePropertyChanged("Customers");
-                }
             }
         }
         
@@ -587,9 +536,6 @@ namespace PizzaAPI.ServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.CustomerDAO[] CustomersField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string FirstField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -605,19 +551,6 @@ namespace PizzaAPI.ServiceReference {
             }
             set {
                 this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.CustomerDAO[] Customers {
-            get {
-                return this.CustomersField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CustomersField, value) != true)) {
-                    this.CustomersField = value;
-                    this.RaisePropertyChanged("Customers");
-                }
             }
         }
         
@@ -680,6 +613,9 @@ namespace PizzaAPI.ServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool ActiveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -692,6 +628,19 @@ namespace PizzaAPI.ServiceReference {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Active {
+            get {
+                return this.ActiveField;
+            }
+            set {
+                if ((this.ActiveField.Equals(value) != true)) {
+                    this.ActiveField = value;
+                    this.RaisePropertyChanged("Active");
+                }
             }
         }
         
@@ -741,7 +690,7 @@ namespace PizzaAPI.ServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.CustomerDAO CustomerField;
+        private PizzaAPI.ServiceReference1.CustomerDAO CustomerField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int CustomerIdField;
@@ -753,10 +702,7 @@ namespace PizzaAPI.ServiceReference {
         private string NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.PizzaDAO[] PizzasField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.StoreDAO StoreField;
+        private PizzaAPI.ServiceReference1.StoreDAO StoreField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int StoreIdField;
@@ -775,7 +721,7 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.CustomerDAO Customer {
+        public PizzaAPI.ServiceReference1.CustomerDAO Customer {
             get {
                 return this.CustomerField;
             }
@@ -827,20 +773,7 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.PizzaDAO[] Pizzas {
-            get {
-                return this.PizzasField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PizzasField, value) != true)) {
-                    this.PizzasField = value;
-                    this.RaisePropertyChanged("Pizzas");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.StoreDAO Store {
+        public PizzaAPI.ServiceReference1.StoreDAO Store {
             get {
                 return this.StoreField;
             }
@@ -890,42 +823,30 @@ namespace PizzaAPI.ServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PizzaDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="StoreDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
     [System.SerializableAttribute()]
-    public partial class PizzaDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class StoreDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.CrustDAO CrustField;
+        private PizzaAPI.ServiceReference1.AddressDAO AddressField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int CrustIdField;
+        private int AddressIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
+        private string LocationIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.OrderDAO OrderField;
+        private PizzaAPI.ServiceReference1.PhoneDAO PhoneField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> OrderIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.SauceDAO SauceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int SauceIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.SizeDAO SizeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int SizeIdField;
+        private int PhoneIdField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -938,7 +859,259 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.CrustDAO Crust {
+        public PizzaAPI.ServiceReference1.AddressDAO Address {
+            get {
+                return this.AddressField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AddressField, value) != true)) {
+                    this.AddressField = value;
+                    this.RaisePropertyChanged("Address");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int AddressId {
+            get {
+                return this.AddressIdField;
+            }
+            set {
+                if ((this.AddressIdField.Equals(value) != true)) {
+                    this.AddressIdField = value;
+                    this.RaisePropertyChanged("AddressId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LocationId {
+            get {
+                return this.LocationIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LocationIdField, value) != true)) {
+                    this.LocationIdField = value;
+                    this.RaisePropertyChanged("LocationId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public PizzaAPI.ServiceReference1.PhoneDAO Phone {
+            get {
+                return this.PhoneField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PhoneField, value) != true)) {
+                    this.PhoneField = value;
+                    this.RaisePropertyChanged("Phone");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PhoneId {
+            get {
+                return this.PhoneIdField;
+            }
+            set {
+                if ((this.PhoneIdField.Equals(value) != true)) {
+                    this.PhoneIdField = value;
+                    this.RaisePropertyChanged("PhoneId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PizzaCheeseDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
+    [System.SerializableAttribute()]
+    public partial class PizzaCheeseDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PizzaAPI.ServiceReference1.CheeseDAO CheeseField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CheeseIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PizzaAPI.ServiceReference1.PizzaDAO PizzaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PizzaIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public PizzaAPI.ServiceReference1.CheeseDAO Cheese {
+            get {
+                return this.CheeseField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CheeseField, value) != true)) {
+                    this.CheeseField = value;
+                    this.RaisePropertyChanged("Cheese");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CheeseId {
+            get {
+                return this.CheeseIdField;
+            }
+            set {
+                if ((this.CheeseIdField.Equals(value) != true)) {
+                    this.CheeseIdField = value;
+                    this.RaisePropertyChanged("CheeseId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public PizzaAPI.ServiceReference1.PizzaDAO Pizza {
+            get {
+                return this.PizzaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PizzaField, value) != true)) {
+                    this.PizzaField = value;
+                    this.RaisePropertyChanged("Pizza");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PizzaId {
+            get {
+                return this.PizzaIdField;
+            }
+            set {
+                if ((this.PizzaIdField.Equals(value) != true)) {
+                    this.PizzaIdField = value;
+                    this.RaisePropertyChanged("PizzaId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PizzaDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
+    [System.SerializableAttribute()]
+    public partial class PizzaDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PizzaAPI.ServiceReference1.CrustDAO CrustField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CrustIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PizzaAPI.ServiceReference1.OrderDAO OrderField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> OrderIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PizzaAPI.ServiceReference1.SauceDAO SauceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SauceIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PizzaAPI.ServiceReference1.SizeDAO SizeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SizeIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PizzaAPI.ServiceReference1.CheeseDAO[] cheesesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private PizzaAPI.ServiceReference1.ToppingDAO[] toppingsField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public PizzaAPI.ServiceReference1.CrustDAO Crust {
             get {
                 return this.CrustField;
             }
@@ -990,7 +1163,7 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.OrderDAO Order {
+        public PizzaAPI.ServiceReference1.OrderDAO Order {
             get {
                 return this.OrderField;
             }
@@ -1016,7 +1189,7 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.SauceDAO Sauce {
+        public PizzaAPI.ServiceReference1.SauceDAO Sauce {
             get {
                 return this.SauceField;
             }
@@ -1042,7 +1215,7 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.SizeDAO Size {
+        public PizzaAPI.ServiceReference1.SizeDAO Size {
             get {
                 return this.SizeField;
             }
@@ -1067,111 +1240,28 @@ namespace PizzaAPI.ServiceReference {
             }
         }
         
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CrustDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
-    [System.SerializableAttribute()]
-    public partial class CrustDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ActiveField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.PizzaDAO[] PizzasField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal ValueField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Active {
+        public PizzaAPI.ServiceReference1.CheeseDAO[] cheeses {
             get {
-                return this.ActiveField;
+                return this.cheesesField;
             }
             set {
-                if ((this.ActiveField.Equals(value) != true)) {
-                    this.ActiveField = value;
-                    this.RaisePropertyChanged("Active");
+                if ((object.ReferenceEquals(this.cheesesField, value) != true)) {
+                    this.cheesesField = value;
+                    this.RaisePropertyChanged("cheeses");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
+        public PizzaAPI.ServiceReference1.ToppingDAO[] toppings {
             get {
-                return this.IdField;
+                return this.toppingsField;
             }
             set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.PizzaDAO[] Pizzas {
-            get {
-                return this.PizzasField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PizzasField, value) != true)) {
-                    this.PizzasField = value;
-                    this.RaisePropertyChanged("Pizzas");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Value {
-            get {
-                return this.ValueField;
-            }
-            set {
-                if ((this.ValueField.Equals(value) != true)) {
-                    this.ValueField = value;
-                    this.RaisePropertyChanged("Value");
+                if ((object.ReferenceEquals(this.toppingsField, value) != true)) {
+                    this.toppingsField = value;
+                    this.RaisePropertyChanged("toppings");
                 }
             }
         }
@@ -1196,6 +1286,9 @@ namespace PizzaAPI.ServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool ActiveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -1211,6 +1304,19 @@ namespace PizzaAPI.ServiceReference {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Active {
+            get {
+                return this.ActiveField;
+            }
+            set {
+                if ((this.ActiveField.Equals(value) != true)) {
+                    this.ActiveField = value;
+                    this.RaisePropertyChanged("Active");
+                }
             }
         }
         
@@ -1273,6 +1379,9 @@ namespace PizzaAPI.ServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool ActiveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -1288,6 +1397,19 @@ namespace PizzaAPI.ServiceReference {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Active {
+            get {
+                return this.ActiveField;
+            }
+            set {
+                if ((this.ActiveField.Equals(value) != true)) {
+                    this.ActiveField = value;
+                    this.RaisePropertyChanged("Active");
+                }
             }
         }
         
@@ -1342,21 +1464,21 @@ namespace PizzaAPI.ServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CheeseDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ToppingDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
     [System.SerializableAttribute()]
-    public partial class CheeseDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class ToppingDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool ActiveField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.PizzaCheeseDAO[] PizzaCheeseDAOField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private decimal ValueField;
@@ -1368,6 +1490,19 @@ namespace PizzaAPI.ServiceReference {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Active {
+            get {
+                return this.ActiveField;
+            }
+            set {
+                if ((this.ActiveField.Equals(value) != true)) {
+                    this.ActiveField = value;
+                    this.RaisePropertyChanged("Active");
+                }
             }
         }
         
@@ -1398,19 +1533,6 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.PizzaCheeseDAO[] PizzaCheeseDAO {
-            get {
-                return this.PizzaCheeseDAOField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PizzaCheeseDAOField, value) != true)) {
-                    this.PizzaCheeseDAOField = value;
-                    this.RaisePropertyChanged("PizzaCheeseDAO");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public decimal Value {
             get {
                 return this.ValueField;
@@ -1419,115 +1541,6 @@ namespace PizzaAPI.ServiceReference {
                 if ((this.ValueField.Equals(value) != true)) {
                     this.ValueField = value;
                     this.RaisePropertyChanged("Value");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PizzaCheeseDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
-    [System.SerializableAttribute()]
-    public partial class PizzaCheeseDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.CheeseDAO CheeseField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int CheeseIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.PizzaDAO PizzaField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int PizzaIdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.CheeseDAO Cheese {
-            get {
-                return this.CheeseField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CheeseField, value) != true)) {
-                    this.CheeseField = value;
-                    this.RaisePropertyChanged("Cheese");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int CheeseId {
-            get {
-                return this.CheeseIdField;
-            }
-            set {
-                if ((this.CheeseIdField.Equals(value) != true)) {
-                    this.CheeseIdField = value;
-                    this.RaisePropertyChanged("CheeseId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.PizzaDAO Pizza {
-            get {
-                return this.PizzaField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PizzaField, value) != true)) {
-                    this.PizzaField = value;
-                    this.RaisePropertyChanged("Pizza");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PizzaId {
-            get {
-                return this.PizzaIdField;
-            }
-            set {
-                if ((this.PizzaIdField.Equals(value) != true)) {
-                    this.PizzaIdField = value;
-                    this.RaisePropertyChanged("PizzaId");
                 }
             }
         }
@@ -1555,13 +1568,13 @@ namespace PizzaAPI.ServiceReference {
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.PizzaDAO PizzaField;
+        private PizzaAPI.ServiceReference1.PizzaDAO PizzaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int PizzaIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PizzaAPI.ServiceReference.ToppingDAO ToppingField;
+        private PizzaAPI.ServiceReference1.ToppingDAO ToppingField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int ToppingIdField;
@@ -1590,7 +1603,7 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.PizzaDAO Pizza {
+        public PizzaAPI.ServiceReference1.PizzaDAO Pizza {
             get {
                 return this.PizzaField;
             }
@@ -1616,7 +1629,7 @@ namespace PizzaAPI.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PizzaAPI.ServiceReference.ToppingDAO Topping {
+        public PizzaAPI.ServiceReference1.ToppingDAO Topping {
             get {
                 return this.ToppingField;
             }
@@ -1651,455 +1664,378 @@ namespace PizzaAPI.ServiceReference {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ToppingDAO", Namespace="http://schemas.datacontract.org/2004/07/PizService.Models")]
-    [System.SerializableAttribute()]
-    public partial class ToppingDAO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal ValueField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Value {
-            get {
-                return this.ValueField;
-            }
-            set {
-                if ((this.ValueField.Equals(value) != true)) {
-                    this.ValueField = value;
-                    this.RaisePropertyChanged("Value");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference.IService2")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService2")]
     public interface IService2 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetAddresses", ReplyAction="http://tempuri.org/IService2/GetAddressesResponse")]
-        PizzaAPI.ServiceReference.AddressDAO[] GetAddresses();
+        PizzaAPI.ServiceReference1.AddressDAO[] GetAddresses();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetAddresses", ReplyAction="http://tempuri.org/IService2/GetAddressesResponse")]
-        System.Threading.Tasks.Task<PizzaAPI.ServiceReference.AddressDAO[]> GetAddressesAsync();
+        System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.AddressDAO[]> GetAddressesAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetCheeses", ReplyAction="http://tempuri.org/IService2/GetCheesesResponse")]
-        PizzaAPI.ServiceReference.CheeseDAO[] GetCheeses();
+        PizzaAPI.ServiceReference1.CheeseDAO[] GetCheeses();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetCheeses", ReplyAction="http://tempuri.org/IService2/GetCheesesResponse")]
-        System.Threading.Tasks.Task<PizzaAPI.ServiceReference.CheeseDAO[]> GetCheesesAsync();
+        System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.CheeseDAO[]> GetCheesesAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetCrusts", ReplyAction="http://tempuri.org/IService2/GetCrustsResponse")]
-        PizzaAPI.ServiceReference.CrustDAO[] GetCrusts();
+        PizzaAPI.ServiceReference1.CrustDAO[] GetCrusts();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetCrusts", ReplyAction="http://tempuri.org/IService2/GetCrustsResponse")]
-        System.Threading.Tasks.Task<PizzaAPI.ServiceReference.CrustDAO[]> GetCrustsAsync();
+        System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.CrustDAO[]> GetCrustsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetCustomers", ReplyAction="http://tempuri.org/IService2/GetCustomersResponse")]
-        PizzaAPI.ServiceReference.CustomerDAO[] GetCustomers();
+        PizzaAPI.ServiceReference1.CustomerDAO[] GetCustomers();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetCustomers", ReplyAction="http://tempuri.org/IService2/GetCustomersResponse")]
-        System.Threading.Tasks.Task<PizzaAPI.ServiceReference.CustomerDAO[]> GetCustomersAsync();
+        System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.CustomerDAO[]> GetCustomersAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetEmails", ReplyAction="http://tempuri.org/IService2/GetEmailsResponse")]
-        PizzaAPI.ServiceReference.EmailDAO[] GetEmails();
+        PizzaAPI.ServiceReference1.EmailDAO[] GetEmails();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetEmails", ReplyAction="http://tempuri.org/IService2/GetEmailsResponse")]
-        System.Threading.Tasks.Task<PizzaAPI.ServiceReference.EmailDAO[]> GetEmailsAsync();
+        System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.EmailDAO[]> GetEmailsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetNames", ReplyAction="http://tempuri.org/IService2/GetNamesResponse")]
-        PizzaAPI.ServiceReference.NameDAO[] GetNames();
+        PizzaAPI.ServiceReference1.NameDAO[] GetNames();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetNames", ReplyAction="http://tempuri.org/IService2/GetNamesResponse")]
-        System.Threading.Tasks.Task<PizzaAPI.ServiceReference.NameDAO[]> GetNamesAsync();
+        System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.NameDAO[]> GetNamesAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetOrders", ReplyAction="http://tempuri.org/IService2/GetOrdersResponse")]
-        PizzaAPI.ServiceReference.OrderDAO[] GetOrders();
+        PizzaAPI.ServiceReference1.OrderDAO[] GetOrders();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetOrders", ReplyAction="http://tempuri.org/IService2/GetOrdersResponse")]
-        System.Threading.Tasks.Task<PizzaAPI.ServiceReference.OrderDAO[]> GetOrdersAsync();
+        System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.OrderDAO[]> GetOrdersAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetPhones", ReplyAction="http://tempuri.org/IService2/GetPhonesResponse")]
-        PizzaAPI.ServiceReference.PhoneDAO[] GetPhones();
+        PizzaAPI.ServiceReference1.PhoneDAO[] GetPhones();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetPhones", ReplyAction="http://tempuri.org/IService2/GetPhonesResponse")]
-        System.Threading.Tasks.Task<PizzaAPI.ServiceReference.PhoneDAO[]> GetPhonesAsync();
+        System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.PhoneDAO[]> GetPhonesAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetPizzaCheeses", ReplyAction="http://tempuri.org/IService2/GetPizzaCheesesResponse")]
-        PizzaAPI.ServiceReference.PizzaCheeseDAO[] GetPizzaCheeses();
+        PizzaAPI.ServiceReference1.PizzaCheeseDAO[] GetPizzaCheeses();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetPizzaCheeses", ReplyAction="http://tempuri.org/IService2/GetPizzaCheesesResponse")]
-        System.Threading.Tasks.Task<PizzaAPI.ServiceReference.PizzaCheeseDAO[]> GetPizzaCheesesAsync();
+        System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.PizzaCheeseDAO[]> GetPizzaCheesesAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetPizzas", ReplyAction="http://tempuri.org/IService2/GetPizzasResponse")]
-        PizzaAPI.ServiceReference.PizzaDAO[] GetPizzas();
+        PizzaAPI.ServiceReference1.PizzaDAO[] GetPizzas();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetPizzas", ReplyAction="http://tempuri.org/IService2/GetPizzasResponse")]
-        System.Threading.Tasks.Task<PizzaAPI.ServiceReference.PizzaDAO[]> GetPizzasAsync();
+        System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.PizzaDAO[]> GetPizzasAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetPizzaToppings", ReplyAction="http://tempuri.org/IService2/GetPizzaToppingsResponse")]
-        PizzaAPI.ServiceReference.PizzaToppingDAO[] GetPizzaToppings();
+        PizzaAPI.ServiceReference1.PizzaToppingDAO[] GetPizzaToppings();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetPizzaToppings", ReplyAction="http://tempuri.org/IService2/GetPizzaToppingsResponse")]
-        System.Threading.Tasks.Task<PizzaAPI.ServiceReference.PizzaToppingDAO[]> GetPizzaToppingsAsync();
+        System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.PizzaToppingDAO[]> GetPizzaToppingsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetSaucess", ReplyAction="http://tempuri.org/IService2/GetSaucessResponse")]
-        PizzaAPI.ServiceReference.SauceDAO[] GetSaucess();
+        PizzaAPI.ServiceReference1.SauceDAO[] GetSaucess();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetSaucess", ReplyAction="http://tempuri.org/IService2/GetSaucessResponse")]
-        System.Threading.Tasks.Task<PizzaAPI.ServiceReference.SauceDAO[]> GetSaucessAsync();
+        System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.SauceDAO[]> GetSaucessAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetSizes", ReplyAction="http://tempuri.org/IService2/GetSizesResponse")]
-        PizzaAPI.ServiceReference.SizeDAO[] GetSizes();
+        PizzaAPI.ServiceReference1.SizeDAO[] GetSizes();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetSizes", ReplyAction="http://tempuri.org/IService2/GetSizesResponse")]
-        System.Threading.Tasks.Task<PizzaAPI.ServiceReference.SizeDAO[]> GetSizesAsync();
+        System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.SizeDAO[]> GetSizesAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetStores", ReplyAction="http://tempuri.org/IService2/GetStoresResponse")]
-        PizzaAPI.ServiceReference.StoreDAO[] GetStores();
+        PizzaAPI.ServiceReference1.StoreDAO[] GetStores();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetStores", ReplyAction="http://tempuri.org/IService2/GetStoresResponse")]
-        System.Threading.Tasks.Task<PizzaAPI.ServiceReference.StoreDAO[]> GetStoresAsync();
+        System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.StoreDAO[]> GetStoresAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetToppings", ReplyAction="http://tempuri.org/IService2/GetToppingsResponse")]
-        PizzaAPI.ServiceReference.ToppingDAO[] GetToppings();
+        PizzaAPI.ServiceReference1.ToppingDAO[] GetToppings();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/GetToppings", ReplyAction="http://tempuri.org/IService2/GetToppingsResponse")]
-        System.Threading.Tasks.Task<PizzaAPI.ServiceReference.ToppingDAO[]> GetToppingsAsync();
+        System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.ToppingDAO[]> GetToppingsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertAddress", ReplyAction="http://tempuri.org/IService2/InsertAddressResponse")]
-        bool InsertAddress(PizzaAPI.ServiceReference.AddressDAO itm);
+        bool InsertAddress(PizzaAPI.ServiceReference1.AddressDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertAddress", ReplyAction="http://tempuri.org/IService2/InsertAddressResponse")]
-        System.Threading.Tasks.Task<bool> InsertAddressAsync(PizzaAPI.ServiceReference.AddressDAO itm);
+        System.Threading.Tasks.Task<bool> InsertAddressAsync(PizzaAPI.ServiceReference1.AddressDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertCheese", ReplyAction="http://tempuri.org/IService2/InsertCheeseResponse")]
-        bool InsertCheese(PizzaAPI.ServiceReference.CheeseDAO itm);
+        bool InsertCheese(PizzaAPI.ServiceReference1.CheeseDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertCheese", ReplyAction="http://tempuri.org/IService2/InsertCheeseResponse")]
-        System.Threading.Tasks.Task<bool> InsertCheeseAsync(PizzaAPI.ServiceReference.CheeseDAO itm);
+        System.Threading.Tasks.Task<bool> InsertCheeseAsync(PizzaAPI.ServiceReference1.CheeseDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertCrust", ReplyAction="http://tempuri.org/IService2/InsertCrustResponse")]
-        bool InsertCrust(PizzaAPI.ServiceReference.CrustDAO itm);
+        bool InsertCrust(PizzaAPI.ServiceReference1.CrustDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertCrust", ReplyAction="http://tempuri.org/IService2/InsertCrustResponse")]
-        System.Threading.Tasks.Task<bool> InsertCrustAsync(PizzaAPI.ServiceReference.CrustDAO itm);
+        System.Threading.Tasks.Task<bool> InsertCrustAsync(PizzaAPI.ServiceReference1.CrustDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertCustomer", ReplyAction="http://tempuri.org/IService2/InsertCustomerResponse")]
-        bool InsertCustomer(PizzaAPI.ServiceReference.CustomerDAO itm);
+        bool InsertCustomer(PizzaAPI.ServiceReference1.CustomerDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertCustomer", ReplyAction="http://tempuri.org/IService2/InsertCustomerResponse")]
-        System.Threading.Tasks.Task<bool> InsertCustomerAsync(PizzaAPI.ServiceReference.CustomerDAO itm);
+        System.Threading.Tasks.Task<bool> InsertCustomerAsync(PizzaAPI.ServiceReference1.CustomerDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertEmail", ReplyAction="http://tempuri.org/IService2/InsertEmailResponse")]
-        bool InsertEmail(PizzaAPI.ServiceReference.EmailDAO itm);
+        bool InsertEmail(PizzaAPI.ServiceReference1.EmailDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertEmail", ReplyAction="http://tempuri.org/IService2/InsertEmailResponse")]
-        System.Threading.Tasks.Task<bool> InsertEmailAsync(PizzaAPI.ServiceReference.EmailDAO itm);
+        System.Threading.Tasks.Task<bool> InsertEmailAsync(PizzaAPI.ServiceReference1.EmailDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertName", ReplyAction="http://tempuri.org/IService2/InsertNameResponse")]
-        bool InsertName(PizzaAPI.ServiceReference.NameDAO itm);
+        bool InsertName(PizzaAPI.ServiceReference1.NameDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertName", ReplyAction="http://tempuri.org/IService2/InsertNameResponse")]
-        System.Threading.Tasks.Task<bool> InsertNameAsync(PizzaAPI.ServiceReference.NameDAO itm);
+        System.Threading.Tasks.Task<bool> InsertNameAsync(PizzaAPI.ServiceReference1.NameDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertOrder", ReplyAction="http://tempuri.org/IService2/InsertOrderResponse")]
-        bool InsertOrder(PizzaAPI.ServiceReference.OrderDAO itm);
+        bool InsertOrder(PizzaAPI.ServiceReference1.OrderDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertOrder", ReplyAction="http://tempuri.org/IService2/InsertOrderResponse")]
-        System.Threading.Tasks.Task<bool> InsertOrderAsync(PizzaAPI.ServiceReference.OrderDAO itm);
+        System.Threading.Tasks.Task<bool> InsertOrderAsync(PizzaAPI.ServiceReference1.OrderDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertPhone", ReplyAction="http://tempuri.org/IService2/InsertPhoneResponse")]
-        bool InsertPhone(PizzaAPI.ServiceReference.PhoneDAO itm);
+        bool InsertPhone(PizzaAPI.ServiceReference1.PhoneDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertPhone", ReplyAction="http://tempuri.org/IService2/InsertPhoneResponse")]
-        System.Threading.Tasks.Task<bool> InsertPhoneAsync(PizzaAPI.ServiceReference.PhoneDAO itm);
+        System.Threading.Tasks.Task<bool> InsertPhoneAsync(PizzaAPI.ServiceReference1.PhoneDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertPizzaCheese", ReplyAction="http://tempuri.org/IService2/InsertPizzaCheeseResponse")]
-        bool InsertPizzaCheese(PizzaAPI.ServiceReference.PizzaCheeseDAO itm);
+        bool InsertPizzaCheese(PizzaAPI.ServiceReference1.PizzaCheeseDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertPizzaCheese", ReplyAction="http://tempuri.org/IService2/InsertPizzaCheeseResponse")]
-        System.Threading.Tasks.Task<bool> InsertPizzaCheeseAsync(PizzaAPI.ServiceReference.PizzaCheeseDAO itm);
+        System.Threading.Tasks.Task<bool> InsertPizzaCheeseAsync(PizzaAPI.ServiceReference1.PizzaCheeseDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertPizza", ReplyAction="http://tempuri.org/IService2/InsertPizzaResponse")]
-        bool InsertPizza(PizzaAPI.ServiceReference.PizzaDAO itm);
+        bool InsertPizza(PizzaAPI.ServiceReference1.PizzaDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertPizza", ReplyAction="http://tempuri.org/IService2/InsertPizzaResponse")]
-        System.Threading.Tasks.Task<bool> InsertPizzaAsync(PizzaAPI.ServiceReference.PizzaDAO itm);
+        System.Threading.Tasks.Task<bool> InsertPizzaAsync(PizzaAPI.ServiceReference1.PizzaDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertPizzaTopping", ReplyAction="http://tempuri.org/IService2/InsertPizzaToppingResponse")]
-        bool InsertPizzaTopping(PizzaAPI.ServiceReference.PizzaToppingDAO itm);
+        bool InsertPizzaTopping(PizzaAPI.ServiceReference1.PizzaToppingDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertPizzaTopping", ReplyAction="http://tempuri.org/IService2/InsertPizzaToppingResponse")]
-        System.Threading.Tasks.Task<bool> InsertPizzaToppingAsync(PizzaAPI.ServiceReference.PizzaToppingDAO itm);
+        System.Threading.Tasks.Task<bool> InsertPizzaToppingAsync(PizzaAPI.ServiceReference1.PizzaToppingDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertSauce", ReplyAction="http://tempuri.org/IService2/InsertSauceResponse")]
-        bool InsertSauce(PizzaAPI.ServiceReference.SauceDAO itm);
+        bool InsertSauce(PizzaAPI.ServiceReference1.SauceDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertSauce", ReplyAction="http://tempuri.org/IService2/InsertSauceResponse")]
-        System.Threading.Tasks.Task<bool> InsertSauceAsync(PizzaAPI.ServiceReference.SauceDAO itm);
+        System.Threading.Tasks.Task<bool> InsertSauceAsync(PizzaAPI.ServiceReference1.SauceDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertSize", ReplyAction="http://tempuri.org/IService2/InsertSizeResponse")]
-        bool InsertSize(PizzaAPI.ServiceReference.SizeDAO itm);
+        bool InsertSize(PizzaAPI.ServiceReference1.SizeDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertSize", ReplyAction="http://tempuri.org/IService2/InsertSizeResponse")]
-        System.Threading.Tasks.Task<bool> InsertSizeAsync(PizzaAPI.ServiceReference.SizeDAO itm);
+        System.Threading.Tasks.Task<bool> InsertSizeAsync(PizzaAPI.ServiceReference1.SizeDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertStore", ReplyAction="http://tempuri.org/IService2/InsertStoreResponse")]
-        bool InsertStore(PizzaAPI.ServiceReference.StoreDAO itm);
+        bool InsertStore(PizzaAPI.ServiceReference1.StoreDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertStore", ReplyAction="http://tempuri.org/IService2/InsertStoreResponse")]
-        System.Threading.Tasks.Task<bool> InsertStoreAsync(PizzaAPI.ServiceReference.StoreDAO itm);
+        System.Threading.Tasks.Task<bool> InsertStoreAsync(PizzaAPI.ServiceReference1.StoreDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertTopping", ReplyAction="http://tempuri.org/IService2/InsertToppingResponse")]
-        bool InsertTopping(PizzaAPI.ServiceReference.ToppingDAO itm);
+        bool InsertTopping(PizzaAPI.ServiceReference1.ToppingDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/InsertTopping", ReplyAction="http://tempuri.org/IService2/InsertToppingResponse")]
-        System.Threading.Tasks.Task<bool> InsertToppingAsync(PizzaAPI.ServiceReference.ToppingDAO itm);
+        System.Threading.Tasks.Task<bool> InsertToppingAsync(PizzaAPI.ServiceReference1.ToppingDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdateAddress", ReplyAction="http://tempuri.org/IService2/UpdateAddressResponse")]
-        bool UpdateAddress(PizzaAPI.ServiceReference.AddressDAO itm);
+        bool UpdateAddress(PizzaAPI.ServiceReference1.AddressDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdateAddress", ReplyAction="http://tempuri.org/IService2/UpdateAddressResponse")]
-        System.Threading.Tasks.Task<bool> UpdateAddressAsync(PizzaAPI.ServiceReference.AddressDAO itm);
+        System.Threading.Tasks.Task<bool> UpdateAddressAsync(PizzaAPI.ServiceReference1.AddressDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdateCheese", ReplyAction="http://tempuri.org/IService2/UpdateCheeseResponse")]
-        bool UpdateCheese(PizzaAPI.ServiceReference.CheeseDAO itm);
+        bool UpdateCheese(PizzaAPI.ServiceReference1.CheeseDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdateCheese", ReplyAction="http://tempuri.org/IService2/UpdateCheeseResponse")]
-        System.Threading.Tasks.Task<bool> UpdateCheeseAsync(PizzaAPI.ServiceReference.CheeseDAO itm);
+        System.Threading.Tasks.Task<bool> UpdateCheeseAsync(PizzaAPI.ServiceReference1.CheeseDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdateCrust", ReplyAction="http://tempuri.org/IService2/UpdateCrustResponse")]
-        bool UpdateCrust(PizzaAPI.ServiceReference.CrustDAO itm);
+        bool UpdateCrust(PizzaAPI.ServiceReference1.CrustDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdateCrust", ReplyAction="http://tempuri.org/IService2/UpdateCrustResponse")]
-        System.Threading.Tasks.Task<bool> UpdateCrustAsync(PizzaAPI.ServiceReference.CrustDAO itm);
+        System.Threading.Tasks.Task<bool> UpdateCrustAsync(PizzaAPI.ServiceReference1.CrustDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdateCustomer", ReplyAction="http://tempuri.org/IService2/UpdateCustomerResponse")]
-        bool UpdateCustomer(PizzaAPI.ServiceReference.CustomerDAO itm);
+        bool UpdateCustomer(PizzaAPI.ServiceReference1.CustomerDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdateCustomer", ReplyAction="http://tempuri.org/IService2/UpdateCustomerResponse")]
-        System.Threading.Tasks.Task<bool> UpdateCustomerAsync(PizzaAPI.ServiceReference.CustomerDAO itm);
+        System.Threading.Tasks.Task<bool> UpdateCustomerAsync(PizzaAPI.ServiceReference1.CustomerDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdateEmail", ReplyAction="http://tempuri.org/IService2/UpdateEmailResponse")]
-        bool UpdateEmail(PizzaAPI.ServiceReference.EmailDAO itm);
+        bool UpdateEmail(PizzaAPI.ServiceReference1.EmailDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdateEmail", ReplyAction="http://tempuri.org/IService2/UpdateEmailResponse")]
-        System.Threading.Tasks.Task<bool> UpdateEmailAsync(PizzaAPI.ServiceReference.EmailDAO itm);
+        System.Threading.Tasks.Task<bool> UpdateEmailAsync(PizzaAPI.ServiceReference1.EmailDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdateName", ReplyAction="http://tempuri.org/IService2/UpdateNameResponse")]
-        bool UpdateName(PizzaAPI.ServiceReference.NameDAO itm);
+        bool UpdateName(PizzaAPI.ServiceReference1.NameDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdateName", ReplyAction="http://tempuri.org/IService2/UpdateNameResponse")]
-        System.Threading.Tasks.Task<bool> UpdateNameAsync(PizzaAPI.ServiceReference.NameDAO itm);
+        System.Threading.Tasks.Task<bool> UpdateNameAsync(PizzaAPI.ServiceReference1.NameDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdateOrder", ReplyAction="http://tempuri.org/IService2/UpdateOrderResponse")]
-        bool UpdateOrder(PizzaAPI.ServiceReference.OrderDAO itm);
+        bool UpdateOrder(PizzaAPI.ServiceReference1.OrderDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdateOrder", ReplyAction="http://tempuri.org/IService2/UpdateOrderResponse")]
-        System.Threading.Tasks.Task<bool> UpdateOrderAsync(PizzaAPI.ServiceReference.OrderDAO itm);
+        System.Threading.Tasks.Task<bool> UpdateOrderAsync(PizzaAPI.ServiceReference1.OrderDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdatePhone", ReplyAction="http://tempuri.org/IService2/UpdatePhoneResponse")]
-        bool UpdatePhone(PizzaAPI.ServiceReference.PhoneDAO itm);
+        bool UpdatePhone(PizzaAPI.ServiceReference1.PhoneDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdatePhone", ReplyAction="http://tempuri.org/IService2/UpdatePhoneResponse")]
-        System.Threading.Tasks.Task<bool> UpdatePhoneAsync(PizzaAPI.ServiceReference.PhoneDAO itm);
+        System.Threading.Tasks.Task<bool> UpdatePhoneAsync(PizzaAPI.ServiceReference1.PhoneDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdatePizzaCheese", ReplyAction="http://tempuri.org/IService2/UpdatePizzaCheeseResponse")]
-        bool UpdatePizzaCheese(PizzaAPI.ServiceReference.PizzaCheeseDAO itm);
+        bool UpdatePizzaCheese(PizzaAPI.ServiceReference1.PizzaCheeseDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdatePizzaCheese", ReplyAction="http://tempuri.org/IService2/UpdatePizzaCheeseResponse")]
-        System.Threading.Tasks.Task<bool> UpdatePizzaCheeseAsync(PizzaAPI.ServiceReference.PizzaCheeseDAO itm);
+        System.Threading.Tasks.Task<bool> UpdatePizzaCheeseAsync(PizzaAPI.ServiceReference1.PizzaCheeseDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdatePizza", ReplyAction="http://tempuri.org/IService2/UpdatePizzaResponse")]
-        bool UpdatePizza(PizzaAPI.ServiceReference.PizzaDAO itm);
+        bool UpdatePizza(PizzaAPI.ServiceReference1.PizzaDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdatePizza", ReplyAction="http://tempuri.org/IService2/UpdatePizzaResponse")]
-        System.Threading.Tasks.Task<bool> UpdatePizzaAsync(PizzaAPI.ServiceReference.PizzaDAO itm);
+        System.Threading.Tasks.Task<bool> UpdatePizzaAsync(PizzaAPI.ServiceReference1.PizzaDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdatePizzaTopping", ReplyAction="http://tempuri.org/IService2/UpdatePizzaToppingResponse")]
-        bool UpdatePizzaTopping(PizzaAPI.ServiceReference.PizzaToppingDAO itm);
+        bool UpdatePizzaTopping(PizzaAPI.ServiceReference1.PizzaToppingDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdatePizzaTopping", ReplyAction="http://tempuri.org/IService2/UpdatePizzaToppingResponse")]
-        System.Threading.Tasks.Task<bool> UpdatePizzaToppingAsync(PizzaAPI.ServiceReference.PizzaToppingDAO itm);
+        System.Threading.Tasks.Task<bool> UpdatePizzaToppingAsync(PizzaAPI.ServiceReference1.PizzaToppingDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdateSauce", ReplyAction="http://tempuri.org/IService2/UpdateSauceResponse")]
-        bool UpdateSauce(PizzaAPI.ServiceReference.SauceDAO itm);
+        bool UpdateSauce(PizzaAPI.ServiceReference1.SauceDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdateSauce", ReplyAction="http://tempuri.org/IService2/UpdateSauceResponse")]
-        System.Threading.Tasks.Task<bool> UpdateSauceAsync(PizzaAPI.ServiceReference.SauceDAO itm);
+        System.Threading.Tasks.Task<bool> UpdateSauceAsync(PizzaAPI.ServiceReference1.SauceDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdateSize", ReplyAction="http://tempuri.org/IService2/UpdateSizeResponse")]
-        bool UpdateSize(PizzaAPI.ServiceReference.SizeDAO itm);
+        bool UpdateSize(PizzaAPI.ServiceReference1.SizeDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdateSize", ReplyAction="http://tempuri.org/IService2/UpdateSizeResponse")]
-        System.Threading.Tasks.Task<bool> UpdateSizeAsync(PizzaAPI.ServiceReference.SizeDAO itm);
+        System.Threading.Tasks.Task<bool> UpdateSizeAsync(PizzaAPI.ServiceReference1.SizeDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdateStore", ReplyAction="http://tempuri.org/IService2/UpdateStoreResponse")]
-        bool UpdateStore(PizzaAPI.ServiceReference.StoreDAO itm);
+        bool UpdateStore(PizzaAPI.ServiceReference1.StoreDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdateStore", ReplyAction="http://tempuri.org/IService2/UpdateStoreResponse")]
-        System.Threading.Tasks.Task<bool> UpdateStoreAsync(PizzaAPI.ServiceReference.StoreDAO itm);
+        System.Threading.Tasks.Task<bool> UpdateStoreAsync(PizzaAPI.ServiceReference1.StoreDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdateTopping", ReplyAction="http://tempuri.org/IService2/UpdateToppingResponse")]
-        bool UpdateTopping(PizzaAPI.ServiceReference.ToppingDAO itm);
+        bool UpdateTopping(PizzaAPI.ServiceReference1.ToppingDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/UpdateTopping", ReplyAction="http://tempuri.org/IService2/UpdateToppingResponse")]
-        System.Threading.Tasks.Task<bool> UpdateToppingAsync(PizzaAPI.ServiceReference.ToppingDAO itm);
+        System.Threading.Tasks.Task<bool> UpdateToppingAsync(PizzaAPI.ServiceReference1.ToppingDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeleteAddress", ReplyAction="http://tempuri.org/IService2/DeleteAddressResponse")]
-        bool DeleteAddress(PizzaAPI.ServiceReference.AddressDAO itm);
+        bool DeleteAddress(PizzaAPI.ServiceReference1.AddressDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeleteAddress", ReplyAction="http://tempuri.org/IService2/DeleteAddressResponse")]
-        System.Threading.Tasks.Task<bool> DeleteAddressAsync(PizzaAPI.ServiceReference.AddressDAO itm);
+        System.Threading.Tasks.Task<bool> DeleteAddressAsync(PizzaAPI.ServiceReference1.AddressDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeleteCheese", ReplyAction="http://tempuri.org/IService2/DeleteCheeseResponse")]
-        bool DeleteCheese(PizzaAPI.ServiceReference.CheeseDAO itm);
+        bool DeleteCheese(PizzaAPI.ServiceReference1.CheeseDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeleteCheese", ReplyAction="http://tempuri.org/IService2/DeleteCheeseResponse")]
-        System.Threading.Tasks.Task<bool> DeleteCheeseAsync(PizzaAPI.ServiceReference.CheeseDAO itm);
+        System.Threading.Tasks.Task<bool> DeleteCheeseAsync(PizzaAPI.ServiceReference1.CheeseDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeleteCrust", ReplyAction="http://tempuri.org/IService2/DeleteCrustResponse")]
-        bool DeleteCrust(PizzaAPI.ServiceReference.CrustDAO itm);
+        bool DeleteCrust(PizzaAPI.ServiceReference1.CrustDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeleteCrust", ReplyAction="http://tempuri.org/IService2/DeleteCrustResponse")]
-        System.Threading.Tasks.Task<bool> DeleteCrustAsync(PizzaAPI.ServiceReference.CrustDAO itm);
+        System.Threading.Tasks.Task<bool> DeleteCrustAsync(PizzaAPI.ServiceReference1.CrustDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeleteCustomer", ReplyAction="http://tempuri.org/IService2/DeleteCustomerResponse")]
-        bool DeleteCustomer(PizzaAPI.ServiceReference.CustomerDAO itm);
+        bool DeleteCustomer(PizzaAPI.ServiceReference1.CustomerDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeleteCustomer", ReplyAction="http://tempuri.org/IService2/DeleteCustomerResponse")]
-        System.Threading.Tasks.Task<bool> DeleteCustomerAsync(PizzaAPI.ServiceReference.CustomerDAO itm);
+        System.Threading.Tasks.Task<bool> DeleteCustomerAsync(PizzaAPI.ServiceReference1.CustomerDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeleteEmail", ReplyAction="http://tempuri.org/IService2/DeleteEmailResponse")]
-        bool DeleteEmail(PizzaAPI.ServiceReference.EmailDAO itm);
+        bool DeleteEmail(PizzaAPI.ServiceReference1.EmailDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeleteEmail", ReplyAction="http://tempuri.org/IService2/DeleteEmailResponse")]
-        System.Threading.Tasks.Task<bool> DeleteEmailAsync(PizzaAPI.ServiceReference.EmailDAO itm);
+        System.Threading.Tasks.Task<bool> DeleteEmailAsync(PizzaAPI.ServiceReference1.EmailDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeleteName", ReplyAction="http://tempuri.org/IService2/DeleteNameResponse")]
-        bool DeleteName(PizzaAPI.ServiceReference.NameDAO itm);
+        bool DeleteName(PizzaAPI.ServiceReference1.NameDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeleteName", ReplyAction="http://tempuri.org/IService2/DeleteNameResponse")]
-        System.Threading.Tasks.Task<bool> DeleteNameAsync(PizzaAPI.ServiceReference.NameDAO itm);
+        System.Threading.Tasks.Task<bool> DeleteNameAsync(PizzaAPI.ServiceReference1.NameDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeleteOrder", ReplyAction="http://tempuri.org/IService2/DeleteOrderResponse")]
-        bool DeleteOrder(PizzaAPI.ServiceReference.OrderDAO itm);
+        bool DeleteOrder(PizzaAPI.ServiceReference1.OrderDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeleteOrder", ReplyAction="http://tempuri.org/IService2/DeleteOrderResponse")]
-        System.Threading.Tasks.Task<bool> DeleteOrderAsync(PizzaAPI.ServiceReference.OrderDAO itm);
+        System.Threading.Tasks.Task<bool> DeleteOrderAsync(PizzaAPI.ServiceReference1.OrderDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeletePhone", ReplyAction="http://tempuri.org/IService2/DeletePhoneResponse")]
-        bool DeletePhone(PizzaAPI.ServiceReference.PhoneDAO itm);
+        bool DeletePhone(PizzaAPI.ServiceReference1.PhoneDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeletePhone", ReplyAction="http://tempuri.org/IService2/DeletePhoneResponse")]
-        System.Threading.Tasks.Task<bool> DeletePhoneAsync(PizzaAPI.ServiceReference.PhoneDAO itm);
+        System.Threading.Tasks.Task<bool> DeletePhoneAsync(PizzaAPI.ServiceReference1.PhoneDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeletePizzaCheese", ReplyAction="http://tempuri.org/IService2/DeletePizzaCheeseResponse")]
-        bool DeletePizzaCheese(PizzaAPI.ServiceReference.PizzaCheeseDAO itm);
+        bool DeletePizzaCheese(PizzaAPI.ServiceReference1.PizzaCheeseDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeletePizzaCheese", ReplyAction="http://tempuri.org/IService2/DeletePizzaCheeseResponse")]
-        System.Threading.Tasks.Task<bool> DeletePizzaCheeseAsync(PizzaAPI.ServiceReference.PizzaCheeseDAO itm);
+        System.Threading.Tasks.Task<bool> DeletePizzaCheeseAsync(PizzaAPI.ServiceReference1.PizzaCheeseDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeletePizza", ReplyAction="http://tempuri.org/IService2/DeletePizzaResponse")]
-        bool DeletePizza(PizzaAPI.ServiceReference.PizzaDAO itm);
+        bool DeletePizza(PizzaAPI.ServiceReference1.PizzaDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeletePizza", ReplyAction="http://tempuri.org/IService2/DeletePizzaResponse")]
-        System.Threading.Tasks.Task<bool> DeletePizzaAsync(PizzaAPI.ServiceReference.PizzaDAO itm);
+        System.Threading.Tasks.Task<bool> DeletePizzaAsync(PizzaAPI.ServiceReference1.PizzaDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeletePizzaTopping", ReplyAction="http://tempuri.org/IService2/DeletePizzaToppingResponse")]
-        bool DeletePizzaTopping(PizzaAPI.ServiceReference.PizzaToppingDAO itm);
+        bool DeletePizzaTopping(PizzaAPI.ServiceReference1.PizzaToppingDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeletePizzaTopping", ReplyAction="http://tempuri.org/IService2/DeletePizzaToppingResponse")]
-        System.Threading.Tasks.Task<bool> DeletePizzaToppingAsync(PizzaAPI.ServiceReference.PizzaToppingDAO itm);
+        System.Threading.Tasks.Task<bool> DeletePizzaToppingAsync(PizzaAPI.ServiceReference1.PizzaToppingDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeleteSauce", ReplyAction="http://tempuri.org/IService2/DeleteSauceResponse")]
-        bool DeleteSauce(PizzaAPI.ServiceReference.SauceDAO itm);
+        bool DeleteSauce(PizzaAPI.ServiceReference1.SauceDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeleteSauce", ReplyAction="http://tempuri.org/IService2/DeleteSauceResponse")]
-        System.Threading.Tasks.Task<bool> DeleteSauceAsync(PizzaAPI.ServiceReference.SauceDAO itm);
+        System.Threading.Tasks.Task<bool> DeleteSauceAsync(PizzaAPI.ServiceReference1.SauceDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeleteSize", ReplyAction="http://tempuri.org/IService2/DeleteSizeResponse")]
-        bool DeleteSize(PizzaAPI.ServiceReference.SizeDAO itm);
+        bool DeleteSize(PizzaAPI.ServiceReference1.SizeDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeleteSize", ReplyAction="http://tempuri.org/IService2/DeleteSizeResponse")]
-        System.Threading.Tasks.Task<bool> DeleteSizeAsync(PizzaAPI.ServiceReference.SizeDAO itm);
+        System.Threading.Tasks.Task<bool> DeleteSizeAsync(PizzaAPI.ServiceReference1.SizeDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeleteStore", ReplyAction="http://tempuri.org/IService2/DeleteStoreResponse")]
-        bool DeleteStore(PizzaAPI.ServiceReference.StoreDAO itm);
+        bool DeleteStore(PizzaAPI.ServiceReference1.StoreDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeleteStore", ReplyAction="http://tempuri.org/IService2/DeleteStoreResponse")]
-        System.Threading.Tasks.Task<bool> DeleteStoreAsync(PizzaAPI.ServiceReference.StoreDAO itm);
+        System.Threading.Tasks.Task<bool> DeleteStoreAsync(PizzaAPI.ServiceReference1.StoreDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeleteTopping", ReplyAction="http://tempuri.org/IService2/DeleteToppingResponse")]
-        bool DeleteTopping(PizzaAPI.ServiceReference.ToppingDAO itm);
+        bool DeleteTopping(PizzaAPI.ServiceReference1.ToppingDAO itm);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService2/DeleteTopping", ReplyAction="http://tempuri.org/IService2/DeleteToppingResponse")]
-        System.Threading.Tasks.Task<bool> DeleteToppingAsync(PizzaAPI.ServiceReference.ToppingDAO itm);
+        System.Threading.Tasks.Task<bool> DeleteToppingAsync(PizzaAPI.ServiceReference1.ToppingDAO itm);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IService2Channel : PizzaAPI.ServiceReference.IService2, System.ServiceModel.IClientChannel {
+    public interface IService2Channel : PizzaAPI.ServiceReference1.IService2, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class Service2Client : System.ServiceModel.ClientBase<PizzaAPI.ServiceReference.IService2>, PizzaAPI.ServiceReference.IService2 {
+    public partial class Service2Client : System.ServiceModel.ClientBase<PizzaAPI.ServiceReference1.IService2>, PizzaAPI.ServiceReference1.IService2 {
         
         public Service2Client() {
         }
@@ -2120,483 +2056,483 @@ namespace PizzaAPI.ServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public PizzaAPI.ServiceReference.AddressDAO[] GetAddresses() {
+        public PizzaAPI.ServiceReference1.AddressDAO[] GetAddresses() {
             return base.Channel.GetAddresses();
         }
         
-        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference.AddressDAO[]> GetAddressesAsync() {
+        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.AddressDAO[]> GetAddressesAsync() {
             return base.Channel.GetAddressesAsync();
         }
         
-        public PizzaAPI.ServiceReference.CheeseDAO[] GetCheeses() {
+        public PizzaAPI.ServiceReference1.CheeseDAO[] GetCheeses() {
             return base.Channel.GetCheeses();
         }
         
-        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference.CheeseDAO[]> GetCheesesAsync() {
+        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.CheeseDAO[]> GetCheesesAsync() {
             return base.Channel.GetCheesesAsync();
         }
         
-        public PizzaAPI.ServiceReference.CrustDAO[] GetCrusts() {
+        public PizzaAPI.ServiceReference1.CrustDAO[] GetCrusts() {
             return base.Channel.GetCrusts();
         }
         
-        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference.CrustDAO[]> GetCrustsAsync() {
+        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.CrustDAO[]> GetCrustsAsync() {
             return base.Channel.GetCrustsAsync();
         }
         
-        public PizzaAPI.ServiceReference.CustomerDAO[] GetCustomers() {
+        public PizzaAPI.ServiceReference1.CustomerDAO[] GetCustomers() {
             return base.Channel.GetCustomers();
         }
         
-        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference.CustomerDAO[]> GetCustomersAsync() {
+        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.CustomerDAO[]> GetCustomersAsync() {
             return base.Channel.GetCustomersAsync();
         }
         
-        public PizzaAPI.ServiceReference.EmailDAO[] GetEmails() {
+        public PizzaAPI.ServiceReference1.EmailDAO[] GetEmails() {
             return base.Channel.GetEmails();
         }
         
-        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference.EmailDAO[]> GetEmailsAsync() {
+        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.EmailDAO[]> GetEmailsAsync() {
             return base.Channel.GetEmailsAsync();
         }
         
-        public PizzaAPI.ServiceReference.NameDAO[] GetNames() {
+        public PizzaAPI.ServiceReference1.NameDAO[] GetNames() {
             return base.Channel.GetNames();
         }
         
-        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference.NameDAO[]> GetNamesAsync() {
+        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.NameDAO[]> GetNamesAsync() {
             return base.Channel.GetNamesAsync();
         }
         
-        public PizzaAPI.ServiceReference.OrderDAO[] GetOrders() {
+        public PizzaAPI.ServiceReference1.OrderDAO[] GetOrders() {
             return base.Channel.GetOrders();
         }
         
-        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference.OrderDAO[]> GetOrdersAsync() {
+        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.OrderDAO[]> GetOrdersAsync() {
             return base.Channel.GetOrdersAsync();
         }
         
-        public PizzaAPI.ServiceReference.PhoneDAO[] GetPhones() {
+        public PizzaAPI.ServiceReference1.PhoneDAO[] GetPhones() {
             return base.Channel.GetPhones();
         }
         
-        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference.PhoneDAO[]> GetPhonesAsync() {
+        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.PhoneDAO[]> GetPhonesAsync() {
             return base.Channel.GetPhonesAsync();
         }
         
-        public PizzaAPI.ServiceReference.PizzaCheeseDAO[] GetPizzaCheeses() {
+        public PizzaAPI.ServiceReference1.PizzaCheeseDAO[] GetPizzaCheeses() {
             return base.Channel.GetPizzaCheeses();
         }
         
-        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference.PizzaCheeseDAO[]> GetPizzaCheesesAsync() {
+        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.PizzaCheeseDAO[]> GetPizzaCheesesAsync() {
             return base.Channel.GetPizzaCheesesAsync();
         }
         
-        public PizzaAPI.ServiceReference.PizzaDAO[] GetPizzas() {
+        public PizzaAPI.ServiceReference1.PizzaDAO[] GetPizzas() {
             return base.Channel.GetPizzas();
         }
         
-        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference.PizzaDAO[]> GetPizzasAsync() {
+        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.PizzaDAO[]> GetPizzasAsync() {
             return base.Channel.GetPizzasAsync();
         }
         
-        public PizzaAPI.ServiceReference.PizzaToppingDAO[] GetPizzaToppings() {
+        public PizzaAPI.ServiceReference1.PizzaToppingDAO[] GetPizzaToppings() {
             return base.Channel.GetPizzaToppings();
         }
         
-        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference.PizzaToppingDAO[]> GetPizzaToppingsAsync() {
+        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.PizzaToppingDAO[]> GetPizzaToppingsAsync() {
             return base.Channel.GetPizzaToppingsAsync();
         }
         
-        public PizzaAPI.ServiceReference.SauceDAO[] GetSaucess() {
+        public PizzaAPI.ServiceReference1.SauceDAO[] GetSaucess() {
             return base.Channel.GetSaucess();
         }
         
-        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference.SauceDAO[]> GetSaucessAsync() {
+        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.SauceDAO[]> GetSaucessAsync() {
             return base.Channel.GetSaucessAsync();
         }
         
-        public PizzaAPI.ServiceReference.SizeDAO[] GetSizes() {
+        public PizzaAPI.ServiceReference1.SizeDAO[] GetSizes() {
             return base.Channel.GetSizes();
         }
         
-        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference.SizeDAO[]> GetSizesAsync() {
+        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.SizeDAO[]> GetSizesAsync() {
             return base.Channel.GetSizesAsync();
         }
         
-        public PizzaAPI.ServiceReference.StoreDAO[] GetStores() {
+        public PizzaAPI.ServiceReference1.StoreDAO[] GetStores() {
             return base.Channel.GetStores();
         }
         
-        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference.StoreDAO[]> GetStoresAsync() {
+        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.StoreDAO[]> GetStoresAsync() {
             return base.Channel.GetStoresAsync();
         }
         
-        public PizzaAPI.ServiceReference.ToppingDAO[] GetToppings() {
+        public PizzaAPI.ServiceReference1.ToppingDAO[] GetToppings() {
             return base.Channel.GetToppings();
         }
         
-        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference.ToppingDAO[]> GetToppingsAsync() {
+        public System.Threading.Tasks.Task<PizzaAPI.ServiceReference1.ToppingDAO[]> GetToppingsAsync() {
             return base.Channel.GetToppingsAsync();
         }
         
-        public bool InsertAddress(PizzaAPI.ServiceReference.AddressDAO itm) {
+        public bool InsertAddress(PizzaAPI.ServiceReference1.AddressDAO itm) {
             return base.Channel.InsertAddress(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> InsertAddressAsync(PizzaAPI.ServiceReference.AddressDAO itm) {
+        public System.Threading.Tasks.Task<bool> InsertAddressAsync(PizzaAPI.ServiceReference1.AddressDAO itm) {
             return base.Channel.InsertAddressAsync(itm);
         }
         
-        public bool InsertCheese(PizzaAPI.ServiceReference.CheeseDAO itm) {
+        public bool InsertCheese(PizzaAPI.ServiceReference1.CheeseDAO itm) {
             return base.Channel.InsertCheese(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> InsertCheeseAsync(PizzaAPI.ServiceReference.CheeseDAO itm) {
+        public System.Threading.Tasks.Task<bool> InsertCheeseAsync(PizzaAPI.ServiceReference1.CheeseDAO itm) {
             return base.Channel.InsertCheeseAsync(itm);
         }
         
-        public bool InsertCrust(PizzaAPI.ServiceReference.CrustDAO itm) {
+        public bool InsertCrust(PizzaAPI.ServiceReference1.CrustDAO itm) {
             return base.Channel.InsertCrust(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> InsertCrustAsync(PizzaAPI.ServiceReference.CrustDAO itm) {
+        public System.Threading.Tasks.Task<bool> InsertCrustAsync(PizzaAPI.ServiceReference1.CrustDAO itm) {
             return base.Channel.InsertCrustAsync(itm);
         }
         
-        public bool InsertCustomer(PizzaAPI.ServiceReference.CustomerDAO itm) {
+        public bool InsertCustomer(PizzaAPI.ServiceReference1.CustomerDAO itm) {
             return base.Channel.InsertCustomer(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> InsertCustomerAsync(PizzaAPI.ServiceReference.CustomerDAO itm) {
+        public System.Threading.Tasks.Task<bool> InsertCustomerAsync(PizzaAPI.ServiceReference1.CustomerDAO itm) {
             return base.Channel.InsertCustomerAsync(itm);
         }
         
-        public bool InsertEmail(PizzaAPI.ServiceReference.EmailDAO itm) {
+        public bool InsertEmail(PizzaAPI.ServiceReference1.EmailDAO itm) {
             return base.Channel.InsertEmail(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> InsertEmailAsync(PizzaAPI.ServiceReference.EmailDAO itm) {
+        public System.Threading.Tasks.Task<bool> InsertEmailAsync(PizzaAPI.ServiceReference1.EmailDAO itm) {
             return base.Channel.InsertEmailAsync(itm);
         }
         
-        public bool InsertName(PizzaAPI.ServiceReference.NameDAO itm) {
+        public bool InsertName(PizzaAPI.ServiceReference1.NameDAO itm) {
             return base.Channel.InsertName(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> InsertNameAsync(PizzaAPI.ServiceReference.NameDAO itm) {
+        public System.Threading.Tasks.Task<bool> InsertNameAsync(PizzaAPI.ServiceReference1.NameDAO itm) {
             return base.Channel.InsertNameAsync(itm);
         }
         
-        public bool InsertOrder(PizzaAPI.ServiceReference.OrderDAO itm) {
+        public bool InsertOrder(PizzaAPI.ServiceReference1.OrderDAO itm) {
             return base.Channel.InsertOrder(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> InsertOrderAsync(PizzaAPI.ServiceReference.OrderDAO itm) {
+        public System.Threading.Tasks.Task<bool> InsertOrderAsync(PizzaAPI.ServiceReference1.OrderDAO itm) {
             return base.Channel.InsertOrderAsync(itm);
         }
         
-        public bool InsertPhone(PizzaAPI.ServiceReference.PhoneDAO itm) {
+        public bool InsertPhone(PizzaAPI.ServiceReference1.PhoneDAO itm) {
             return base.Channel.InsertPhone(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> InsertPhoneAsync(PizzaAPI.ServiceReference.PhoneDAO itm) {
+        public System.Threading.Tasks.Task<bool> InsertPhoneAsync(PizzaAPI.ServiceReference1.PhoneDAO itm) {
             return base.Channel.InsertPhoneAsync(itm);
         }
         
-        public bool InsertPizzaCheese(PizzaAPI.ServiceReference.PizzaCheeseDAO itm) {
+        public bool InsertPizzaCheese(PizzaAPI.ServiceReference1.PizzaCheeseDAO itm) {
             return base.Channel.InsertPizzaCheese(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> InsertPizzaCheeseAsync(PizzaAPI.ServiceReference.PizzaCheeseDAO itm) {
+        public System.Threading.Tasks.Task<bool> InsertPizzaCheeseAsync(PizzaAPI.ServiceReference1.PizzaCheeseDAO itm) {
             return base.Channel.InsertPizzaCheeseAsync(itm);
         }
         
-        public bool InsertPizza(PizzaAPI.ServiceReference.PizzaDAO itm) {
+        public bool InsertPizza(PizzaAPI.ServiceReference1.PizzaDAO itm) {
             return base.Channel.InsertPizza(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> InsertPizzaAsync(PizzaAPI.ServiceReference.PizzaDAO itm) {
+        public System.Threading.Tasks.Task<bool> InsertPizzaAsync(PizzaAPI.ServiceReference1.PizzaDAO itm) {
             return base.Channel.InsertPizzaAsync(itm);
         }
         
-        public bool InsertPizzaTopping(PizzaAPI.ServiceReference.PizzaToppingDAO itm) {
+        public bool InsertPizzaTopping(PizzaAPI.ServiceReference1.PizzaToppingDAO itm) {
             return base.Channel.InsertPizzaTopping(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> InsertPizzaToppingAsync(PizzaAPI.ServiceReference.PizzaToppingDAO itm) {
+        public System.Threading.Tasks.Task<bool> InsertPizzaToppingAsync(PizzaAPI.ServiceReference1.PizzaToppingDAO itm) {
             return base.Channel.InsertPizzaToppingAsync(itm);
         }
         
-        public bool InsertSauce(PizzaAPI.ServiceReference.SauceDAO itm) {
+        public bool InsertSauce(PizzaAPI.ServiceReference1.SauceDAO itm) {
             return base.Channel.InsertSauce(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> InsertSauceAsync(PizzaAPI.ServiceReference.SauceDAO itm) {
+        public System.Threading.Tasks.Task<bool> InsertSauceAsync(PizzaAPI.ServiceReference1.SauceDAO itm) {
             return base.Channel.InsertSauceAsync(itm);
         }
         
-        public bool InsertSize(PizzaAPI.ServiceReference.SizeDAO itm) {
+        public bool InsertSize(PizzaAPI.ServiceReference1.SizeDAO itm) {
             return base.Channel.InsertSize(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> InsertSizeAsync(PizzaAPI.ServiceReference.SizeDAO itm) {
+        public System.Threading.Tasks.Task<bool> InsertSizeAsync(PizzaAPI.ServiceReference1.SizeDAO itm) {
             return base.Channel.InsertSizeAsync(itm);
         }
         
-        public bool InsertStore(PizzaAPI.ServiceReference.StoreDAO itm) {
+        public bool InsertStore(PizzaAPI.ServiceReference1.StoreDAO itm) {
             return base.Channel.InsertStore(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> InsertStoreAsync(PizzaAPI.ServiceReference.StoreDAO itm) {
+        public System.Threading.Tasks.Task<bool> InsertStoreAsync(PizzaAPI.ServiceReference1.StoreDAO itm) {
             return base.Channel.InsertStoreAsync(itm);
         }
         
-        public bool InsertTopping(PizzaAPI.ServiceReference.ToppingDAO itm) {
+        public bool InsertTopping(PizzaAPI.ServiceReference1.ToppingDAO itm) {
             return base.Channel.InsertTopping(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> InsertToppingAsync(PizzaAPI.ServiceReference.ToppingDAO itm) {
+        public System.Threading.Tasks.Task<bool> InsertToppingAsync(PizzaAPI.ServiceReference1.ToppingDAO itm) {
             return base.Channel.InsertToppingAsync(itm);
         }
         
-        public bool UpdateAddress(PizzaAPI.ServiceReference.AddressDAO itm) {
+        public bool UpdateAddress(PizzaAPI.ServiceReference1.AddressDAO itm) {
             return base.Channel.UpdateAddress(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> UpdateAddressAsync(PizzaAPI.ServiceReference.AddressDAO itm) {
+        public System.Threading.Tasks.Task<bool> UpdateAddressAsync(PizzaAPI.ServiceReference1.AddressDAO itm) {
             return base.Channel.UpdateAddressAsync(itm);
         }
         
-        public bool UpdateCheese(PizzaAPI.ServiceReference.CheeseDAO itm) {
+        public bool UpdateCheese(PizzaAPI.ServiceReference1.CheeseDAO itm) {
             return base.Channel.UpdateCheese(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> UpdateCheeseAsync(PizzaAPI.ServiceReference.CheeseDAO itm) {
+        public System.Threading.Tasks.Task<bool> UpdateCheeseAsync(PizzaAPI.ServiceReference1.CheeseDAO itm) {
             return base.Channel.UpdateCheeseAsync(itm);
         }
         
-        public bool UpdateCrust(PizzaAPI.ServiceReference.CrustDAO itm) {
+        public bool UpdateCrust(PizzaAPI.ServiceReference1.CrustDAO itm) {
             return base.Channel.UpdateCrust(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> UpdateCrustAsync(PizzaAPI.ServiceReference.CrustDAO itm) {
+        public System.Threading.Tasks.Task<bool> UpdateCrustAsync(PizzaAPI.ServiceReference1.CrustDAO itm) {
             return base.Channel.UpdateCrustAsync(itm);
         }
         
-        public bool UpdateCustomer(PizzaAPI.ServiceReference.CustomerDAO itm) {
+        public bool UpdateCustomer(PizzaAPI.ServiceReference1.CustomerDAO itm) {
             return base.Channel.UpdateCustomer(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> UpdateCustomerAsync(PizzaAPI.ServiceReference.CustomerDAO itm) {
+        public System.Threading.Tasks.Task<bool> UpdateCustomerAsync(PizzaAPI.ServiceReference1.CustomerDAO itm) {
             return base.Channel.UpdateCustomerAsync(itm);
         }
         
-        public bool UpdateEmail(PizzaAPI.ServiceReference.EmailDAO itm) {
+        public bool UpdateEmail(PizzaAPI.ServiceReference1.EmailDAO itm) {
             return base.Channel.UpdateEmail(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> UpdateEmailAsync(PizzaAPI.ServiceReference.EmailDAO itm) {
+        public System.Threading.Tasks.Task<bool> UpdateEmailAsync(PizzaAPI.ServiceReference1.EmailDAO itm) {
             return base.Channel.UpdateEmailAsync(itm);
         }
         
-        public bool UpdateName(PizzaAPI.ServiceReference.NameDAO itm) {
+        public bool UpdateName(PizzaAPI.ServiceReference1.NameDAO itm) {
             return base.Channel.UpdateName(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> UpdateNameAsync(PizzaAPI.ServiceReference.NameDAO itm) {
+        public System.Threading.Tasks.Task<bool> UpdateNameAsync(PizzaAPI.ServiceReference1.NameDAO itm) {
             return base.Channel.UpdateNameAsync(itm);
         }
         
-        public bool UpdateOrder(PizzaAPI.ServiceReference.OrderDAO itm) {
+        public bool UpdateOrder(PizzaAPI.ServiceReference1.OrderDAO itm) {
             return base.Channel.UpdateOrder(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> UpdateOrderAsync(PizzaAPI.ServiceReference.OrderDAO itm) {
+        public System.Threading.Tasks.Task<bool> UpdateOrderAsync(PizzaAPI.ServiceReference1.OrderDAO itm) {
             return base.Channel.UpdateOrderAsync(itm);
         }
         
-        public bool UpdatePhone(PizzaAPI.ServiceReference.PhoneDAO itm) {
+        public bool UpdatePhone(PizzaAPI.ServiceReference1.PhoneDAO itm) {
             return base.Channel.UpdatePhone(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> UpdatePhoneAsync(PizzaAPI.ServiceReference.PhoneDAO itm) {
+        public System.Threading.Tasks.Task<bool> UpdatePhoneAsync(PizzaAPI.ServiceReference1.PhoneDAO itm) {
             return base.Channel.UpdatePhoneAsync(itm);
         }
         
-        public bool UpdatePizzaCheese(PizzaAPI.ServiceReference.PizzaCheeseDAO itm) {
+        public bool UpdatePizzaCheese(PizzaAPI.ServiceReference1.PizzaCheeseDAO itm) {
             return base.Channel.UpdatePizzaCheese(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> UpdatePizzaCheeseAsync(PizzaAPI.ServiceReference.PizzaCheeseDAO itm) {
+        public System.Threading.Tasks.Task<bool> UpdatePizzaCheeseAsync(PizzaAPI.ServiceReference1.PizzaCheeseDAO itm) {
             return base.Channel.UpdatePizzaCheeseAsync(itm);
         }
         
-        public bool UpdatePizza(PizzaAPI.ServiceReference.PizzaDAO itm) {
+        public bool UpdatePizza(PizzaAPI.ServiceReference1.PizzaDAO itm) {
             return base.Channel.UpdatePizza(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> UpdatePizzaAsync(PizzaAPI.ServiceReference.PizzaDAO itm) {
+        public System.Threading.Tasks.Task<bool> UpdatePizzaAsync(PizzaAPI.ServiceReference1.PizzaDAO itm) {
             return base.Channel.UpdatePizzaAsync(itm);
         }
         
-        public bool UpdatePizzaTopping(PizzaAPI.ServiceReference.PizzaToppingDAO itm) {
+        public bool UpdatePizzaTopping(PizzaAPI.ServiceReference1.PizzaToppingDAO itm) {
             return base.Channel.UpdatePizzaTopping(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> UpdatePizzaToppingAsync(PizzaAPI.ServiceReference.PizzaToppingDAO itm) {
+        public System.Threading.Tasks.Task<bool> UpdatePizzaToppingAsync(PizzaAPI.ServiceReference1.PizzaToppingDAO itm) {
             return base.Channel.UpdatePizzaToppingAsync(itm);
         }
         
-        public bool UpdateSauce(PizzaAPI.ServiceReference.SauceDAO itm) {
+        public bool UpdateSauce(PizzaAPI.ServiceReference1.SauceDAO itm) {
             return base.Channel.UpdateSauce(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> UpdateSauceAsync(PizzaAPI.ServiceReference.SauceDAO itm) {
+        public System.Threading.Tasks.Task<bool> UpdateSauceAsync(PizzaAPI.ServiceReference1.SauceDAO itm) {
             return base.Channel.UpdateSauceAsync(itm);
         }
         
-        public bool UpdateSize(PizzaAPI.ServiceReference.SizeDAO itm) {
+        public bool UpdateSize(PizzaAPI.ServiceReference1.SizeDAO itm) {
             return base.Channel.UpdateSize(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> UpdateSizeAsync(PizzaAPI.ServiceReference.SizeDAO itm) {
+        public System.Threading.Tasks.Task<bool> UpdateSizeAsync(PizzaAPI.ServiceReference1.SizeDAO itm) {
             return base.Channel.UpdateSizeAsync(itm);
         }
         
-        public bool UpdateStore(PizzaAPI.ServiceReference.StoreDAO itm) {
+        public bool UpdateStore(PizzaAPI.ServiceReference1.StoreDAO itm) {
             return base.Channel.UpdateStore(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> UpdateStoreAsync(PizzaAPI.ServiceReference.StoreDAO itm) {
+        public System.Threading.Tasks.Task<bool> UpdateStoreAsync(PizzaAPI.ServiceReference1.StoreDAO itm) {
             return base.Channel.UpdateStoreAsync(itm);
         }
         
-        public bool UpdateTopping(PizzaAPI.ServiceReference.ToppingDAO itm) {
+        public bool UpdateTopping(PizzaAPI.ServiceReference1.ToppingDAO itm) {
             return base.Channel.UpdateTopping(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> UpdateToppingAsync(PizzaAPI.ServiceReference.ToppingDAO itm) {
+        public System.Threading.Tasks.Task<bool> UpdateToppingAsync(PizzaAPI.ServiceReference1.ToppingDAO itm) {
             return base.Channel.UpdateToppingAsync(itm);
         }
         
-        public bool DeleteAddress(PizzaAPI.ServiceReference.AddressDAO itm) {
+        public bool DeleteAddress(PizzaAPI.ServiceReference1.AddressDAO itm) {
             return base.Channel.DeleteAddress(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> DeleteAddressAsync(PizzaAPI.ServiceReference.AddressDAO itm) {
+        public System.Threading.Tasks.Task<bool> DeleteAddressAsync(PizzaAPI.ServiceReference1.AddressDAO itm) {
             return base.Channel.DeleteAddressAsync(itm);
         }
         
-        public bool DeleteCheese(PizzaAPI.ServiceReference.CheeseDAO itm) {
+        public bool DeleteCheese(PizzaAPI.ServiceReference1.CheeseDAO itm) {
             return base.Channel.DeleteCheese(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> DeleteCheeseAsync(PizzaAPI.ServiceReference.CheeseDAO itm) {
+        public System.Threading.Tasks.Task<bool> DeleteCheeseAsync(PizzaAPI.ServiceReference1.CheeseDAO itm) {
             return base.Channel.DeleteCheeseAsync(itm);
         }
         
-        public bool DeleteCrust(PizzaAPI.ServiceReference.CrustDAO itm) {
+        public bool DeleteCrust(PizzaAPI.ServiceReference1.CrustDAO itm) {
             return base.Channel.DeleteCrust(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> DeleteCrustAsync(PizzaAPI.ServiceReference.CrustDAO itm) {
+        public System.Threading.Tasks.Task<bool> DeleteCrustAsync(PizzaAPI.ServiceReference1.CrustDAO itm) {
             return base.Channel.DeleteCrustAsync(itm);
         }
         
-        public bool DeleteCustomer(PizzaAPI.ServiceReference.CustomerDAO itm) {
+        public bool DeleteCustomer(PizzaAPI.ServiceReference1.CustomerDAO itm) {
             return base.Channel.DeleteCustomer(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> DeleteCustomerAsync(PizzaAPI.ServiceReference.CustomerDAO itm) {
+        public System.Threading.Tasks.Task<bool> DeleteCustomerAsync(PizzaAPI.ServiceReference1.CustomerDAO itm) {
             return base.Channel.DeleteCustomerAsync(itm);
         }
         
-        public bool DeleteEmail(PizzaAPI.ServiceReference.EmailDAO itm) {
+        public bool DeleteEmail(PizzaAPI.ServiceReference1.EmailDAO itm) {
             return base.Channel.DeleteEmail(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> DeleteEmailAsync(PizzaAPI.ServiceReference.EmailDAO itm) {
+        public System.Threading.Tasks.Task<bool> DeleteEmailAsync(PizzaAPI.ServiceReference1.EmailDAO itm) {
             return base.Channel.DeleteEmailAsync(itm);
         }
         
-        public bool DeleteName(PizzaAPI.ServiceReference.NameDAO itm) {
+        public bool DeleteName(PizzaAPI.ServiceReference1.NameDAO itm) {
             return base.Channel.DeleteName(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> DeleteNameAsync(PizzaAPI.ServiceReference.NameDAO itm) {
+        public System.Threading.Tasks.Task<bool> DeleteNameAsync(PizzaAPI.ServiceReference1.NameDAO itm) {
             return base.Channel.DeleteNameAsync(itm);
         }
         
-        public bool DeleteOrder(PizzaAPI.ServiceReference.OrderDAO itm) {
+        public bool DeleteOrder(PizzaAPI.ServiceReference1.OrderDAO itm) {
             return base.Channel.DeleteOrder(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> DeleteOrderAsync(PizzaAPI.ServiceReference.OrderDAO itm) {
+        public System.Threading.Tasks.Task<bool> DeleteOrderAsync(PizzaAPI.ServiceReference1.OrderDAO itm) {
             return base.Channel.DeleteOrderAsync(itm);
         }
         
-        public bool DeletePhone(PizzaAPI.ServiceReference.PhoneDAO itm) {
+        public bool DeletePhone(PizzaAPI.ServiceReference1.PhoneDAO itm) {
             return base.Channel.DeletePhone(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> DeletePhoneAsync(PizzaAPI.ServiceReference.PhoneDAO itm) {
+        public System.Threading.Tasks.Task<bool> DeletePhoneAsync(PizzaAPI.ServiceReference1.PhoneDAO itm) {
             return base.Channel.DeletePhoneAsync(itm);
         }
         
-        public bool DeletePizzaCheese(PizzaAPI.ServiceReference.PizzaCheeseDAO itm) {
+        public bool DeletePizzaCheese(PizzaAPI.ServiceReference1.PizzaCheeseDAO itm) {
             return base.Channel.DeletePizzaCheese(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> DeletePizzaCheeseAsync(PizzaAPI.ServiceReference.PizzaCheeseDAO itm) {
+        public System.Threading.Tasks.Task<bool> DeletePizzaCheeseAsync(PizzaAPI.ServiceReference1.PizzaCheeseDAO itm) {
             return base.Channel.DeletePizzaCheeseAsync(itm);
         }
         
-        public bool DeletePizza(PizzaAPI.ServiceReference.PizzaDAO itm) {
+        public bool DeletePizza(PizzaAPI.ServiceReference1.PizzaDAO itm) {
             return base.Channel.DeletePizza(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> DeletePizzaAsync(PizzaAPI.ServiceReference.PizzaDAO itm) {
+        public System.Threading.Tasks.Task<bool> DeletePizzaAsync(PizzaAPI.ServiceReference1.PizzaDAO itm) {
             return base.Channel.DeletePizzaAsync(itm);
         }
         
-        public bool DeletePizzaTopping(PizzaAPI.ServiceReference.PizzaToppingDAO itm) {
+        public bool DeletePizzaTopping(PizzaAPI.ServiceReference1.PizzaToppingDAO itm) {
             return base.Channel.DeletePizzaTopping(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> DeletePizzaToppingAsync(PizzaAPI.ServiceReference.PizzaToppingDAO itm) {
+        public System.Threading.Tasks.Task<bool> DeletePizzaToppingAsync(PizzaAPI.ServiceReference1.PizzaToppingDAO itm) {
             return base.Channel.DeletePizzaToppingAsync(itm);
         }
         
-        public bool DeleteSauce(PizzaAPI.ServiceReference.SauceDAO itm) {
+        public bool DeleteSauce(PizzaAPI.ServiceReference1.SauceDAO itm) {
             return base.Channel.DeleteSauce(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> DeleteSauceAsync(PizzaAPI.ServiceReference.SauceDAO itm) {
+        public System.Threading.Tasks.Task<bool> DeleteSauceAsync(PizzaAPI.ServiceReference1.SauceDAO itm) {
             return base.Channel.DeleteSauceAsync(itm);
         }
         
-        public bool DeleteSize(PizzaAPI.ServiceReference.SizeDAO itm) {
+        public bool DeleteSize(PizzaAPI.ServiceReference1.SizeDAO itm) {
             return base.Channel.DeleteSize(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> DeleteSizeAsync(PizzaAPI.ServiceReference.SizeDAO itm) {
+        public System.Threading.Tasks.Task<bool> DeleteSizeAsync(PizzaAPI.ServiceReference1.SizeDAO itm) {
             return base.Channel.DeleteSizeAsync(itm);
         }
         
-        public bool DeleteStore(PizzaAPI.ServiceReference.StoreDAO itm) {
+        public bool DeleteStore(PizzaAPI.ServiceReference1.StoreDAO itm) {
             return base.Channel.DeleteStore(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> DeleteStoreAsync(PizzaAPI.ServiceReference.StoreDAO itm) {
+        public System.Threading.Tasks.Task<bool> DeleteStoreAsync(PizzaAPI.ServiceReference1.StoreDAO itm) {
             return base.Channel.DeleteStoreAsync(itm);
         }
         
-        public bool DeleteTopping(PizzaAPI.ServiceReference.ToppingDAO itm) {
+        public bool DeleteTopping(PizzaAPI.ServiceReference1.ToppingDAO itm) {
             return base.Channel.DeleteTopping(itm);
         }
         
-        public System.Threading.Tasks.Task<bool> DeleteToppingAsync(PizzaAPI.ServiceReference.ToppingDAO itm) {
+        public System.Threading.Tasks.Task<bool> DeleteToppingAsync(PizzaAPI.ServiceReference1.ToppingDAO itm) {
             return base.Channel.DeleteToppingAsync(itm);
         }
     }

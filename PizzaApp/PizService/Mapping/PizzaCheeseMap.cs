@@ -15,6 +15,9 @@ namespace PizService.Mapping
          a.Cheese = CheeseMap.MapToCheese(b.Cheese);
          a.CheeseId = b.CheeseId;
          a.PizzaId = b.PizzaId;
+         a.Id = b.Id;
+         a.Pizza = PizzaMap.MapToPizza( b.Pizza);
+         
          return a;
       }
 
@@ -24,6 +27,8 @@ namespace PizService.Mapping
          a.Cheese = CheeseMap.MapToCheeseDAO(b.Cheese);
          a.CheeseId = b.CheeseId;
          a.PizzaId = b.PizzaId;
+         a.Id = b.Id;
+         a.Pizza = PizzaMap.MapToPizzaDAO(b.Pizza);
          return a;
       }
    }

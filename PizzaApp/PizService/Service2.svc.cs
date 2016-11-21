@@ -262,7 +262,6 @@ namespace PizService
       {
          var a = Mapping.AddressMap.MapToAddress(itm);
          a.Active = true;
-
          return da.InsertAddress(a);
       }
 
@@ -305,9 +304,20 @@ namespace PizService
 
       public bool InsertOrder(OrderDAO itm)
       {
+         //insert the order
          var a = Mapping.OrderMap.MapToOrder(itm);
          a.Active = true;
-         return da.InsertOrder(a);
+         var customer = da.getCustomers().Where(m => m.Name.First == a.Customer.Name.First && m.Name.Last == a.Customer.Name.Last).FirstOrDefault();
+         a.CustomerId = customer.Id;
+         var store = da.getStores().Where(m => m.LocationId == a.Store.LocationId).FirstOrDefault();
+         a.StoreId = store.Id;
+         var orderBool = da.InsertOrder(a);
+         
+        
+
+         
+
+         return (orderBool) ;
       }
 
       public bool InsertPhone(PhoneDAO itm)
@@ -321,6 +331,24 @@ namespace PizService
       {
          var a = Mapping.PizzaMap.MapToPizza(itm);
          a.Active = true;
+         //a.Crust
+         //a.Order
+         //a.Sauce
+         //a.Size
+         var crust = da.getCrustss().Where(m => m.Name == a.Crust.Name).FirstOrDefault();
+         a.CrustId = crust.Id;
+         var order = da.getOrders().Where(m => m.Name == a.Order.Name).FirstOrDefault();
+         a.OrderId = order.Id;
+         var sauce = da.getSauces().Where(m => m.Name == a.Sauce.Name).FirstOrDefault();
+         a.SauceId = sauce.Id;
+         var size = da.getSizes().Where(m => m.Name == a.Size.Name).FirstOrDefault();
+         a.SizeId = size.Id;
+
+
+
+
+
+
          return da.InsertPizza(a);
       }
 
@@ -328,10 +356,15 @@ namespace PizService
       {
          var a = Mapping.PizzaCheeseMap.MapToPizzaCheese(itm);
          a.Active = true;
-         return da.InsertPizzaCheese(a);
-      }
+         var cheese = da.getCheeses().Where(m => m.Name == a.Cheese.Name).FirstOrDefault();
+         a.CheeseId = cheese.Id;
+         var pizza = da.getPizzas().Where(m => m.Name == a.Pizza.Name).FirstOrDefault();
+         a.PizzaId = pizza.Id;
 
-      
+
+
+         return da.InsertPizzaCheese(a);
+      }      
 
       public bool InsertPizzaTopping(PizzaToppingDAO itm)
       {

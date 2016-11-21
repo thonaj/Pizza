@@ -1,5 +1,5 @@
 ﻿using PizzaAPI.Models;
-using PizzaAPI.ServiceReference;
+using PizzaAPI.ServiceReference1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,11 +17,12 @@ namespace PizzaAPI.Mappers
          a.StoreId = b.StoreId;
          a.Value = b.Value;
          a.Customer = CustomerMap.MapToCustomerDTO(b.Customer);
+         a.CustomerId = b.CustomerId;
          
-         foreach (var item in b.Pizzas)
-         {
-            a.Pizzas.Add(PizzaMap.MapToPizzaDTO(item));
-         }
+         //foreach (var item in b.Pizzas)
+         //{
+         //   a.Pizzas.Add(PizzaMap.MapToPizzaDTO(item));
+         //}
          return a;
       }
 
@@ -33,6 +34,12 @@ namespace PizzaAPI.Mappers
          a.StoreId = b.StoreId;
          a.Value = b.Value;
          a.Customer = CustomerMap.MapToCustomerDAO(b.Customer);
+         a.CustomerId = b.CustomerId;
+         //for (int i = 0; i < b.Pizzas.Count; i++)
+         //{
+         //   a.Pizzas[i] = PizzaMap.MapToPizzaDAO(b.Pizzas.ElementAt(i));
+         //}
+         
          
          
          return a;

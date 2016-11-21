@@ -350,6 +350,7 @@ namespace Piz.DataAccess
          }
          public bool InsertCustomer(Customer itm)
          {
+
             db.Customers.Add(itm);
             return db.SaveChanges() > 0;
          }
@@ -366,6 +367,7 @@ namespace Piz.DataAccess
          }
          public bool InsertOrder(Order itm)
          {
+            
             db.Orders.Add(itm);
             return db.SaveChanges() > 0;
          }

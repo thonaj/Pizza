@@ -32,5 +32,15 @@ namespace PizService.Models
       public virtual SauceDAO Sauce { get; set; }
       [DataMember]
       public virtual SizeDAO Size { get; set; }
+      [DataMember]
+      public List<ToppingDAO> toppings { get; set; }
+      [DataMember]
+      public List<CheeseDAO> cheeses { get; set; }
+      //[DataMember]
+      //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+      //public virtual ICollection<PizzaCheese> PizzaCheese { get; set; }
+      //[DataMember]
+      //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+      //public virtual ICollection<PizzaTopping> PizzaToppings { get; set; }
    }
 }

@@ -1,5 +1,5 @@
 ﻿using PizzaAPI.Models;
-using PizzaAPI.ServiceReference;
+using PizzaAPI.ServiceReference1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,15 +17,15 @@ namespace PizzaAPI.Mappers
          a.Phone = PhoneMap.MapToPhoneDTO(b.Phone);
          a.AddressId = a.AddressId;
          a.PhoneId = b.PhoneId;
-         if(b.Orders!=null)
-         {
-            foreach (var item in b.Orders)
-            {
-               a.Orders.Add(OrderMap.MapToOrderDTO(item));
-            }
-         }
-         
-         
+         //if(b.Orders!=null)
+         //{
+         //   foreach (var item in b.Orders)
+         //   {
+         //      a.Orders.Add(OrderMap.MapToOrderDTO(item));
+         //   }
+         //}
+         //a.Id = b.Id;
+
 
          return a;
       }
@@ -38,7 +38,11 @@ namespace PizzaAPI.Mappers
          a.Phone = PhoneMap.MapToPhoneDAO(b.Phone);
          a.AddressId = a.AddressId;
          a.PhoneId = b.PhoneId;
-
+         //a.Id = b.Id;
+         //for (int i=0;i< b.Orders.Count;i++)
+         //{
+         //   a.Orders[i]=(OrderMap.MapToOrderDAO(b.Orders.ElementAt(i)));
+         //}
 
 
          return a;

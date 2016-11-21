@@ -1,5 +1,5 @@
 ﻿using PizzaAPI.Models;
-using PizzaAPI.ServiceReference;
+using PizzaAPI.ServiceReference1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +13,11 @@ namespace PizzaAPI.Mappers
       {
          var a = new EmailDTO();
          a.EmailString = b.EmailString;
+         //foreach (var item in b.Customers)
+         //{
+         //   a.Customers.Add(CustomerMap.MapToCustomerDTO(item));
+         //}
+         //a.Id = b.Id;
          return a;
       }
 
@@ -20,6 +25,11 @@ namespace PizzaAPI.Mappers
       {
          var a = new EmailDAO();
          a.EmailString = b.EmailString;
+         //for (int i=0;i< b.Customers.Count;i++)
+         //{
+         //   a.Customers[i]=(CustomerMap.MapToCustomerDAO(b.Customers.ElementAt(i)));
+         //}
+         //a.Id = b.Id;
          return a;
       }
    }

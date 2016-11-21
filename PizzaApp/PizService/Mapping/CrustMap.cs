@@ -14,6 +14,12 @@ namespace PizService.Mapping
          var a = new Crust();
          a.Name = b.Name;
          a.Value = b.Value;
+         a.Id = b.Id;
+         //foreach (var item in b.Pizzas)
+         //{
+         //   a.Pizzas.Add(PizzaMap.MapToPizza(item));
+         //}
+         
          return a;
       }
       public static CrustDAO MapToCrustDAO(Crust b)
@@ -21,6 +27,11 @@ namespace PizService.Mapping
          var a = new CrustDAO();
          a.Name = b.Name;
          a.Value = b.Value;
+         a.Id = b.Id;
+         //foreach (var item in b.Pizzas)
+         //{
+         //   a.Pizzas.Add(PizzaMap.MapToPizzaDAO(item));
+         //}
          return a;
       }
    }

@@ -15,6 +15,9 @@ namespace PizService.Mapping
          a.PizzaId = b.PizzaId;
          a.ToppingId = b.ToppingId;
          a.Topping = ToppingMap.MapToTopping(b.Topping);
+         a.Id = b.Id;
+         a.Pizza = PizzaMap.MapToPizza(b.Pizza);
+         
          return a;
       }
       public static PizzaToppingDAO MapToPizzaToppingDAO(PizzaTopping b)
@@ -23,6 +26,8 @@ namespace PizService.Mapping
          a.PizzaId = b.PizzaId;
          a.ToppingId = b.ToppingId;
          b.Topping = b.Topping;
+         a.Id = b.Id;
+         a.Pizza = PizzaMap.MapToPizzaDAO(b.Pizza);
          return a;
       }
    }

@@ -7,7 +7,11 @@ namespace PizzaAPI.Models
 {
    public class CustomerDTO
    {
-
+      [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+      //public CustomerDTO()
+      //{
+      //   this.Orders = new HashSet<OrderDTO>();
+      //}
       public int NameId { get; set; }
       public int AddressId { get; set; }
       public int PhoneId { get; set; }
@@ -16,8 +20,8 @@ namespace PizzaAPI.Models
       public virtual NameDTO Name { get; set; }
       public virtual EmailDTO Email { get; set; }
       public virtual PhoneDTO Phone { get; set; }
-      [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-      public virtual ICollection<OrderDTO> Orders { get; set; }
+      //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+      //public virtual ICollection<OrderDTO> Orders { get; set; }
 
       
 

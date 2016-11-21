@@ -12,11 +12,11 @@ namespace PizService.Models
    [DataContract]
    public class OrderDAO
    {
-      [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-      public OrderDAO()
-      {
-         this.Pizzas = new HashSet<PizzaDAO>();
-      }
+      //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+      //public OrderDAO()
+      //{
+      //   this.Pizzas = new HashSet<PizzaDAO>();
+      //}
       [DataMember]
       public int Id { get; set; }
       [DataMember]
@@ -28,12 +28,11 @@ namespace PizService.Models
       [DataMember]
       public int CustomerId { get; set; }
       [DataMember]
-
       public virtual CustomerDAO Customer { get; set; }
       [DataMember]
       public virtual StoreDAO Store { get; set; }
-      [DataMember]
-      [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-      public virtual ICollection<PizzaDAO> Pizzas { get; set; }
+      //[DataMember]
+      //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+      //public virtual ICollection<PizzaDAO> Pizzas { get; set; }
    }
 }

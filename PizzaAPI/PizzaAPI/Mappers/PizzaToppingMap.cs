@@ -1,5 +1,5 @@
 ﻿using PizzaAPI.Models;
-using PizzaAPI.ServiceReference;
+using PizzaAPI.ServiceReference1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +15,8 @@ namespace PizzaAPI.Mappers
          a.PizzaId = b.PizzaId;
          a.Topping = ToppingMap.MapToToppingDTO(b.Topping);
          a.ToppingId = b.ToppingId;
-
+         //a.Id = b.Id;
+         a.Pizza = PizzaMap.MapToPizzaDTO(b.Pizza);
          return a;
       }
 
@@ -25,7 +26,8 @@ namespace PizzaAPI.Mappers
          a.PizzaId = b.PizzaId;
          a.Topping = ToppingMap.MapToToppingDAO(b.Topping);
          a.ToppingId = b.ToppingId;
-
+         //a.Id = b.Id;
+         a.Pizza = PizzaMap.MapToPizzaDAO(b.Pizza);
          return a;
       }
    }

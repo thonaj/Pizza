@@ -15,5 +15,9 @@ namespace PizzaAPI.Models
       {
          return string.Format("{0}_{1}", PizzaId,CheeseId);
       }
+      //public int Id { get; set; }
+     
+     
+      public virtual PizzaDTO Pizza { get; set; }
    }
 }

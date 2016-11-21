@@ -16,6 +16,16 @@ namespace PizService.Mapping
          a.State = b.State;
          a.Street = b.Street;
          a.Zip = b.Zip;
+         //foreach (var item in b.CustomersDAO)
+         //{
+         //   a.Customers.Add(CustomerMap.MapToCustomer(item));
+         //}
+         a.Id = b.Id;
+         //foreach (var item in b.StoresDAO)
+         //{
+         //   a.Stores.Add(StoreMap.MapToStore(item));
+         //}
+         
          
 
          return a;
@@ -27,7 +37,15 @@ namespace PizService.Mapping
          a.State = b.State;
          a.Street = b.Street;
          a.Zip = b.Zip;
-
+         //foreach (var item in b.Customers)
+         //{
+         //   a.CustomersDAO.Add(CustomerMap.MapToCustomerDAO(item));
+         //}
+         a.Id = b.Id;
+         //foreach (var item in b.Stores)
+         //{
+         //   a.StoresDAO.Add(StoreMap.MapToStoreDAO(item));
+         //}
          return a;
       }
    }
