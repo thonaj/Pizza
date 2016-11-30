@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//test devops pipeline attempt 6
+//test devops pipeline attempt 7
 namespace Piz.DataAccess
 {
    public class EF
