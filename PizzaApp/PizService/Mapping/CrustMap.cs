@@ -15,10 +15,6 @@ namespace PizService.Mapping
          a.Name = b.Name;
          a.Value = b.Value;
          a.Id = b.Id;
-         //foreach (var item in b.Pizzas)
-         //{
-         //   a.Pizzas.Add(PizzaMap.MapToPizza(item));
-         //}
          
          return a;
       }
@@ -28,10 +24,7 @@ namespace PizService.Mapping
          a.Name = b.Name;
          a.Value = b.Value;
          a.Id = b.Id;
-         //foreach (var item in b.Pizzas)
-         //{
-         //   a.Pizzas.Add(PizzaMap.MapToPizzaDAO(item));
-         //}
+        
          return a;
       }
    }

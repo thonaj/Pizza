@@ -14,10 +14,7 @@ namespace PizService.Mapping
          var a = new Name();
          a.First = b.First;
          a.Last = b.Last;
-         //foreach (var item in b.Customers)
-         //{
-         //   a.Customers.Add(CustomerMap.MapToCustomer(item));
-         //}
+         
          a.Id = b.Id;
          return a;
       }
@@ -27,10 +24,7 @@ namespace PizService.Mapping
          var a = new NameDAO();
          a.First = b.First;
          a.Last = b.Last;
-         //foreach (var item in b.Customers)
-         //{
-         //   a.Customers.Add(CustomerMap.MapToCustomerDAO(item));
-         //}
+        
          a.Id = b.Id;
          return a;
       }

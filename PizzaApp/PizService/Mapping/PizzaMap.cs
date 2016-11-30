@@ -21,8 +21,6 @@ namespace PizService.Mapping
          a.OrderId = b.OrderId;
          a.SauceId = b.SauceId;
          a.SizeId = b.SizeId;
-         //a.PizzaCheese = b.PizzaCheese;
-         //a.PizzaToppings = b.PizzaToppings;
          a.Id = b.Id;
          
          return a;
@@ -40,8 +38,6 @@ namespace PizService.Mapping
          a.OrderId = b.OrderId;
          a.SauceId = b.SauceId;
          a.SizeId = b.SizeId;
-         //a.PizzaCheese = b.PizzaCheese;
-         //a.PizzaToppings = b.PizzaToppings;
          a.Id = b.Id;
          return a;
       }

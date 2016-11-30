@@ -16,10 +16,7 @@ namespace PizService.Mapping
          a.Value = b.Value;
          a.Id = b.Id;
          
-         //foreach (var item in b.Pizzas)
-         //{
-         //   a.Pizzas.Add(PizzaMap.MapToPizza(item));
-         //}
+        
          return a;
       }
       public static SizeDAO MapToSizeDAO(Size b)
@@ -28,10 +25,7 @@ namespace PizService.Mapping
          a.Name = b.Name;
          a.Value = b.Value.GetValueOrDefault();
          a.Id = b.Id;
-         //foreach (var item in b.Pizzas)
-         //{
-         //   a.Pizzas.Add(PizzaMap.MapToPizzaDAO(item));
-         //}
+        
          return a;
       }
    }

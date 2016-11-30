@@ -19,11 +19,6 @@ namespace PizService.Mapping
          a.PhoneId = b.PhoneId;
          a.Id = b.Id;
 
-         //foreach (var item in b.Orders)
-         //{
-         //   a.Orders.Add(Mapping.OrderMap.MapToOrder(item));
-         //}
-
          return a;
       }
       public static StoreDAO MapToStoreDAO(Store b)
@@ -35,10 +30,7 @@ namespace PizService.Mapping
          a.AddressId = b.AddressId;
          a.PhoneId = b.PhoneId;
          a.Id = b.Id;
-         //foreach (var item in b.Orders)
-         //{
-         //   a.Orders.Add(Mapping.OrderMap.MapToOrderDAO(item));
-         //}
+       
          return a;
       }
    }

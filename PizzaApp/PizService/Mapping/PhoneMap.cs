@@ -14,14 +14,7 @@ namespace PizService.Mapping
          var a = new Phone();
          a.Number = b.Number;
          a.Id = b.Id;
-         //foreach (var item in b.Customers)
-         //{
-         //   a.Customers.Add(CustomerMap.MapToCustomer(item));
-         //}
-         //foreach (var item in b.Stores)
-         //{
-         //   a.Stores.Add(StoreMap.MapToStore(item));
-         //}
+        
          return a;
       }
 
@@ -30,14 +23,7 @@ namespace PizService.Mapping
          var a = new PhoneDAO();
          a.Number = b.Number;
          a.Id = b.Id;
-         //foreach (var item in b.Customers)
-         //{
-         //   a.Customers.Add(CustomerMap.MapToCustomerDAO(item));
-         //}
-         //foreach (var item in b.Stores)
-         //{
-         //   a.Stores.Add(StoreMap.MapToStoreDAO(item));
-         //}
+        
          return a;
       }
    }
