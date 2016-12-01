@@ -37,7 +37,7 @@ namespace PizzaApp.test
       public void testGetCustomers()
       {
          List<Customer> result = da.getCustomers();
-         Assert.Null(result);//attempt 3
+         Assert.NotNull(result);//attempt 4
       }
    }
 }
